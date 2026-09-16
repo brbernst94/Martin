@@ -107,13 +107,30 @@ survive a restart (persisted next to the repo checkout).
 
 ## Answer first, file second
 
-Marty replies before he writes anything. Repo writes are staged during the turn
-and committed in a single push *after* the reply is sent, so git never sits
-between a question and its answer — and a turn that touches four files is one
-commit, not four.
+Answering and recording are two separate passes.
 
-You'll see a quiet `_pushed a1b2c3d: company/knowledge.md_` under his reply when
-something landed.
+**Pass one** answers you, with read-only tools. No writes, because every tool
+call is a full model round trip — letting Marty file paperwork mid-answer added
+about a minute per file while you watched a status line.
+
+**Pass two** runs in the background once the reply is on screen, at low effort,
+with writes enabled. It records anything durable and pushes it as one commit. If
+there was nothing worth recording it does nothing and says nothing.
+
+You'll see a quiet `_filed a1b2c3d: company/knowledge.md_` under his reply when
+something landed, and a visible warning if the push failed.
+
+The morning brief is the exception — writing the brief *is* the job, so it keeps
+writes inline.
+
+## If Marty can't commit
+
+A **public** repo clones fine with a bad, expired, or read-only token, so a
+successful clone proves nothing about write access. Marty now asks GitHub
+directly at boot and logs a loud block if the token can't write.
+
+The fix is almost always a fine-grained token missing **Repository permissions →
+Contents → Read and write**, or one scoped to the wrong repository.
 
 ## How Marty remembers
 

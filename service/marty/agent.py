@@ -29,7 +29,7 @@ CORE_DOCS = [
     "marketing/strategy.md",
 ]
 
-REPO_TOOLS = [
+READ_TOOLS = [
     {
         "name": "read_file",
         "description": (
@@ -63,26 +63,29 @@ REPO_TOOLS = [
             "additionalProperties": False,
         },
     },
-    {
-        "name": "write_file",
-        "description": (
-            "Write a file to the strategy repo. This is how you make something permanent. "
-            "Always read the file first and write it back whole. Writes are batched and "
-            "pushed in one commit after your reply is sent, so calling this several times "
-            "in a turn is cheap. The commit message states the decision, not the file list."
-        ),
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "path": {"type": "string"},
-                "content": {"type": "string", "description": "Full new contents of the file."},
-                "commit_message": {"type": "string", "description": "One line, states the decision."},
-            },
-            "required": ["path", "content", "commit_message"],
-            "additionalProperties": False,
-        },
-    },
 ]
+
+WRITE_TOOL = {
+    "name": "write_file",
+    "description": (
+        "Write a file to the strategy repo. This is how you make something permanent. "
+        "Always read the file first and write it back whole. Writes are staged and "
+        "pushed as one commit at the end, so calling this several times is cheap."
+    ),
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "path": {"type": "string"},
+            "content": {"type": "string", "description": "Full new contents of the file."},
+            "commit_message": {"type": "string", "description": "One line, states the decision."},
+        },
+        "required": ["path", "content", "commit_message"],
+        "additionalProperties": False,
+    },
+}
+
+# Writes are only offered during the capture pass, never while answering.
+REPO_TOOLS = READ_TOOLS + [WRITE_TOOL]
 
 WEB_SEARCH_TOOL = {
     "type": "web_search_20260209",
@@ -216,12 +219,18 @@ class Marty:
 
     # -- the loop ---------------------------------------------------------
 
-    def respond(self, history: list[dict], on_tool=None) -> tuple[str, list[dict]]:
-        """Run to completion. Returns (reply_text, updated_history)."""
-        self._commit_messages: list[str] = []
+    def respond(self, history: list[dict], on_tool=None, allow_writes: bool = False,
+                effort: str | None = None) -> tuple[str, list[dict]]:
+        """Run to completion. Returns (reply_text, updated_history).
+
+        Writes are off by default. Every tool call is a full model round trip, so
+        letting Marty file paperwork mid-answer added a minute per file while
+        Brian watched a status line. Answering is the critical path; capture runs
+        afterwards via capture().
+        """
         self.repo.ensure()
         messages = list(history)
-        tools = REPO_TOOLS + [WEB_SEARCH_TOOL]
+        tools = list(REPO_TOOLS if allow_writes else READ_TOOLS) + [WEB_SEARCH_TOOL]
         system = self.system_prompt()
 
         resumes = 0
@@ -231,7 +240,7 @@ class Marty:
                 max_tokens=MAX_TOKENS,
                 system=system,
                 thinking={"type": "adaptive"},
-                output_config={"effort": EFFORT},
+                output_config={"effort": effort or EFFORT},
                 tools=tools,
                 messages=messages,
             )
@@ -275,9 +284,38 @@ class Marty:
 
         return reply or "(I got stuck on that one — try asking again.)", messages
 
+    def capture(self, history: list[dict]) -> str | None:
+        """Second pass, after the reply is sent. Records anything durable.
+
+        Runs at low effort — deciding what to file is mechanical next to deciding
+        what to think. Brian is not waiting on this.
+        """
+        self._commit_messages = []
+        prompt = (
+            "You have already replied to that message — it has been sent. Now record "
+            "anything durable from the exchange, following the capture rules in your "
+            "instructions.\n\n"
+            "Read the file before you rewrite it, and write it back whole.\n\n"
+            "If nothing in that exchange was a durable fact, a decision, or a change "
+            "that makes a strategy document wrong, then do nothing at all and reply "
+            "with exactly: NOTHING TO LOG.\n\n"
+            "Do not log chatter, questions, or your own reasoning. Only what Brian or "
+            "Patrick stated, what got decided, and what that breaks."
+        )
+        try:
+            _, _ = self.respond(
+                list(history) + [{"role": "user", "content": prompt}],
+                allow_writes=True,
+                effort="low",
+            )
+        except Exception as exc:  # noqa: BLE001
+            log.exception("capture pass failed")
+            return f"FAILED: {type(exc).__name__}: {exc}"
+        return self.publish()
+
     def publish(self) -> str | None:
         """Push whatever this turn staged. Called after the reply goes out."""
-        messages = getattr(self, "_commit_messages", [])
+        messages = getattr(self, "_commit_messages", None) or []
         if not messages:
             return None
         try:

@@ -113,6 +113,7 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
     history = threads.get(convo_key)
     history.append({"role": "user", "content": body})
 
+    updated: list[dict] = []
     try:
         reply, updated = marty.respond(history, on_tool=note)
         threads.set(convo_key, updated)
@@ -125,14 +126,30 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
     for part in parts[1:]:
         client.chat_postMessage(channel=channel, thread_ts=reply_ts, text=part)
 
-    # Push after answering, so git never sits between a question and its reply.
-    pushed = marty.publish()
-    if pushed:
-        client.chat_postMessage(
-            channel=channel, thread_ts=reply_ts,
-            text=("_pushed " + pushed + "_") if not pushed.startswith("FAILED")
-                 else ":warning: couldn't push — " + pushed,
-        )
+    # Capture runs after the answer is on screen, off the critical path.
+    if not updated:
+        return
+    threading.Thread(
+        target=run_capture, args=(client, channel, reply_ts, updated), daemon=True
+    ).start()
+
+
+def run_capture(client, channel: str, reply_ts: str | None, history: list[dict]) -> None:
+    """Record anything durable from the exchange. Silent when there's nothing."""
+    try:
+        pushed = marty.capture(history)
+    except Exception as exc:  # noqa: BLE001
+        log.exception("capture failed")
+        pushed = f"FAILED: {type(exc).__name__}: {exc}"
+
+    if not pushed:
+        return
+    text = (f":warning: couldn't save that to the repo — {pushed}"
+            if pushed.startswith("FAILED") else f"_filed {pushed}_")
+    try:
+        client.chat_postMessage(channel=channel, thread_ts=reply_ts, text=text)
+    except Exception:  # noqa: BLE001
+        log.warning("could not post capture confirmation")
 
 
 # --- Slack events ------------------------------------------------------------
@@ -199,7 +216,7 @@ def post_morning_brief() -> None:
         "itself — nothing else, no preamble about having done it."
     )
     try:
-        reply, _ = marty.respond([{"role": "user", "content": prompt}])
+        reply, _ = marty.respond([{"role": "user", "content": prompt}], allow_writes=True)
     except Exception as exc:  # noqa: BLE001
         log.exception("brief failed")
         reply = f"Brief failed: `{type(exc).__name__}: {exc}`"
@@ -252,6 +269,15 @@ def main() -> None:
     global BOT_USER_ID
     repo.ensure()
     log.info("repo ready at %s", repo.dir)
+
+    problem = repo.verify_push_access()
+    if problem:
+        log.error("=" * 72)
+        log.error("WRITE ACCESS PROBLEM: %s", problem)
+        log.error("Marty will answer questions but cannot record anything.")
+        log.error("=" * 72)
+    else:
+        log.info("github write access confirmed for %s", repo.slug)
 
     BOT_USER_ID = app.client.auth_test()["user_id"]
     log.info("connected to Slack as %s", BOT_USER_ID)

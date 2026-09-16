@@ -1,10 +1,13 @@
 """The strategy repo, as a working copy Marty can read and commit to."""
 from __future__ import annotations
 
+import json
 import logging
 import os
 import subprocess
 import threading
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 log = logging.getLogger("marty.repo")
@@ -101,6 +104,41 @@ class Repo:
                     self._git("reset", "--hard", f"origin/{self.branch}")
                 except RuntimeError as exc:
                     log.warning("pull failed, continuing on local copy: %s", self._scrub(str(exc)))
+
+    def verify_push_access(self) -> str:
+        """Check the token can actually write, at boot rather than at first write.
+
+        A public repo clones fine with a bad token, so the clone succeeding proves
+        nothing. This asks GitHub directly.
+        """
+        req = urllib.request.Request(
+            f"https://api.github.com/repos/{self.slug}",
+            headers={
+                "Authorization": f"Bearer {self._token}",
+                "Accept": "application/vnd.github+json",
+                "User-Agent": "marty-cmo",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                info = json.load(resp)
+        except urllib.error.HTTPError as exc:
+            if exc.code == 401:
+                return ("GITHUB_TOKEN is invalid or expired — Marty can read this public "
+                        "repo but cannot commit anything.")
+            if exc.code == 404:
+                return (f"GITHUB_TOKEN cannot see {self.slug}. For a fine-grained token, "
+                        "check it grants access to this specific repository.")
+            return f"GitHub returned {exc.code} checking repo access."
+        except Exception as exc:  # noqa: BLE001 — never block boot on this
+            log.warning("could not verify push access: %s", exc)
+            return ""
+
+        if not info.get("permissions", {}).get("push"):
+            return (f"GITHUB_TOKEN can read {self.slug} but not write to it. A "
+                    "fine-grained token needs Repository permissions → Contents → "
+                    "Read and write.")
+        return ""
 
     # -- reads ------------------------------------------------------------
 
