@@ -1,0 +1,634 @@
+<title>Marty's Press Sheet</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+  :root {
+    --paper:      #E7E9E3;
+    --paper-2:    #F2F3EF;
+    --paper-sunk: #DCDFD7;
+    --ink:        #1A1C19;
+    --ink-soft:   #5C6159;
+    --ink-faint:  #8B9086;
+    --rule:       #C6CABF;
+    --blue:       #1B4FD8;
+    --ochre:      #B57D0E;
+    --press-green:#3D7A39;
+    --red:        #AF3526;
+    --hatch:      rgba(26,28,25,.07);
+
+    --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --f-body:    "Newsreader", Georgia, "Times New Roman", serif;
+    --f-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --gut: clamp(16px, 4vw, 40px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #16171A;
+      --paper-2:    #1E2024;
+      --paper-sunk: #101114;
+      --ink:        #E8EAE4;
+      --ink-soft:   #A0A69B;
+      --ink-faint:  #6B7168;
+      --rule:       #33363B;
+      --blue:       #7E9BFF;
+      --ochre:      #E0AC48;
+      --press-green:#6FB169;
+      --red:        #E0705F;
+      --hatch:      rgba(232,234,228,.06);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:      #16171A;
+    --paper-2:    #1E2024;
+    --paper-sunk: #101114;
+    --ink:        #E8EAE4;
+    --ink-soft:   #A0A69B;
+    --ink-faint:  #6B7168;
+    --rule:       #33363B;
+    --blue:       #7E9BFF;
+    --ochre:      #E0AC48;
+    --press-green:#6FB169;
+    --red:        #E0705F;
+    --hatch:      rgba(232,234,228,.06);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .sheet { max-width: 1080px; margin: 0 auto; padding-inline: var(--gut); padding-block: 0 72px; }
+
+  /* --- ink density strip: the color bar down the edge of a press sheet --- */
+  .colorbar { display: flex; height: 10px; gap: 2px; margin-block: 0 0; }
+  .colorbar i { flex: 1; display: block; }
+
+  /* --- masthead --- */
+  header { border-bottom: 2px solid var(--ink); padding-block: 28px 14px; position: relative; }
+  .eyebrow {
+    font-family: var(--f-mono); font-size: 11px; font-weight: 600;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  h1 {
+    font-family: var(--f-display); font-weight: 800; font-size: clamp(30px, 7vw, 54px);
+    line-height: .95; letter-spacing: -.02em; margin: 10px 0 12px; text-wrap: balance;
+  }
+  .standfirst { font-size: 17px; color: var(--ink-soft); max-width: 60ch; margin: 0 0 16px; }
+  .slugline {
+    display: flex; flex-wrap: wrap; gap: 6px 22px;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--ink-faint); padding-bottom: 6px;
+  }
+  .slugline b { color: var(--ink); font-weight: 600; }
+  .regmark { position: absolute; top: 24px; right: 0; opacity: .55; }
+
+  /* --- headline gap callout --- */
+  .gap {
+    display: grid; grid-template-columns: auto 1fr; gap: 0 26px; align-items: center;
+    border-bottom: 1px solid var(--rule); padding-block: 26px;
+  }
+  .gap-fig {
+    font-family: var(--f-display); font-weight: 800; font-size: clamp(52px, 13vw, 96px);
+    line-height: .85; letter-spacing: -.03em; color: var(--blue);
+    font-variant-numeric: tabular-nums;
+  }
+  .gap-fig small { display: block; font-size: .3em; letter-spacing: .1em; color: var(--ink-soft); text-transform: uppercase; font-family: var(--f-mono); margin-top: 10px; }
+  .gap p { margin: 0; max-width: 52ch; font-size: 16px; }
+  @media (max-width: 560px) { .gap { grid-template-columns: 1fr; gap: 14px; } }
+
+  /* --- sections --- */
+  section { padding-block: 34px 6px; }
+  h2 {
+    font-family: var(--f-mono); font-size: 11px; font-weight: 600; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--ink-soft); margin: 0 0 4px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .sec-note { font-size: 15px; color: var(--ink-soft); margin: 0 0 18px; max-width: 62ch; }
+
+  /* --- metric plate --- */
+  .plate { display: grid; grid-template-columns: repeat(var(--cols, 4), 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+  @media (max-width: 860px) { .plate { --cols: 2 !important; } }
+  @media (max-width: 460px) { .plate { --cols: 1 !important; } }
+  .cell { background: var(--paper-2); padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 7px; min-height: 132px; }
+  .cell.dead { background: var(--paper-sunk); background-image: repeating-linear-gradient(135deg, transparent 0 7px, var(--hatch) 7px 8px); }
+  .k {
+    font-family: var(--f-mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  .v {
+    font-family: var(--f-display); font-weight: 700; font-size: 34px; line-height: 1;
+    letter-spacing: -.02em; font-variant-numeric: tabular-nums;
+  }
+  .v.none { color: var(--ink-faint); font-weight: 500; }
+  .m { font-size: 13.5px; line-height: 1.35; color: var(--ink-soft); margin-top: auto; }
+  .m b { color: var(--ink); font-weight: 500; }
+  .tag {
+    font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ochre); font-weight: 600;
+  }
+
+  /* --- channel ledger --- */
+  .ledger { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .ledger th {
+    font-family: var(--f-mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-soft); text-align: left;
+    padding: 0 14px 8px 0; border-bottom: 1px solid var(--ink); white-space: nowrap;
+  }
+  .ledger td { padding: 13px 14px 13px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .ledger td:first-child { font-family: var(--f-display); font-weight: 700; font-size: 16px; white-space: nowrap; }
+  .ledger td:last-child, .ledger th:last-child { padding-right: 0; }
+  .num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; color: var(--ink-faint); }
+  .why { color: var(--ink-soft); font-size: 14px; }
+  .scroll { overflow-x: auto; }
+  .pill {
+    display: inline-block; font-family: var(--f-mono); font-size: 10px; font-weight: 600;
+    letter-spacing: .09em; text-transform: uppercase; padding: 3px 8px 2px;
+    border: 1px solid currentColor; white-space: nowrap;
+  }
+  .pill.core { color: var(--blue); }
+  .pill.test { color: var(--ochre); }
+  .pill.off  { color: var(--ink-faint); }
+  .pill.live { color: var(--press-green); }
+
+  /* --- blockers --- */
+  ol.block { list-style: none; counter-reset: b; margin: 0; padding: 0; }
+  ol.block li {
+    counter-increment: b; display: grid; grid-template-columns: 2.4em 1fr; gap: 0 14px;
+    padding: 15px 0; border-bottom: 1px solid var(--rule);
+  }
+  ol.block li::before {
+    content: counter(b, decimal-leading-zero);
+    font-family: var(--f-mono); font-size: 12px; font-weight: 600; color: var(--red);
+    padding-top: 4px;
+  }
+  ol.block h3 { font-family: var(--f-display); font-weight: 700; font-size: 17px; margin: 0 0 3px; }
+  ol.block p { margin: 0; font-size: 15px; color: var(--ink-soft); max-width: 60ch; }
+  .who { font-family: var(--f-mono); font-size: 10px; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-faint); }
+
+  footer {
+    margin-top: 44px; padding-top: 18px; border-top: 2px solid var(--ink);
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .05em;
+    color: var(--ink-faint); display: flex; flex-wrap: wrap; gap: 6px 24px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .cell, .ledger tr { transition: background-color .15s ease; }
+  }
+</style>
+
+<div class="colorbar" aria-hidden="true">
+  <i style="background:#1B4FD8"></i><i style="background:#B57D0E"></i><i style="background:#AF3526"></i>
+  <i style="background:#3D7A39"></i><i style="background:#1A1C19"></i><i style="background:#8B9086"></i>
+  <i style="background:#C6CABF"></i>
+</div>
+
+<div class="sheet">
+  <header>
+    <svg class="regmark" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+      <circle cx="15" cy="15" r="8.5" fill="none" stroke="currentColor" stroke-width="1"></circle>
+      <path d="M15 0v30M0 15h30" stroke="currentColor" stroke-width="1" fill="none"></path>
+    </svg>
+    <div class="eyebrow">Marketing dashboard &middot; owned by Marty, CMO</div>
+    <h1>Marty's Press Sheet</h1>
+    <p class="standfirst">Every number this business will run on, and the honest state of each one. Nothing here is estimated, projected, or rounded up from a guess.</p>
+    <div class="slugline">
+      <span>As of <b id="asof">2026-09-16</b></span>
+      <span>Stage <b id="stage">pre-launch</b></span>
+      <span>Spend to date <b>$0</b></span>
+      <span>Subscribers <b>not yet</b></span>
+    </div>
+  </header>
+
+  <div class="gap">
+    <div class="gap-fig"><span id="live-count">0</span>/<span id="total-count">24</span><small>Metrics instrumented</small></div>
+    <p>The dashboard is empty because the business hasn't launched, and an empty dashboard is the correct output. The work right now isn't reading numbers &mdash; it's building the plumbing that produces them before the first customer arrives, because none of it can be back-filled afterward.</p>
+  </div>
+
+  <section>
+    <h2>Funnel</h2>
+    <p class="sec-note">From a stranger to an email address to a paying subscriber. The waitlist target is the only number on this page with a date attached.</p>
+    <div class="plate" id="plate-funnel" style="--cols:3"></div>
+  </section>
+
+  <section>
+    <h2>Acquisition</h2>
+    <p class="sec-note">Category CAC runs about $72. Whether we can live with that depends entirely on a price nobody has set yet.</p>
+    <div class="plate" id="plate-acquisition" style="--cols:4"></div>
+  </section>
+
+  <section>
+    <h2>Revenue</h2>
+    <p class="sec-note">Gross margin counts Patrick's studio hours at a real rate. A margin that only works because the founder's labour is free isn't a margin.</p>
+    <div class="plate" id="plate-revenue" style="--cols:3"></div>
+  </section>
+
+  <section>
+    <h2>Retention</h2>
+    <p class="sec-note">At 8% monthly churn the average subscriber lasts 12.5 months. At 4%, 25. That single number is worth more than every channel decision combined.</p>
+    <div class="plate" id="plate-retention" style="--cols:4"></div>
+  </section>
+
+  <section>
+    <h2>Channels</h2>
+    <p class="sec-note">Three deep, not fifteen shallow. Every channel carries a kill criterion before it carries a budget.</p>
+    <div class="scroll">
+      <table class="ledger">
+        <thead><tr><th>Channel</th><th>Status</th><th>Reach</th><th>Signups</th><th>Spend</th><th>Kill criterion</th></tr></thead>
+        <tbody id="channel-rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>What's blocking the numbers</h2>
+    <p class="sec-note">In order. Each one gates measurement, not just marketing.</p>
+    <ol class="block">
+      <li><div><h3>No price point</h3><p>Decides whether paid acquisition is viable at all, and sets the ceiling on CAC. Below roughly $25/month the paid math almost certainly never clears. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>No storefront, so no analytics</h3><p>Visits, checkout starts, and completion rate don't exist until something is live to measure. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>No "how did you hear about us?" at checkout</h3><p>Platform-reported attribution is directional at best at our size. One free-text question at checkout will be the most reliable acquisition data we ever get &mdash; and it has to exist before the first order. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>No tracked links on physical tactics</h3><p>A coaster drop without a unique short link teaches us nothing. Every guerrilla tactic needs its own URL or QR before a single unit is printed. <span class="who">Marty</span></p></div></li>
+      <li><div><h3>No dunning or cancel survey</h3><p>Involuntary churn is a quarter to a third of all churn and is pure engineering. The cancel survey is the only qualitative research we get for free. Both are launch requirements. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>No studio capacity number</h3><p>How many bundles Patrick can make per month is the growth ceiling. Marketing past it damages the brand faster than slow growth does. <span class="who">Patrick</span></p></div></li>
+    </ol>
+  </section>
+
+  <footer>
+    <span>Source of truth: data/metrics.json</span>
+    <span>Schema: data/metrics-schema.md</span>
+    <span>Null means not measured, never zero</span>
+    <span id="foot-updated">Updated 2026-09-16 by Marty</span>
+  </footer>
+</div>
+
+<script id="metrics-data" type="application/json">
+{
+  "meta": {
+    "as_of": "2026-09-16",
+    "updated_by": "marty",
+    "stage": "pre-launch",
+    "note": "Every value is null because nothing has been instrumented yet. Null means 'not measured'. It never means zero. Nothing enters this file without a source and a date."
+  },
+  "north_star": {
+    "id": "active_subscribers",
+    "label": "Active subscribers",
+    "value": null,
+    "target": null,
+    "source": null,
+    "note": "Target set once price and studio capacity are known."
+  },
+  "funnel": {
+    "site_visits": {
+      "value": null,
+      "period": "monthly",
+      "source": null
+    },
+    "unique_visitors": {
+      "value": null,
+      "period": "monthly",
+      "source": null
+    },
+    "waitlist_signups": {
+      "value": null,
+      "period": "cumulative",
+      "target": 500,
+      "source": null
+    },
+    "visit_to_signup_rate": {
+      "value": null,
+      "unit": "percent",
+      "benchmark": 3.0,
+      "source": null
+    },
+    "signup_to_subscriber_rate": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    },
+    "checkout_start": {
+      "value": null,
+      "period": "monthly",
+      "source": null
+    },
+    "checkout_completion_rate": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    }
+  },
+  "acquisition": {
+    "new_subscribers": {
+      "value": null,
+      "period": "monthly",
+      "source": null
+    },
+    "cac_blended": {
+      "value": null,
+      "unit": "usd",
+      "benchmark": 72,
+      "source": null
+    },
+    "cac_paid": {
+      "value": null,
+      "unit": "usd",
+      "source": null
+    },
+    "cac_organic": {
+      "value": null,
+      "unit": "usd",
+      "source": null
+    },
+    "marketing_spend": {
+      "value": 0,
+      "unit": "usd",
+      "period": "cumulative",
+      "source": "No spend to date. See marketing/paid-media.md.",
+      "as_of": "2026-09-16"
+    }
+  },
+  "revenue": {
+    "mrr": {
+      "value": null,
+      "unit": "usd",
+      "source": null
+    },
+    "arpu": {
+      "value": null,
+      "unit": "usd",
+      "source": null
+    },
+    "price_point": {
+      "value": null,
+      "unit": "usd",
+      "source": "Not yet decided. company/open-questions.md #2."
+    },
+    "gross_margin": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    },
+    "ltv": {
+      "value": null,
+      "unit": "usd",
+      "source": null
+    },
+    "ltv_cac_ratio": {
+      "value": null,
+      "benchmark": 3.0,
+      "source": null
+    }
+  },
+  "retention": {
+    "monthly_churn": {
+      "value": null,
+      "unit": "percent",
+      "target": 5.0,
+      "benchmark": 8.0,
+      "source": null
+    },
+    "voluntary_churn": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    },
+    "involuntary_churn": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    },
+    "month_2_retention": {
+      "value": null,
+      "unit": "percent",
+      "target": 85.0,
+      "source": null
+    },
+    "month_6_retention": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    },
+    "avg_subscriber_lifetime_months": {
+      "value": null,
+      "source": null
+    },
+    "pause_rate": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    },
+    "gift_conversion_at_expiry": {
+      "value": null,
+      "unit": "percent",
+      "source": null
+    }
+  },
+  "channels": [
+    {
+      "name": "Instagram",
+      "status": "not_live",
+      "followers": null,
+      "engagement_rate": null,
+      "signups_attributed": null,
+      "spend": 0,
+      "source": null
+    },
+    {
+      "name": "Pinterest",
+      "status": "not_live",
+      "monthly_impressions": null,
+      "outbound_clicks": null,
+      "signups_attributed": null,
+      "spend": 0,
+      "source": null
+    },
+    {
+      "name": "Email",
+      "status": "not_live",
+      "list_size": null,
+      "open_rate": null,
+      "click_rate": null,
+      "signups_attributed": null,
+      "spend": 0,
+      "source": null
+    },
+    {
+      "name": "Physical / guerrilla",
+      "status": "not_live",
+      "units_distributed": null,
+      "scans": null,
+      "signups_attributed": null,
+      "spend": 0,
+      "source": null
+    },
+    {
+      "name": "TikTok",
+      "status": "not_live",
+      "followers": null,
+      "views": null,
+      "signups_attributed": null,
+      "spend": 0,
+      "source": null
+    },
+    {
+      "name": "Reddit",
+      "status": "not_live",
+      "signups_attributed": null,
+      "spend": 0,
+      "source": null
+    },
+    {
+      "name": "Paid social",
+      "status": "off",
+      "impressions": null,
+      "cpa": null,
+      "signups_attributed": null,
+      "spend": 0,
+      "source": "Gated. See marketing/paid-media.md."
+    }
+  ],
+  "cohorts": [],
+  "history": []
+}
+</script>
+<script>
+(function () {
+  var DATA = {};
+  try { DATA = JSON.parse(document.getElementById("metrics-data").textContent); } catch (e) { DATA = {}; }
+
+  var fmt = {
+    usd: function (v) { return "$" + Number(v).toLocaleString("en-US"); },
+    percent: function (v) { return v + "%"; },
+    plain: function (v) { return Number(v).toLocaleString("en-US"); }
+  };
+
+  // label, path, how-we-get-it note
+  var SPEC = {
+    funnel: [
+      ["Site visits", "funnel.site_visits", "Needs a live storefront with analytics."],
+      ["Unique visitors", "funnel.unique_visitors", "Needs a live storefront with analytics."],
+      ["Waitlist signups", "funnel.waitlist_signups", "Before we charge anyone. It is the whole launch mechanism."],
+      ["Visit → signup", "funnel.visit_to_signup_rate", "3% on cold traffic is the gate for turning paid on."],
+      ["Signup → subscriber", "funnel.signup_to_subscriber_rate", "Measured once at launch. The whole waitlist bet."],
+      ["Checkout completion", "funnel.checkout_completion_rate", "Storefront. Watch it from order one."]
+    ],
+    acquisition: [
+      ["New subscribers", "acquisition.new_subscribers", "Monthly, first-time payers only."],
+      ["CAC, blended", "acquisition.cac_blended", "All spend ÷ all new subscribers."],
+      ["CAC, paid", "acquisition.cac_paid", "No paid running. Gated behind four conditions."],
+      ["Marketing spend", "acquisition.marketing_spend", "Cash out the door, guerrilla printing included."]
+    ],
+    revenue: [
+      ["MRR", "revenue.mrr", "Subscribers × ARPU."],
+      ["Price point", "revenue.price_point", "Not set. Blocks most of this page."],
+      ["ARPU", "revenue.arpu", "Net of discounts, which we don't intend to run."],
+      ["Gross margin", "revenue.gross_margin", "After COGS, postage, and Patrick's hours at a real rate."],
+      ["LTV", "revenue.ltv", "ARPU × margin ÷ churn."],
+      ["LTV : CAC", "revenue.ltv_cac_ratio", "Below 3:1 means the model doesn't work."]
+    ],
+    retention: [
+      ["Monthly churn", "retention.monthly_churn", "By month 6. Category average is 8%."],
+      ["Month-2 retention", "retention.month_2_retention", "The most predictive number we will have."],
+      ["Month-6 retention", "retention.month_6_retention", "Where a wall-space ceiling would show up."],
+      ["Involuntary churn", "retention.involuntary_churn", "Failed cards. Pure engineering — dunning fixes it."],
+      ["Pause rate", "retention.pause_rate", "Higher is good. A pause is a retained customer."],
+      ["Subscriber lifetime", "retention.avg_subscriber_lifetime_months", "1 ÷ monthly churn, in months."],
+      ["Gift → self-pay", "retention.gift_conversion_at_expiry", "Free money if gifting ships before Q4."],
+      ["Active subscribers", "north_star.value", "The north star. Paused subscribers counted separately."]
+    ]
+  };
+
+  function dig(path) {
+    return path.split(".").reduce(function (o, k) { return (o && o[k] !== undefined) ? o[k] : undefined; }, DATA);
+  }
+
+  var live = 0, total = 0;
+
+  function render(group) {
+    var host = document.getElementById("plate-" + group);
+    if (!host) { return; }
+    SPEC[group].forEach(function (row) {
+      var label = row[0], node = dig(row[1]), note = row[2];
+      var isLeaf = (node !== undefined) && (typeof node !== "object" || node === null);
+      var val = isLeaf ? node : (node && node.value !== undefined ? node.value : null);
+      var unit = (node && node.unit) || null;
+      var target = (node && node.target !== undefined) ? node.target : null;
+      var bench = (node && node.benchmark !== undefined) ? node.benchmark : null;
+
+      total++;
+      var has = val !== null && val !== undefined;
+      if (has) { live++; }
+
+      var shown = "not measured";
+      if (has) {
+        shown = unit === "usd" ? fmt.usd(val) : unit === "percent" ? fmt.percent(val) : fmt.plain(val);
+      }
+
+      var sub = note;
+      if (target !== null) { sub = "<b>Target " + (unit === "percent" ? target + "%" : fmt.plain(target)) + ".</b> " + note; }
+      else if (bench !== null) {
+        var b = unit === "usd" ? fmt.usd(bench)
+              : unit === "percent" ? bench + "%"
+              : label.indexOf(":") > -1 ? bench + ":1"
+              : bench;
+        sub = "<b>Benchmark " + b + ".</b> " + note;
+      }
+
+      var cell = document.createElement("div");
+      cell.className = "cell" + (has ? "" : " dead");
+      cell.innerHTML =
+        '<div class="k">' + label + "</div>" +
+        '<div class="v' + (has ? "" : " none") + '">' + (has ? shown : "&mdash;") + "</div>" +
+        '<div class="m">' + sub + "</div>";
+      host.appendChild(cell);
+    });
+  }
+
+  ["funnel", "acquisition", "revenue", "retention"].forEach(render);
+
+  var KILL = {
+    "Instagram": ["core", "Day 90: under 500 followers or under 2% engagement → cut to one post a week."],
+    "Pinterest": ["core", "Day 120: under 5,000 monthly impressions with correct keywording → deprioritise, never kill."],
+    "Email": ["core", "None. Email doesn't get killed."],
+    "Physical / guerrilla": ["core", "Per tactic, 45–90 days, measured by unique short link."],
+    "TikTok": ["test", "Day 90: no video past 20k views → stop cross-posting."],
+    "Reddit": ["test", "Immediately, on any moderator warning."],
+    "Paid social": ["off", "Cost per email over $5 → kill at day 7, don't restart."]
+  };
+
+  function reachOf(c) {
+    var keys = ["followers", "monthly_impressions", "list_size", "units_distributed", "views", "impressions"];
+    for (var i = 0; i < keys.length; i++) {
+      if (c[keys[i]] !== undefined && c[keys[i]] !== null) { return fmt.plain(c[keys[i]]); }
+    }
+    return "—";
+  }
+
+  var tbody = document.getElementById("channel-rows");
+  (DATA.channels || []).forEach(function (c) {
+    var meta = KILL[c.name] || ["off", "—"];
+    var status = c.status === "live" ? "live" : meta[0];
+    var statusLabel = c.status === "not_live" ? meta[0] === "core" ? "Core · not live" : "Test · not live"
+                    : c.status === "off" ? "Off" : c.status;
+    var tr = document.createElement("tr");
+    tr.innerHTML =
+      "<td>" + c.name + "</td>" +
+      '<td><span class="pill ' + status + '">' + statusLabel + "</span></td>" +
+      '<td class="num">' + reachOf(c) + "</td>" +
+      '<td class="num">' + (c.signups_attributed === null || c.signups_attributed === undefined ? "—" : fmt.plain(c.signups_attributed)) + "</td>" +
+      '<td class="num">' + fmt.usd(c.spend || 0) + "</td>" +
+      '<td class="why">' + meta[1] + "</td>";
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById("live-count").textContent = live;
+  document.getElementById("total-count").textContent = total;
+  if (DATA.meta) {
+    document.getElementById("asof").textContent = DATA.meta.as_of || "—";
+    document.getElementById("stage").textContent = (DATA.meta.stage || "—").replace(/-/g, " ");
+    document.getElementById("foot-updated").textContent = "Updated " + (DATA.meta.as_of || "—") + " by " + (DATA.meta.updated_by || "marty");
+  }
+})();
+</script>

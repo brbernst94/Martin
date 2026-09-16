@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "as_of": "2026-09-16",
+    "updated_by": "marty",
+    "stage": "pre-launch",
+    "note": "Every value is null because nothing has been instrumented yet. Null means 'not measured'. It never means zero. Nothing enters this file without a source and a date."
+  },
+  "north_star": {
+    "id": "active_subscribers",
+    "label": "Active subscribers",
+    "value": null,
+    "target": null,
+    "source": null,
+    "note": "Target set once price and studio capacity are known."
+  },
+  "funnel": {
+    "site_visits": { "value": null, "period": "monthly", "source": null },
+    "unique_visitors": { "value": null, "period": "monthly", "source": null },
+    "waitlist_signups": { "value": null, "period": "cumulative", "target": 500, "source": null },
+    "visit_to_signup_rate": { "value": null, "unit": "percent", "benchmark": 3.0, "source": null },
+    "signup_to_subscriber_rate": { "value": null, "unit": "percent", "source": null },
+    "checkout_start": { "value": null, "period": "monthly", "source": null },
+    "checkout_completion_rate": { "value": null, "unit": "percent", "source": null }
+  },
+  "acquisition": {
+    "new_subscribers": { "value": null, "period": "monthly", "source": null },
+    "cac_blended": { "value": null, "unit": "usd", "benchmark": 72, "source": null },
+    "cac_paid": { "value": null, "unit": "usd", "source": null },
+    "cac_organic": { "value": null, "unit": "usd", "source": null },
+    "marketing_spend": { "value": 0, "unit": "usd", "period": "cumulative", "source": "No spend to date. See marketing/paid-media.md.", "as_of": "2026-09-16" }
+  },
+  "revenue": {
+    "mrr": { "value": null, "unit": "usd", "source": null },
+    "arpu": { "value": null, "unit": "usd", "source": null },
+    "price_point": { "value": null, "unit": "usd", "source": "Not yet decided. company/open-questions.md #2." },
+    "gross_margin": { "value": null, "unit": "percent", "source": null },
+    "ltv": { "value": null, "unit": "usd", "source": null },
+    "ltv_cac_ratio": { "value": null, "benchmark": 3.0, "source": null }
+  },
+  "retention": {
+    "monthly_churn": { "value": null, "unit": "percent", "target": 5.0, "benchmark": 8.0, "source": null },
+    "voluntary_churn": { "value": null, "unit": "percent", "source": null },
+    "involuntary_churn": { "value": null, "unit": "percent", "source": null },
+    "month_2_retention": { "value": null, "unit": "percent", "target": 85.0, "source": null },
+    "month_6_retention": { "value": null, "unit": "percent", "source": null },
+    "avg_subscriber_lifetime_months": { "value": null, "source": null },
+    "pause_rate": { "value": null, "unit": "percent", "source": null },
+    "gift_conversion_at_expiry": { "value": null, "unit": "percent", "source": null }
+  },
+  "channels": [
+    { "name": "Instagram", "status": "not_live", "followers": null, "engagement_rate": null, "signups_attributed": null, "spend": 0, "source": null },
+    { "name": "Pinterest", "status": "not_live", "monthly_impressions": null, "outbound_clicks": null, "signups_attributed": null, "spend": 0, "source": null },
+    { "name": "Email", "status": "not_live", "list_size": null, "open_rate": null, "click_rate": null, "signups_attributed": null, "spend": 0, "source": null },
+    { "name": "Physical / guerrilla", "status": "not_live", "units_distributed": null, "scans": null, "signups_attributed": null, "spend": 0, "source": null },
+    { "name": "TikTok", "status": "not_live", "followers": null, "views": null, "signups_attributed": null, "spend": 0, "source": null },
+    { "name": "Reddit", "status": "not_live", "signups_attributed": null, "spend": 0, "source": null },
+    { "name": "Paid social", "status": "off", "impressions": null, "cpa": null, "signups_attributed": null, "spend": 0, "source": "Gated. See marketing/paid-media.md." }
+  ],
+  "cohorts": [],
+  "history": []
+}
