@@ -71,10 +71,17 @@ Set every one of these in Railway → Variables (`.env.example` is the template)
 Marty can spend your Anthropic credits and commit to the repo. Find a user ID in
 Slack: profile → ⋮ → Copy member ID.
 
-### Volume
+### Volume (optional)
 
-Railway → **Volumes** → add one mounted at `/data`. Without it Marty re-clones
-the repo on every restart — it works, it's just slower and burns GitHub calls.
+Railway → project canvas → **Cmd+K → "volume"**, or right-click the empty canvas.
+It's a canvas-level object, not a service setting, which is why it's hard to
+find — and it needs a Hobby plan or above.
+
+**Skip it if it's in the way.** Without a volume `/data` is ordinary ephemeral
+container disk: everything works, Marty just re-clones the repo when the
+container restarts. The repo is a few hundred KB, so that's about two seconds
+at boot. If `REPO_DIR` turns out to be genuinely unwritable the service falls
+back to `/tmp` rather than crash-looping.
 
 ## 4. Turning the morning brief on
 

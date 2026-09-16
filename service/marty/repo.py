@@ -19,9 +19,30 @@ FORBIDDEN_PREFIXES = (".git/", ".github/workflows/", "service/.env")
 _lock = threading.Lock()
 
 
+def _writable_dir(preferred: str) -> Path:
+    """Use REPO_DIR when we can write there, otherwise fall back to /tmp.
+
+    Railway volumes need a paid plan and are easy to miss in the UI. A missing
+    volume should cost a re-clone at boot, not a crash loop.
+    """
+    path = Path(preferred)
+    try:
+        path.mkdir(parents=True, exist_ok=True)
+        probe = path / ".write-test"
+        probe.touch()
+        probe.unlink()
+        return path
+    except OSError:
+        fallback = Path("/tmp/marty-repo")
+        log.warning("%s is not writable — falling back to %s (repo re-clones on restart)",
+                    preferred, fallback)
+        fallback.mkdir(parents=True, exist_ok=True)
+        return fallback
+
+
 class Repo:
     def __init__(self) -> None:
-        self.dir = Path(os.environ.get("REPO_DIR", "/data/repo"))
+        self.dir = _writable_dir(os.environ.get("REPO_DIR", "/data/repo"))
         self.slug = os.environ["GITHUB_REPO"]
         self.branch = os.environ.get("GITHUB_BRANCH", "main")
         self._token = os.environ["GITHUB_TOKEN"]
