@@ -24,6 +24,10 @@ company/          Who we are. Read this first — everything else assumes it.
   brand.md            Positioning, voice, naming, visual guardrails
   icp.md              Who buys this, and why
   open-questions.md   Decisions Marty needs from Brian or Patrick
+  knowledge.md        Facts Brian and Patrick have stated, dated and attributed
+  decisions.md        Every call, and why
+  naming.md           The name, and why the others lost
+  glossary.md         Plain-English definitions of every term in this repo
 marketing/
   strategy.md         The living master strategy. The one doc to read.
   channels.md         Per-channel plan, owner, cadence, kill criteria
