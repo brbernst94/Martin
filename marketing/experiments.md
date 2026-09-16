@@ -25,16 +25,19 @@ date → it doesn't run.*
   per signup on our best segment.
 - **Cost:** ~$400 print, ~6 Brian-hours, ~4 Patrick-hours.
 - **Kill date:** 60 days from first drop.
-- **Blocked by:** a city (open question #4), brand name, short-link tracking.
+- **Blocked by:** brand name, short-link tracking.
 - **Status:** `PROPOSED`
 
-### E-03 · Studio process content, 90 days on Instagram
-- **Bet:** 3 posts/week → 2,000 engaged followers and 300 waitlist signups by day 90.
-- **Cost:** ~1 Patrick-hour/week (filming during work already happening), ~3
-  Marty-hours/week.
+### E-03 · Studio process content, 90 days — one shoot, Instagram + TikTok
+- **Bet:** 3 posts/week on each → 2,000 engaged Instagram followers and 300
+  waitlist signups by day 90.
+- **Cost:** ~1 Patrick-hour/week (filming during work already happening), ~4
+  Marty-hours/week to cut for both platforms.
 - **Kill date:** Day 90. Under 500 followers or under 2% engagement → cut to
   1/week.
-- **Blocked by:** Patrick's willingness to be filmed (open question #6).
+- **Unblocked 2026-09-16:** Brian says Patrick is partial to short form. Format
+  is hands-on-camera — a pull, a failure, or a third-piece reveal — so it does
+  not depend on Patrick being comfortable on camera himself.
 - **Status:** `PROPOSED`
 
 ### E-04 · Pinterest evergreen engine
@@ -54,11 +57,10 @@ date → it doesn't run.*
 - **Status:** `PROPOSED`
 
 ### E-06 · Print-the-city subject selection
-- **Bet:** One hyper-local subject per month; at least one gets reshared by a
-  10k+ local account per quarter.
+- **Bet:** One hyper-local Denver subject per month; at least one gets reshared
+  by a 10k+ local account per quarter.
 - **Cost:** Zero marginal — it's choosing the subject we were printing anyway.
 - **Kill date:** 6 months, if no venue ever reshares.
-- **Blocked by:** a city.
 - **Status:** `PROPOSED`
 
 ### E-07 · Two stickers per bundle, one to give away
@@ -82,18 +84,21 @@ date → it doesn't run.*
 - **Risk:** High downside if done wrong. Patrick posts, never Marty.
 - **Status:** `PROPOSED`
 
-### E-10 · TikTok cross-post
-- **Bet:** Free re-post of Instagram verticals; one video clears 20k views in 90
-  days or the channel isn't for us.
-- **Cost:** ~15 Marty-minutes/week.
-- **Kill date:** Day 90.
+### E-10 · TikTok as a real channel, not a cross-post
+- **Bet:** Same studio footage as E-03, cut looser and native. One video clears
+  20k views and the channel produces 25+ waitlist signups within 90 days.
+- **Cost:** ~0 marginal Patrick-time; ~1 Marty-hour/week editing.
+- **Kill date:** Day 90 (≈ 12/15/26). Miss both thresholds → drop back to pure
+  cross-post and move the editing hour to Pinterest.
+- **Changed 2026-09-16:** was "free re-post, never its own creative budget."
+  Upgraded because Patrick actually wants to make short form, which was the only
+  thing gating it.
 - **Status:** `PROPOSED`
 
 ### E-11 · Bathroom-wall placements in 10 venues
 - **Bet:** 30+ signups/quarter from QR scans.
 - **Cost:** ~$100 prints and frames, Brian's legwork.
 - **Kill date:** 90 days.
-- **Blocked by:** a city.
 - **Status:** `PROPOSED`
 
 ### E-12 · Gift subscriptions live before November
@@ -101,7 +106,6 @@ date → it doesn't run.*
   Prepaid = cash up front and zero involuntary churn.
 - **Cost:** Storefront config, ~6 Brian-hours, a gift-card design from Patrick.
 - **Kill date:** N/A — this is table stakes, it just has a deadline.
-- **Blocked by:** launch date (open question #1).
 - **Status:** `PROPOSED`
 
 ## Killed

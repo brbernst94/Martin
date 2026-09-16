@@ -13,12 +13,34 @@ scarce input), **Compounding** (does today's work still pay in six months),
 | Pinterest | 4 | 1 | 5 | 4 | **Core** |
 | Email | 5 | 2 | 4 | 5 | **Core** |
 | Physical / guerrilla | 5 | 2 | 3 | 4 | **Core** |
-| TikTok | 4 | 3 | 1 | 2 | Test |
+| TikTok | 4 | 1 | 1 | 2 | **Active** (was Test — re-scored 2026-09-16) |
 | Reddit | 5 | 2 | 2 | 3 | Test |
 | Paid social | 3 | 1 | 1 | 3 | Off |
 | Search / SEO | 2 | 4 | 5 | 5 | Off until shop |
 | YouTube | 3 | 5 | 4 | 2 | Off |
 | Markets / craft fairs | 5 | 5 | 1 | 5 | Revisit post-launch |
+
+---
+
+## One brand, one face
+
+There is no separate "Patrick the artist" account and no separate "the brand"
+account. One identity everywhere, with Patrick as the face of it — the Jobs/Apple
+model, and the reason that model works is that there was never a second account.
+Two accounts at zero followers is dividing nothing in half, and it forces a
+"which one does this belong to" decision on every clip, which is what kills
+posting habits. Decision and revisit conditions in `company/decisions.md`.
+
+## Shoot once, cut twice
+
+All short-form comes from the same studio session. One filming pass produces:
+Instagram Reels (home), TikTok cuts (reach, looser and less finished), and
+Pinterest stills. Patrick films during work he's already doing; if it ever
+becomes a separate shoot, it dies.
+
+**The content unit is a pull, a failure, or a third-piece reveal.** Not Patrick
+explaining anything to camera. His hands are the character — face is optional,
+which means none of this is blocked on open question #6.
 
 ---
 
@@ -84,14 +106,25 @@ nobody else in DTC has that.
 
 ---
 
-## Test: TikTok
+## Active: TikTok
 
-**Bet:** The pull video works here too and costs nothing extra — it's the same
-vertical clip as the Reel. Worth 90 days to see if it produces anything.
-**Reality check:** Organic reach on TikTok has matured and commerce intent is
-low relative to Pinterest. Treat as a free re-post, never as a channel with its
-own creative budget.
-**Kill criteria:** Day 90. If no video has cleared 20k views, stop cross-posting.
+*Re-scored 2026-09-16, up from Test. Reason: Brian says Patrick is partial to
+short form and to TikTok specifically. The binding constraint on process video
+was never the platform's reach — it was whether the artist would reliably film.
+That constraint is gone, so the channel is worth real effort.*
+
+**Bet:** Same studio footage as the Reel, cut looser. Nothing there is pretending
+to be finished, and short-form printmaking content travels — the reveal is
+inherently a payoff shot.
+**Reality check that still stands:** commerce intent is low relative to Pinterest
+and a post is dead in 48 hours. TikTok buys reach and top-of-funnel; Instagram is
+where that reach is asked to convert. Bio points to the waitlist, not a shop.
+**Cadence:** 3/week from the same session as Instagram.
+**Owner:** Patrick shoots, Marty cuts and posts.
+**Patrick-hours:** ~0 marginal. This is the whole reason it's worth doing.
+**Kill criteria:** Day 90 (≈ 12/15/26). If no video has cleared 20k views *and*
+TikTok has produced under 25 waitlist signups, drop to pure cross-post and put
+the editing hours into Pinterest.
 
 ## Test: Reddit
 

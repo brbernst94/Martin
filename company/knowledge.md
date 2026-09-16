@@ -46,13 +46,19 @@ in somebody's head or a Slack scrollback.*
 | 2026-09-16 | Brian | **Audience skews internet-native and under 40, but not restrictive of an older age group.** |
 | 2026-09-16 | Patrick | Portfolio at selnerpatrick.myportfolio.com. Projects: Snackcrate, Pollinator Corridor, Sidekicks, The Great Globetrotter, Olio, Counter Culture, Seed And Stone — predominantly food-and-drink brand work. |
 
+## Content and channels
+
+| Date | Who | Fact |
+| --- | --- | --- |
+| 2026-09-16 | Brian | **Patrick is partial to short-form video and specifically to TikTok.** This is the first signal on open question #6 — he's willing to make video, though whether he'll be on camera himself is still unconfirmed. |
+
 ## Still unknown
 
 Things Marty needs and does not have. Mirrors `company/open-questions.md`.
 
 - Patrick's studio minutes per bundle, and monthly capacity ceiling
 - Real bundle weight and verified postage
-- Whether Patrick will appear on camera regularly
+- Whether Patrick will appear on camera himself (hands-only is assumed workable)
 - Marketing budget for months 1–6
 - Edition sizes — open or limited, signed or not
 - Any existing audience: follower counts, list, past customers
