@@ -126,11 +126,22 @@ writes inline.
 ## If Marty can't commit
 
 A **public** repo clones fine with a bad, expired, or read-only token, so a
-successful clone proves nothing about write access. Marty now asks GitHub
-directly at boot and logs a loud block if the token can't write.
+successful clone proves nothing about write access. At boot Marty runs a real
+`git push --dry-run` and logs a loud block naming the problem if it fails.
+
+It has to be a dry-run push specifically. An earlier version asked the REST API
+instead and reported success while git was still being rejected — the API takes
+a Bearer token over `api.github.com`, git takes Basic auth over `github.com`.
+Verifying one tells you nothing about the other. Check the path you actually use.
 
 The fix is almost always a fine-grained token missing **Repository permissions →
-Contents → Read and write**, or one scoped to the wrong repository.
+Contents → Read and write**, or one whose **Repository access** doesn't list this
+repo. A classic token needs the `repo` scope. The boot message reports the token
+type and length, so a stray newline shows up as a wrong length.
+
+Credentials go in an `Authorization: Basic` header passed per-command, never in
+the remote URL — so the token is never written into `.git/config` on the
+volume.
 
 ## How Marty remembers
 

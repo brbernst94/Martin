@@ -1,13 +1,12 @@
 """The strategy repo, as a working copy Marty can read and commit to."""
 from __future__ import annotations
 
+import base64
 import json
 import logging
 import os
 import subprocess
 import threading
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 log = logging.getLogger("marty.repo")
@@ -54,11 +53,19 @@ class Repo:
 
     @property
     def _remote(self) -> str:
-        return f"https://x-access-token:{self._token}@github.com/{self.slug}.git"
+        # No credentials in the URL — they go in an explicit Basic auth header
+        # instead, so nothing is written into .git/config and there is no URL
+        # parsing between us and GitHub.
+        return f"https://github.com/{self.slug}.git"
+
+    @property
+    def _auth_args(self) -> list[str]:
+        basic = base64.b64encode(f"x-access-token:{self._token}".encode()).decode()
+        return ["-c", f"http.extraheader=Authorization: Basic {basic}"]
 
     def _git(self, *args: str, check: bool = True) -> str:
         result = subprocess.run(
-            ["git", *args],
+            ["git", *self._auth_args, *args],
             cwd=self.dir if self.dir.exists() else None,
             capture_output=True,
             text=True,
@@ -80,8 +87,8 @@ class Repo:
                 self.dir.parent.mkdir(parents=True, exist_ok=True)
                 log.info("cloning %s (branch %s) into %s", self.slug, self.branch, self.dir)
                 clone = subprocess.run(
-                    ["git", "clone", "--depth", "50", "--branch", self.branch,
-                     self._remote, str(self.dir)],
+                    ["git", *self._auth_args, "clone", "--depth", "50",
+                     "--branch", self.branch, self._remote, str(self.dir)],
                     capture_output=True, text=True, timeout=300,
                 )
                 if clone.returncode != 0:
@@ -106,11 +113,46 @@ class Repo:
                     log.warning("pull failed, continuing on local copy: %s", self._scrub(str(exc)))
 
     def verify_push_access(self) -> str:
-        """Check the token can actually write, at boot rather than at first write.
+        """Confirm we can actually push, at boot rather than at the first write.
 
-        A public repo clones fine with a bad token, so the clone succeeding proves
-        nothing. This asks GitHub directly.
+        This runs a real `git push --dry-run`, because that is the operation that
+        has to work. An earlier version asked the REST API instead and reported
+        success while git was still being rejected — the API takes a Bearer token
+        over api.github.com, git takes Basic auth over github.com, and verifying
+        one says nothing about the other. Check the path you actually use.
         """
+        try:
+            probe = subprocess.run(
+                ["git", *self._auth_args, "push", "--dry-run", "origin",
+                 f"HEAD:{self.branch}"],
+                cwd=self.dir, capture_output=True, text=True, timeout=60,
+            )
+        except Exception as exc:  # noqa: BLE001 — never block boot on this
+            log.warning("could not verify push access: %s", exc)
+            return ""
+
+        if probe.returncode == 0:
+            return ""
+
+        stderr = self._scrub(probe.stderr.strip())
+        kind = "unknown"
+        if self._token.startswith("github_pat_"):
+            kind = "fine-grained PAT"
+        elif self._token.startswith("ghp_"):
+            kind = "classic PAT"
+        elif self._token.startswith("ghs_"):
+            kind = "app installation token"
+
+        if "Invalid username or token" in stderr or "Authentication failed" in stderr:
+            return (f"GITHUB_TOKEN ({kind}) is rejected for pushing. A fine-grained "
+                    "token needs Repository permissions → Contents → Read and write, "
+                    "and must list this repository under Repository access. A classic "
+                    f"token needs the 'repo' scope. Token length {len(self._token)} — "
+                    "check for a stray space or newline if that looks wrong. "
+                    f"git said: {stderr}")
+        if "protected branch" in stderr.lower() or "denied" in stderr.lower():
+            return f"Push to {self.branch} is blocked by a branch rule. git said: {stderr}"
+        return f"Push check failed: {stderr}"
         req = urllib.request.Request(
             f"https://api.github.com/repos/{self.slug}",
             headers={
