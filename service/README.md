@@ -102,7 +102,30 @@ conversion needed.
 - **`@Marty` in a channel** — he answers in a thread and stays in that thread.
 - **`reset`** in a thread — clears his memory of it.
 
-Threads keep context for 3 days or 40 messages, whichever comes first.
+Threads keep context for 3 days or 40 messages, whichever comes first, and now
+survive a restart (persisted next to the repo checkout).
+
+## How Marty remembers
+
+Two layers, deliberately:
+
+- **Short-term** — the live conversation. Capped, expiring, on disk.
+- **Long-term — the repo.** `company/knowledge.md` holds facts Brian and Patrick
+  have stated, dated and attributed. `company/decisions.md` holds every call and
+  *why*. Both load into his prompt on every single message.
+
+There's no vector database and there shouldn't be. The repo is versioned,
+human-readable, and correctable — a separate memory store would give you two
+sources of truth that drift, and one of them you can't audit.
+
+**When a fact changes**, Marty doesn't just append. He strikes the old fact,
+logs the reversal with its reason, greps the repo for the old value, and rewrites
+every file that carried it — then says what else it broke. A new price changes
+the CAC math in `pricing.md`; a new launch date rebuilds `calendar.md`. A repo
+that contradicts itself is worse than no repo.
+
+Facts from Brian and Patrick outrank anything Marty found on the web. They're the
+experts on this business.
 
 ## Costs
 
