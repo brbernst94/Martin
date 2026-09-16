@@ -4,6 +4,23 @@
 against Verisign RDAP the same day — re-verify at the registrar before buying,
 availability moves hourly.*
 
+## The brief it was judged against
+
+*Brian, 2026-09-16:* fun, community, homely but modern and appealing. Audience is
+internet-native and skews under 40, without shutting out older buyers.
+
+Two constraints fall out of that, and they're the useful part:
+
+- **Not rustic.** Under-40 internet-native buyers are allergic to anything that
+  performs wholesomeness. Anything reading as a church supper or a mommy blog
+  gets bounced on sight.
+- **Not exclusive.** "Community" and "fun" rule out names whose appeal is being
+  on the inside of a velvet rope.
+
+This reconfirmed the pick rather than changing it. **These constraints need to
+reach Patrick before he starts on the mailer** — they govern the visual system
+at least as much as the name.
+
 ## The call
 
 **Standing Invite.** Domain **standinginvitepress.com**.
@@ -26,12 +43,12 @@ problem without a misspelling or a bolted-on "co".
 
 | Name | Verdict | Why |
 | --- | --- | --- |
-| **Standing Invite** | **Pick** | Recurring, hospitable, already our positioning. Says the thing. |
-| The Guest List | Runner-up | Strong — exclusivity plus a list you're on. Slight wedding/nightclub drag, and it's about *being admitted* rather than *being made something*. |
+| **Standing Invite** | **Pick** | Recurring, hospitable, already our positioning. A standing invite is what you have with close friends — no occasion, door's open. Homely and communal without being twee, and warm without being saccharine. |
+| The Guest List | Runner-up | Strong — exclusivity plus a list you're on. But it fails the "community, not velvet rope" constraint, and it's about *being admitted* rather than *being made something*. |
 | Golden Hour Post | Interesting half | "Post" is the good part — mail, postmark, publishing. "Golden hour" is photography's term, not printmaking's, and it pulls toward drinks-at-sunset. |
 | Around the Table | Cut | Warm and completely unownable. It's the title of a hundred cookbooks and podcasts. SEO is unwinnable. |
-| Welcome Table | Cut | Generic, and carries a strong church-supper association that fights the cocktail half of the brand. |
-| Good Company | Cut | Lovely double meaning, impossible name. Thousands of businesses use it; you'd never rank for anything. |
+| Welcome Table | Cut | Fails "not rustic" hardest of the eight. Church-supper association fights both the cocktail half of the brand and the under-40 audience. |
+| Good Company | Cut | The one that *gained* from the vibe brief — fun, communal, lovely double meaning. Still unusable: thousands of businesses have it, you'd never rank for anything and you'd fight for the handle forever. Right feeling, unbuildable asset. |
 | Open Door | **Hard kill** | Opendoor is a multi-billion-dollar real estate company. Unwinnable search, real trademark exposure. Not a close call. |
 | Small Batch | **Hard kill** | The single most overused phrase in food and beverage. It signals nothing because everyone says it. |
 

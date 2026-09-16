@@ -42,6 +42,8 @@ in somebody's head or a Slack scrollback.*
 | Date | Who | Fact |
 | --- | --- | --- |
 | 2026-09-16 | Brian | Name candidates offered: Standing Invite, Open Door, Welcome Table, Around the Table, Good Company, The Guest List, Small Batch, Golden Hour Post. |
+| 2026-09-16 | Brian | **Target vibe: fun, community, homely but modern and appealing.** |
+| 2026-09-16 | Brian | **Audience skews internet-native and under 40, but not restrictive of an older age group.** |
 | 2026-09-16 | Patrick | Portfolio at selnerpatrick.myportfolio.com. Projects: Snackcrate, Pollinator Corridor, Sidekicks, The Great Globetrotter, Olio, Counter Culture, Seed And Stone — predominantly food-and-drink brand work. |
 
 ## Still unknown
