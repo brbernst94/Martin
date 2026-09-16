@@ -20,7 +20,10 @@ He still can't spend money, post publicly, or email anyone outside the company.
 ## 1. Create the Slack app (5 minutes)
 
 1. https://api.slack.com/apps → **Create New App** → **From an app manifest**
-2. Pick your workspace, paste `slack-app-manifest.yml`, create.
+2. Pick your workspace, then paste the manifest. **The editor opens on the JSON
+   tab** — either paste `slack-app-manifest.json`, or click the YAML tab first
+   and paste `slack-app-manifest.yml`. Pasting YAML into the JSON tab fails with
+   `Expecting 'STRING','NUMBER',... got: 'INVALID'`. Create.
 3. **Basic Information → App-Level Tokens** → Generate Token and Scopes.
    Name it `railway`, add the `connections:write` scope, generate.
    Copy the `xapp-…` token → this is `SLACK_APP_TOKEN`.
