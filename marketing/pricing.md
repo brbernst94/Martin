@@ -1,6 +1,7 @@
 # Pricing
 
-*Owner: Marty. 2026-09-16. Built on Brian's Current State Breakeven Analysis.*
+*Owner: Marty. 2026-09-16. Built on Brian's Current State Breakeven Analysis,*
+*with shipping corrected to $2.00/unit on Brian's call the same day.*
 
 ## The recommendation
 
@@ -20,13 +21,13 @@ Per-unit variable cost, from Brian's sheet:
 | Ink | $0.65 |
 | Sticker | $0.75 |
 | Envelope | $0.45 |
-| Shipping | $0.82 |
+| Shipping | $2.00 *(Brian's corrected figure, 2026-09-16)* |
 | Card processing (2.9% + $0.30) | varies with price |
 
 Fixed monthly: website $23, relief blocks $10, parchment $10 = **$43/month.**
 
-Non-processing variable cost is **$3.47/unit**. Fixed costs are trivial. That
-means breakeven is four or five subscribers *at any price in the $15–32 range* —
+Non-processing variable cost is **$4.65/unit**. Fixed costs are trivial. That
+means breakeven is two to five subscribers *at any price in the $15–32 range* —
 the cost structure does not pick the price. Positioning and CAC do.
 
 ## Why $15 is the wrong number
@@ -37,19 +38,19 @@ different category, we're a 25% price premium on the same shelf — the worst
 place to stand.
 
 **2. It kills paid acquisition permanently.** At $15, contribution per unit is
-$10.80. Category-average CAC is ~$72. That's a **seven-month payback**, before
+$9.62. Category-average CAC is ~$72. That's a **7.5-month payback**, before
 Patrick is paid anything. No paid channel ever clears. We'd be capped at whatever
 organic produces, forever.
 
-At $32, contribution is $26.63. CAC payback drops to **under three months** and
-LTV:CAC clears 3:1 comfortably at target churn. That's the whole difference
-between a business that can scale and one that can't.
+At $32, contribution is $26.12. CAC payback drops to **2.8 months** and LTV:CAC
+clears 3:1 comfortably at target churn. That's the whole difference between a
+business that can scale and one that can't.
 
-**3. It doesn't pay Patrick.** At $15 and 50 subscribers, the sheet shows $497/month
-profit. If making and packing 50 bundles is 40 hours, that's **$12/hour** for a
-professional printmaker and graphic designer. At $32 the same month clears
-~$1,290 — about $32/hour. That's still under his market rate, but it's a
-business rather than an expensive hobby.
+**3. It doesn't pay Patrick.** At $15 and 50 subscribers, contribution is
+$481/month against $43 of fixed cost. If making and packing 50 bundles is 40
+hours, that's **$11/hour** for a professional printmaker and graphic designer. At
+$32 the same month clears ~$1,263 — about $31/hour. Still under his market rate,
+but a business rather than an expensive hobby.
 
 **4. The price is the positioning.** The strategy is "a working printmaker's
 studio practice, delivered." A $15 price argues against that in a way no
@@ -58,32 +59,32 @@ that comparison should feel obviously favourable, not suspiciously cheap.
 
 ## Contribution at each price
 
+At $2.00 shipping:
+
 | Price | Processing | Total variable | Contribution | Margin | CAC payback @ $72 |
 | --- | --- | --- | --- | --- | --- |
-| $15 | $0.74 | $4.21 | $10.79 | 72% | 6.7 months |
-| $20 | $0.88 | $4.35 | $15.65 | 78% | 4.6 months |
-| $25 | $1.03 | $4.50 | $20.50 | 82% | 3.5 months |
-| **$32** | **$1.23** | **$4.70** | **$27.30** | **85%** | **2.6 months** |
-| $38 | $1.40 | $4.87 | $33.13 | 87% | 2.2 months |
+| $15 | $0.74 | $5.39 | $9.62 | 64% | 7.5 months |
+| $20 | $0.88 | $5.53 | $14.47 | 72% | 5.0 months |
+| $25 | $1.03 | $5.68 | $19.33 | 77% | 3.7 months |
+| **$32** | **$1.23** | **$5.88** | **$26.12** | **82%** | **2.8 months** |
+| $38 | $1.40 | $6.05 | $31.95 | 84% | 2.3 months |
+
+Note what the corrected shipping did: at $32 the margin moved 85% → 82%, barely
+a flinch. At $15 it moved 72% → 64%. **The cheap price is the fragile one.**
+Every future cost surprise — heavier paper, a bulkier third piece, a postage
+increase — lands harder the lower we price.
 
 Why not $38: it crosses the line where a subscription box starts getting judged
 against genuine luxury goods, and we have no brand equity yet to survive that
 comparison. Revisit at month 12 with a track record.
 
-## Two numbers in the sheet I don't believe
+## Still missing
 
-**Shipping at $0.82 is almost certainly wrong, and it's the one that matters.**
-That's roughly a one-ounce first-class stamp. A rigid mailer carrying a print, a
-sticker, a letter and a third piece will not weigh one ounce and will not be
-machinable. Realistic is **$1.50–$2.50** as a large flat, or **$4–5** if it goes
-rigid via Ground Advantage.
-
-At $32 a $4 shipping cost is survivable — margin drops from 85% to 75%. At $15 it
-eats a third of the contribution. **The cheaper the price, the more this error
-hurts**, which is itself an argument for the higher number.
-
-*Action for Brian: weigh a mocked-up bundle in its actual mailer and price it at
-the counter before we commit to anything.*
+**Shipping is now $2.00** on Brian's call — a reasonable large-flat rate and far
+more believable than the $0.82 in the original sheet. It stays an estimate until
+a real bundle goes across a post office counter. Two things would break it:
+going rigid (Ground Advantage, $4–5) or crossing a weight break. Re-check once
+the mailer design is final.
 
 **Patrick's labour is not in the model at all.** That's fine for a breakeven
 sheet and fatal for a pricing decision. `data/metrics-schema.md` requires gross
@@ -107,7 +108,8 @@ need a studio-hours-per-bundle figure — it's also the growth ceiling
 ## What would change my mind
 
 - Shipping lands above $5/unit → the bundle needs to get lighter or the price
-  needs to go to $38, not down.
+  needs to go to $38, not down. At $32 that's a 72% margin, survivable. At $15
+  it's 43% and the business stops working.
 - Patrick's per-bundle time exceeds ~50 minutes → we're capacity-bound long
   before we're demand-bound, and the price should go *up* to ration it.
 - The Denver waitlist won't convert above $25 → that's real data and it beats

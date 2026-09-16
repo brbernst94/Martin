@@ -6,7 +6,13 @@
     "note": "Every value is null because nothing has been instrumented yet. Null means 'not measured'. It never means zero. Nothing enters this file without a source and a date.",
     "launch_date": "2026-11-01",
     "first_delivery": "2026-12-01",
-    "market": "Denver, CO"
+    "market": "Denver, CO",
+    "cost_inputs": {
+      "variable_per_unit_ex_processing": 4.65,
+      "fixed_monthly": 43,
+      "shipping_per_unit": 2.0,
+      "source": "Brian's breakeven analysis; shipping set to $2.00 by Brian 2026-09-16. Patrick's labour not yet included."
+    }
   },
   "north_star": {
     "id": "active_subscribers",
