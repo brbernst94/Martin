@@ -1,0 +1,228 @@
+"""Marty on Slack. Socket Mode, so Railway needs no public ingress.
+
+Run:  python app.py      (env from service/.env.example)
+"""
+from __future__ import annotations
+
+import logging
+import os
+import re
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+from slack_bolt import App
+from slack_bolt.adapter.socket_mode import SocketModeHandler
+
+from marty import Marty, Repo, Threads
+
+logging.basicConfig(
+    level=os.environ.get("LOG_LEVEL", "INFO"),
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
+log = logging.getLogger("marty.app")
+
+SLACK_LIMIT = 2900  # Slack hard-caps a message block at 3000 chars
+
+repo = Repo()
+marty = Marty(repo)
+threads = Threads()
+app = App(token=os.environ["SLACK_BOT_TOKEN"])
+
+ALLOWED = {u.strip() for u in os.environ.get("MARTY_ALLOWED_USERS", "").split(",") if u.strip()}
+BOT_USER_ID: str | None = None
+
+
+# --- helpers -----------------------------------------------------------------
+
+def chunks(text: str, size: int = SLACK_LIMIT) -> list[str]:
+    """Split on paragraph boundaries where possible, never mid-word."""
+    if len(text) <= size:
+        return [text]
+    out, current = [], ""
+    for para in text.split("\n\n"):
+        if len(current) + len(para) + 2 <= size:
+            current += ("\n\n" if current else "") + para
+            continue
+        if current:
+            out.append(current)
+        while len(para) > size:
+            cut = para.rfind(" ", 0, size)
+            cut = cut if cut > size // 2 else size
+            out.append(para[:cut])
+            para = para[cut:].lstrip()
+        current = para
+    if current:
+        out.append(current)
+    return out
+
+
+def strip_mention(text: str) -> str:
+    return re.sub(r"<@[UW][A-Z0-9]+>", "", text or "").strip()
+
+
+def allowed(user_id: str) -> bool:
+    return not ALLOWED or user_id in ALLOWED
+
+
+def handle(say, client, channel: str, thread_ts: str, user: str, text: str) -> None:
+    if not allowed(user):
+        say(text="I only take direction from Brian and Patrick.", thread_ts=thread_ts)
+        return
+
+    body = strip_mention(text)
+    if not body:
+        return
+
+    if body.lower() in {"reset", "new thread", "forget"}:
+        threads.clear(thread_ts)
+        say(text="Cleared. Starting fresh.", thread_ts=thread_ts)
+        return
+
+    placeholder = client.chat_postMessage(
+        channel=channel, thread_ts=thread_ts, text="_thinking…_"
+    )
+
+    def note(tool_name: str, args: dict) -> None:
+        label = {
+            "read_file": f"reading `{args.get('path', '')}`",
+            "list_files": "listing the repo",
+            "search_repo": f"searching for `{args.get('pattern', '')}`",
+            "write_file": f"writing `{args.get('path', '')}`",
+        }.get(tool_name, tool_name)
+        try:
+            client.chat_update(channel=channel, ts=placeholder["ts"], text=f"_{label}…_")
+        except Exception:  # noqa: BLE001, best-effort status only
+            pass
+
+    history = threads.get(thread_ts)
+    history.append({"role": "user", "content": body})
+
+    try:
+        reply, updated = marty.respond(history, on_tool=note)
+        threads.set(thread_ts, updated)
+    except Exception as exc:  # noqa: BLE001
+        log.exception("turn failed")
+        reply = f"Something broke on my end: `{type(exc).__name__}: {exc}`"
+
+    parts = chunks(reply)
+    client.chat_update(channel=channel, ts=placeholder["ts"], text=parts[0])
+    for part in parts[1:]:
+        client.chat_postMessage(channel=channel, thread_ts=thread_ts, text=part)
+
+
+# --- Slack events ------------------------------------------------------------
+
+@app.event("app_mention")
+def on_mention(event, say, client):
+    handle(
+        say, client,
+        channel=event["channel"],
+        thread_ts=event.get("thread_ts") or event["ts"],
+        user=event.get("user", ""),
+        text=event.get("text", ""),
+    )
+
+
+@app.event("message")
+def on_message(event, say, client):
+    # Ignore edits, deletions, joins, and anything Marty said himself.
+    if event.get("subtype") or event.get("bot_id"):
+        return
+
+    is_dm = event.get("channel_type") == "im"
+    in_thread = bool(event.get("thread_ts"))
+    mentioned = BOT_USER_ID and f"<@{BOT_USER_ID}>" in event.get("text", "")
+
+    # In channels, only answer when mentioned (app_mention covers that) or when
+    # the thread is already one of his.
+    if not is_dm and not (in_thread and threads.get(event["thread_ts"])):
+        return
+    if mentioned and not is_dm:
+        return  # app_mention will handle it; don't answer twice
+
+    handle(
+        say, client,
+        channel=event["channel"],
+        thread_ts=event.get("thread_ts") or event["ts"],
+        user=event.get("user", ""),
+        text=event.get("text", ""),
+    )
+
+
+# --- morning brief (off unless BRIEF_CRON is set) ----------------------------
+
+def post_morning_brief() -> None:
+    channel = os.environ.get("BRIEF_CHANNEL")
+    if not channel:
+        log.warning("BRIEF_CRON set but BRIEF_CHANNEL is not — skipping")
+        return
+
+    log.info("running the morning brief")
+    prompt = (
+        "Run your morning brief now, following .claude/skills/marty-morning-brief/SKILL.md. "
+        "Scan, update whatever the findings justify, write the brief to "
+        "marketing/briefs/YYYY-MM-DD.md with write_file, and then reply with the brief "
+        "itself — nothing else, no preamble about having done it."
+    )
+    try:
+        reply, _ = marty.respond([{"role": "user", "content": prompt}])
+    except Exception as exc:  # noqa: BLE001
+        log.exception("brief failed")
+        reply = f"Brief failed: `{type(exc).__name__}: {exc}`"
+
+    parts = chunks(reply)
+    first = app.client.chat_postMessage(channel=channel, text=parts[0])
+    for part in parts[1:]:
+        app.client.chat_postMessage(channel=channel, thread_ts=first["ts"], text=part)
+
+
+def start_scheduler() -> None:
+    cron = os.environ.get("BRIEF_CRON", "").strip()
+    if not cron:
+        log.info("BRIEF_CRON unset — morning brief is off, Marty runs on demand")
+        return
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.triggers.cron import CronTrigger
+
+    tz = os.environ.get("BRIEF_TZ", "America/Denver")
+    scheduler = BackgroundScheduler(timezone=tz)
+    scheduler.add_job(post_morning_brief, CronTrigger.from_crontab(cron, timezone=tz))
+    scheduler.start()
+    log.info("morning brief scheduled: %s (%s)", cron, tz)
+
+
+# --- health endpoint so Railway sees a listening port ------------------------
+
+class Health(BaseHTTPRequestHandler):
+    def do_GET(self):  # noqa: N802
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain")
+        self.end_headers()
+        self.wfile.write(b"marty ok")
+
+    def log_message(self, *args):  # silence per-request logging
+        pass
+
+
+def start_health_server() -> None:
+    port = int(os.environ.get("PORT", "8080"))
+    server = HTTPServer(("0.0.0.0", port), Health)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    log.info("health server on :%s", port)
+
+
+def main() -> None:
+    global BOT_USER_ID
+    repo.ensure()
+    log.info("repo ready at %s", repo.dir)
+
+    BOT_USER_ID = app.client.auth_test()["user_id"]
+    log.info("connected to Slack as %s", BOT_USER_ID)
+
+    start_health_server()
+    start_scheduler()
+    SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"]).start()
+
+
+if __name__ == "__main__":
+    main()
