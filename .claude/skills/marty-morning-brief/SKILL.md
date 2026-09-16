@@ -81,7 +81,22 @@ Don't just report — change the repo:
 - Brian answered an open question → move it to Answered and propagate the
   consequence into every doc that assumed otherwise
 
-## 5. Commit
+## 5. Send it
+
+Brian has standing authorization for this one send, to these two addresses only:
+
+- Brian Bernstein — brbernst94@gmail.com
+- Patrick Selner — selner.patrick@gmail.com
+
+Subject: `Morning brief — YYYY-MM-DD — <the one thing, in a few words>`
+Body: the brief itself, as plain readable text. No attachments, no tracking, no
+links back to the repo that Patrick can't open.
+
+This authorization covers **the morning brief only**. Any other outbound
+email — a creator, a shop, a venue, a subscriber, a press contact — needs
+Brian's go-ahead in that session.
+
+## 6. Commit
 
 ```
 git add -A

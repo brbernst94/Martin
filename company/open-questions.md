@@ -34,3 +34,10 @@ Answer inline, or in chat and Marty will file them.
 ## Answered
 
 *(Nothing yet.)*
+
+## Decisions on record
+
+| Date | Decision |
+| ---- | -------- |
+| 2026-09-16 | **Morning brief runs on demand, not on a schedule**, until we're closer to launch. Brian will say when to turn the daily cron on. |
+| 2026-09-16 | **Brief delivery:** committed to `marketing/briefs/` and emailed to Brian (brbernst94@gmail.com) and Patrick (selner.patrick@gmail.com). This is the only standing authorization Marty has to send email. |
