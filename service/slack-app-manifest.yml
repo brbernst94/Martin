@@ -2,7 +2,6 @@
 display_information:
   name: Marty
   description: Chief Marketing Officer
-  background_color: "#1b4fd8"
 features:
   bot_user:
     display_name: Marty
