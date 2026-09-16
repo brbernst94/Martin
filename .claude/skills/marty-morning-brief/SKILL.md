@@ -41,34 +41,34 @@ for more than a week:
   doesn't.
 - **Our own numbers.** Once we have any, this leads the brief.
 
-Rules: cite every source with a URL and today's date. If something contradicts a
-document in this repo, update the document — don't just mention it.
+Sources get a URL and today's date **in the repo files**, always. They do not
+go in the brief — Brian isn't auditing you. If a finding contradicts a document
+in this repo, update the document; don't just mention it.
 
 ## 3. Write
 
-Write to `marketing/briefs/YYYY-MM-DD.md` using this shape. Keep it under 400
-words. Brutal editing is the skill here.
+Write to `marketing/briefs/YYYY-MM-DD.md`. **Under 250 words.** Brian reads it on
+a phone between other things.
+
+Write it the way a CMO briefs a CEO: the call first, the reasoning only where it
+changes what he does. No source URLs in the brief — they go in the repo files you
+updated. No narration of your process. No "I researched X and found Y."
 
 ```markdown
-# Morning brief — YYYY-MM-DD
+# Brief — YYYY-MM-DD
 
-**The one thing:** [single sentence. The most important thing Brian should know
-today. If there isn't one, say so honestly and make it short.]
+**[One sentence. The most important thing. A decision or a fact, not a topic.]**
 
-## What I found
-- [Finding. What it is, why it matters to us, what I did about it. Source URL.]
-- [2–4 of these. Never more than 5.]
+[2–4 short paragraphs or bullets. Each one is a thing that happened and what
+you're doing about it. If you already handled it, say so in past tense.]
 
-## What I changed
-- [File and the decision. "Cut TikTok's cadence in channels.md — ..."]
-- [Or: "Nothing — no finding justified a change."]
+**Need from you:** [Max 2, each answerable in one line. Or "Nothing."]
 
-## What I need from you
-- [Specific, answerable in one line. Max 2. If nothing, say "Nothing today."]
-
-## Watching
-- [Things in flight. Kill dates coming up. One line each.]
+**In flight:** [One line each. Kill dates coming up. Skip if empty.]
 ```
+
+Cut every sentence that doesn't change Brian's day. A three-line brief on a quiet
+morning is better than a padded one.
 
 ## 4. Act
 
@@ -88,7 +88,7 @@ Brian has standing authorization for this one send, to these two addresses only:
 - Brian Bernstein — brbernst94@gmail.com
 - Patrick Selner — selner.patrick@gmail.com
 
-Subject: `Morning brief — YYYY-MM-DD — <the one thing, in a few words>`
+Subject: `Brief — YYYY-MM-DD — <the one thing, in a few words>`
 Body: the brief itself, as plain readable text. No attachments, no tracking, no
 links back to the repo that Patrick can't open.
 
@@ -106,9 +106,9 @@ git push -u origin <branch>
 
 ## Hard rules
 
-- Never invent a finding to fill space. "Quiet morning, here's the one thing I'd
-  do today" is a legitimate brief.
+- Never invent a finding to fill space. A three-line brief is a legitimate
+  brief.
 - Never put a benchmark in `data/metrics.json`. Benchmarks go in
   `research/benchmarks.md`.
 - Never send anything externally. Drafts only.
-- Two minutes of reading. If it's longer than 400 words, cut it.
+- Under 250 words. If it's longer, you haven't finished editing.
