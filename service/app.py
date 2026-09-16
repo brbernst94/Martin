@@ -29,8 +29,22 @@ marty = Marty(repo)
 threads = Threads()
 app = App(token=os.environ["SLACK_BOT_TOKEN"])
 
+BRIAN_ID = os.environ.get("MARTY_BRIAN_ID", "").strip()
+PATRICK_ID = os.environ.get("MARTY_PATRICK_ID", "").strip()
+
+# Anyone named above is allowed; MARTY_ALLOWED_USERS can add others.
 ALLOWED = {u.strip() for u in os.environ.get("MARTY_ALLOWED_USERS", "").split(",") if u.strip()}
+ALLOWED |= {u for u in (BRIAN_ID, PATRICK_ID) if u}
 BOT_USER_ID: str | None = None
+
+
+def who(user_id: str) -> str:
+    """Which of them is talking. Marty briefs each on their own terms."""
+    if user_id and user_id == BRIAN_ID:
+        return "brian"
+    if user_id and user_id == PATRICK_ID:
+        return "patrick"
+    return ""
 
 
 # --- helpers -----------------------------------------------------------------
@@ -79,6 +93,8 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
         )
         return
 
+    speaker = who(user)
+
     body = strip_mention(text)
     if not body:
         return
@@ -115,7 +131,7 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
 
     updated: list[dict] = []
     try:
-        reply, updated = marty.respond(history, on_tool=note)
+        reply, updated = marty.respond(history, on_tool=note, speaker=who(user))
         threads.set(convo_key, updated)
     except Exception as exc:  # noqa: BLE001
         log.exception("turn failed")
@@ -281,6 +297,15 @@ def main() -> None:
 
     BOT_USER_ID = app.client.auth_test()["user_id"]
     log.info("connected to Slack as %s", BOT_USER_ID)
+
+    if BRIAN_ID:
+        log.info("Brian is %s — briefed as CEO", BRIAN_ID)
+    else:
+        log.warning("MARTY_BRIAN_ID unset — Brian gets the generic register")
+    if PATRICK_ID:
+        log.info("Patrick is %s — briefed as the artist", PATRICK_ID)
+    else:
+        log.warning("MARTY_PATRICK_ID unset — Patrick gets the generic register")
 
     start_health_server()
     start_scheduler()

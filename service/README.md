@@ -60,16 +60,24 @@ Set every one of these in Railway → Variables (`.env.example` is the template)
 | `GITHUB_REPO` | `brbernst94/Martin` |
 | `GITHUB_BRANCH` | `main` |
 | `REPO_DIR` | `/data/repo` |
-| `MARTY_ALLOWED_USERS` | your + Patrick's Slack user IDs, comma-separated |
+| `MARTY_BRIAN_ID` | your Slack user ID — briefed as CEO |
+| `MARTY_PATRICK_ID` | Patrick's Slack user ID — briefed as the artist |
+| `MARTY_ALLOWED_USERS` | anyone else allowed to talk to him (optional) |
 | `MARTY_MODEL` | `claude-opus-5` |
 | `MARTY_EFFORT` | `high` |
 | `BRIEF_CRON` | **leave empty for now** |
 | `BRIEF_CHANNEL` | the channel ID for `#marty` |
 | `BRIEF_TZ` | `America/Denver` |
 
-**Set `MARTY_ALLOWED_USERS`.** Without it anyone in the workspace who can see
-Marty can spend your Anthropic credits and commit to the repo. Find a user ID in
-Slack: profile → ⋮ → Copy member ID.
+**Set `MARTY_BRIAN_ID` and `MARTY_PATRICK_ID`.** They control two things: who's
+allowed to talk to Marty at all, and how he briefs them. Without them anyone in
+the workspace can spend your Anthropic credits and commit to the repo. Find a
+user ID in Slack: profile → ⋮ → Copy member ID.
+
+Marty talks to Brian as a CEO — money, dates, decisions, no craft vocabulary —
+and to Patrick as the artist: the work, his own printmaking vocabulary, and no
+marketing metrics. Anyone else gets a plain register with no jargon in either
+direction.
 
 ### Volume (optional)
 

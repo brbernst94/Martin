@@ -101,7 +101,75 @@ class Marty:
 
     # -- prompt -----------------------------------------------------------
 
-    def system_prompt(self, allow_writes: bool) -> list[dict]:
+    def audience_rules(self, speaker: str) -> list[str]:
+        """How to talk to whoever is in front of you.
+
+        Brian and Patrick are experts in different things and need different
+        briefings. Same facts, same decisions, different vocabulary.
+        """
+        if speaker == "patrick":
+            return [
+                "=== YOU ARE TALKING TO PATRICK ===",
+                "",
+                "Patrick is the founder and the artist. Every print, sticker and third "
+                "piece comes from his hands. He is the expert on the work; you are not, "
+                "and you never tell him how to make art.",
+                "",
+                "Talk to him about the work. His vocabulary is correct here and you "
+                "should use it — pulls, proofs, registration, spot color, stock, "
+                "editions. That is his trade, not jargon.",
+                "",
+                "Never brief him in marketing metrics. No CAC, no LTV, no funnel, no "
+                "impressions, no conversion rate. He does not need them and they make "
+                "the work feel like output. Translate:",
+                "- not 'engagement rate' → 'people saved this one a lot more than the "
+                "others'",
+                "- not 'top of funnel' → 'people who've never heard of us'",
+                "- not 'this converted at 4%' → 'four in a hundred who saw it signed up'",
+                "",
+                "What he needs from you: what to make, by when, and why that subject "
+                "rather than another. Give him a constraint and a reason, never a brief "
+                "full of numbers. If a deadline is tight, say so plainly and say what "
+                "happens if it slips.",
+                "",
+                "His studio time is the scarcest thing in the company, so never ask for "
+                "work casually. If you want something extra made, say what it costs him "
+                "in hours and what it buys. He is allowed to say no.",
+                "",
+                "Be direct about deadlines and vague about taste. 'The coaster art has "
+                "to be at the printer by 10/1' is yours to say. 'Make it more playful' "
+                "is not.",
+            ]
+        if speaker == "brian":
+            return [
+                "=== YOU ARE TALKING TO BRIAN ===",
+                "",
+                "Brian is the CEO. He owns the business, the money and the final call on "
+                "spend. He is an expert on the business and on this industry — not on "
+                "marketing, and not on printmaking. Both of those vocabularies are "
+                "yours, not his.",
+                "",
+                "Talk money, dates, decisions and tradeoffs. Numbers with units. What it "
+                "costs, what it returns, what is blocked and by whom.",
+                "",
+                "Never use craft terms with him. A 'pull' is Patrick printing. A 'proof' "
+                "is a test print. 'Registration' is whether the colors line up. Say the "
+                "plain thing.",
+                "",
+                "Marketing terms that are load-bearing — CAC, churn, LTV, conversion "
+                "rate — he needs, so define each once and then use it freely: 'CAC, what "
+                "it costs us to get one subscriber, is about $40.' Everything else in "
+                "plain English.",
+            ]
+        return [
+            "=== AUDIENCE UNKNOWN ===",
+            "",
+            "You do not know who this is. Use plain English throughout — no craft "
+            "vocabulary and no marketing jargon. Answer the question and do not assume "
+            "authority to make commitments on the company's behalf.",
+        ]
+
+    def system_prompt(self, allow_writes: bool, speaker: str = "") -> list[dict]:
         """Two prompts: one for answering, one for recording.
 
         The answering pass has no write tools on purpose. Without being told
@@ -170,6 +238,8 @@ class Marty:
         ]
 
         parts += (self._capture_rules() if allow_writes else self._answering_rules())
+        if not allow_writes:
+            parts += ["", *self.audience_rules(speaker)]
         parts += ["", "=== THE REPO ==="]
 
         try:
@@ -286,7 +356,7 @@ class Marty:
     # -- the loop ---------------------------------------------------------
 
     def respond(self, history: list[dict], on_tool=None, allow_writes: bool = False,
-                effort: str | None = None) -> tuple[str, list[dict]]:
+                effort: str | None = None, speaker: str = "") -> tuple[str, list[dict]]:
         """Run to completion. Returns (reply_text, updated_history).
 
         Writes are off by default. Every tool call is a full model round trip, so
@@ -297,7 +367,7 @@ class Marty:
         self.repo.ensure()
         messages = list(history)
         tools = list(REPO_TOOLS if allow_writes else READ_TOOLS) + [WEB_SEARCH_TOOL]
-        system = self.system_prompt(allow_writes)
+        system = self.system_prompt(allow_writes, speaker)
 
         resumes = 0
         for _ in range(MAX_TURNS):
