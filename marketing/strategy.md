@@ -23,6 +23,13 @@ nobody selling licensed digital prints can cross.
 
 Sell the studio, not the subscription.
 
+## One brand, not two
+
+Patrick's art and the brand are marketed as one thing, with Patrick as the face.
+No separate artist account. The positioning requires it — "sell the studio" only
+works if the studio is visibly one person's — and at zero followers a second
+account is dividing nothing in half. Full reasoning in `company/decisions.md`.
+
 ## What the launch date does to the plan
 
 The original plan gave 90 days to build an audience before asking for money. We
@@ -56,18 +63,19 @@ Full detail in `marketing/channels.md`. The short version:
 
 | Channel | Verdict | Why |
 | ------- | ------- | --- |
-| Instagram | **Core** | Where both primary segments live, and where process video performs. |
+| Instagram | **Core** | Where both primary segments live, and where process video performs. Home for short form — commerce intent is here. |
 | Pinterest | **Core** | Search-driven, compounds, and "bar cart art" is an evergreen query. Most underrated channel for this business. |
 | Email | **Core** | The only channel we own. The waitlist *is* the launch. |
 | Physical / guerrilla | **Core** | We make objects. Objects are distribution. See `guerrilla.md`. |
-| TikTok | **Test** | Great for process video, weak for commerce intent, and organic reach has matured. One test cycle. |
+| TikTok | **Active** | Upgraded from Test 2026-09-16. Patrick actually wants to make short form, which was the only real constraint. Same footage cut looser, ~0 marginal Patrick-hours. Buys reach, not conversion. |
 | Reddit | **Test, carefully** | r/cocktails and r/printmaking are exactly our people and will eject us instantly if we market at them. Participate as Patrick, don't advertise. |
 | Paid social | **Off** | No creative, no data, no price point. Revisit at month 4. See `paid-media.md`. |
 | Google / Search | **Off for now** | No brand demand to capture yet. Revisit with the shop. |
 | YouTube long-form | **Off** | High production cost against Patrick's scarcest resource. |
 
-Three deep, not fifteen shallow: **Instagram, Pinterest, and physical.** Email
-is the container they all feed.
+Three deep, not fifteen shallow: **Instagram, Pinterest, and physical.** TikTok
+doesn't break that rule because it isn't a fourth workstream — it's the same
+studio session, cut again. Email is the container they all feed.
 
 ## Retention is the strategy
 
@@ -82,8 +90,10 @@ unpredictability is the reason to stay subscribed.
 
 ## What would make me wrong
 
-- If Patrick won't or can't be on camera, the whole process-content thesis
-  collapses and this becomes a much more expensive, much more ordinary business.
+- If filming turns out to be a separate shoot rather than something that happens
+  during work Patrick is already doing, the whole process-content thesis gets
+  expensive and this becomes a much more ordinary business. His appetite for
+  short form is the asset; his hours are still the constraint.
 - If Brian holds the price at $15, paid never works and we are permanently capped
   at whatever organic produces. I'd rather launch late at $32 than on time at $15.
 - If the real shipping cost lands above $5/unit, the bundle gets lighter or the

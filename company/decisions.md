@@ -39,10 +39,13 @@ months. Awaiting Brian's sign-off.
 ### 2026-09-16 · Name it Standing Invite
 **`PROPOSED` — Marty**
 The only candidate that is hospitality language, implies recurrence, and frames
-the product as an invitation into a practice. Already the positioning line in
-`brand.md`, written before the list arrived. Domain `standinginvitepress.com` —
-"press" reads as printing press, publisher, and post. Hard kills: Open Door
-(Opendoor trademark and search), Small Batch (most overused phrase in food & bev).
+the product as an invitation into a practice. Reconfirmed against Brian's vibe
+brief (fun, community, homely-but-modern, internet-native and under 40): "you've
+got a standing invite" is spoken language, which is what makes it read modern
+without chasing. The Guest List was re-tested against that brief and fails it —
+being admitted past a rope is exclusivity, not community. Domain
+`standinginvitepress.com`. Hard kills: Open Door (Opendoor trademark and search),
+Small Batch (most overused phrase in food & bev).
 
 ### 2026-09-16 · Never discount to acquire
 **`DECIDED` — Marty**
@@ -55,6 +58,30 @@ never a lower price.
 Pinterest is the underrated one — search-driven, so a pin still pulls traffic in
 two years while an Instagram post is dead in 48 hours. Paid is off behind four
 gates. TikTok is a free cross-post, never its own creative budget.
+*(TikTok clause amended 2026-09-16 — see below. The three-deep channel set is
+unchanged.)*
+
+### 2026-09-16 · One brand, Patrick is the face of it — no separate artist account
+**`DECIDED` — Marty**
+Brian asked whether Patrick's art and the brand should be marketed separately or
+combined, Jobs/Apple style. Combined. Two accounts at zero followers is dividing
+nothing in half, and it forces a "which account does this clip belong to"
+decision on every post, which is what actually kills a posting habit. The
+positioning already requires it — "sell the studio, not the subscription" only
+works if the studio is visibly one person's. Revisit only if Patrick ever wants a
+gallery/fine-art identity that would be diluted by the subscription.
+
+### 2026-09-16 · TikTok upgraded from free cross-post to a real short-form channel
+**`DECIDED` — Marty** — amends the TikTok clause of the three-channels decision above
+The binding constraint on process video was never the platform's reach, it was
+whether the artist would reliably film. Brian says Patrick is partial to short
+form and to TikTok specifically, so that constraint is gone and the channel is
+worth real effort. Operating model: **shoot once, cut twice** — one studio
+session produces Instagram Reels, TikTok cuts, and Pinterest stills. Instagram
+remains home because commerce intent and both primary segments are there;
+TikTok carries the same footage cut looser for reach. Content unit is a pull, a
+failure, or a third-piece reveal — not Patrick explaining anything. Hands on
+camera, face optional, so nothing stalls on open question #6.
 
 ### 2026-09-16 · Marty lives in Slack, hosted on Railway
 **`DECIDED` — Brian**
