@@ -197,15 +197,16 @@
     <p class="standfirst">Every number this business will run on, and the honest state of each one. Nothing here is estimated, projected, or rounded up from a guess.</p>
     <div class="slugline">
       <span>As of <b id="asof">2026-09-16</b></span>
-      <span>Stage <b id="stage">pre-launch</b></span>
+      <span>Launch <b id="launch">11/1/26</b></span>
+      <span>Market <b id="market">Denver, CO</b></span>
       <span>Spend to date <b>$0</b></span>
       <span>Subscribers <b>not yet</b></span>
     </div>
   </header>
 
   <div class="gap">
-    <div class="gap-fig"><span id="live-count">0</span>/<span id="total-count">24</span><small>Metrics instrumented</small></div>
-    <p>The dashboard is empty because the business hasn't launched, and an empty dashboard is the correct output. The work right now isn't reading numbers &mdash; it's building the plumbing that produces them before the first customer arrives, because none of it can be back-filled afterward.</p>
+    <div class="gap-fig"><span id="days-left">&mdash;</span><small>Days to launch</small></div>
+    <p>Subscriptions open 11/1/26 and the first bundle lands 12/1/26 &mdash; a Christmas present that arrives on time, which is the best timing this category offers. <b id="live-count">0</b> of <b id="total-count">24</b> metrics are instrumented, and that is the correct state for a business that hasn't launched. The work right now is building the plumbing before the first customer arrives, because none of it can be back-filled afterward.</p>
   </div>
 
   <section>
@@ -216,7 +217,7 @@
 
   <section>
     <h2>Acquisition</h2>
-    <p class="sec-note">Category CAC runs about $72. Whether we can live with that depends entirely on a price nobody has set yet.</p>
+    <p class="sec-note">Category CAC runs about $72. At the proposed $32 that is a 2.6-month payback and paid works. At $15 it is 6.7 months and paid never does.</p>
     <div class="plate" id="plate-acquisition" style="--cols:4"></div>
   </section>
 
@@ -247,12 +248,14 @@
     <h2>What's blocking the numbers</h2>
     <p class="sec-note">In order. Each one gates measurement, not just marketing.</p>
     <ol class="block">
-      <li><div><h3>No price point</h3><p>Decides whether paid acquisition is viable at all, and sets the ceiling on CAC. Below roughly $25/month the paid math almost certainly never clears. <span class="who">Brian</span></p></div></li>
-      <li><div><h3>No storefront, so no analytics</h3><p>Visits, checkout starts, and completion rate don't exist until something is live to measure. <span class="who">Brian</span></p></div></li>
-      <li><div><h3>No "how did you hear about us?" at checkout</h3><p>Platform-reported attribution is directional at best at our size. One free-text question at checkout will be the most reliable acquisition data we ever get &mdash; and it has to exist before the first order. <span class="who">Brian</span></p></div></li>
-      <li><div><h3>No tracked links on physical tactics</h3><p>A coaster drop without a unique short link teaches us nothing. Every guerrilla tactic needs its own URL or QR before a single unit is printed. <span class="who">Marty</span></p></div></li>
-      <li><div><h3>No dunning or cancel survey</h3><p>Involuntary churn is a quarter to a third of all churn and is pure engineering. The cancel survey is the only qualitative research we get for free. Both are launch requirements. <span class="who">Brian</span></p></div></li>
-      <li><div><h3>No studio capacity number</h3><p>How many bundles Patrick can make per month is the growth ceiling. Marketing past it damages the brand faster than slow growth does. <span class="who">Patrick</span></p></div></li>
+      <li><div><h3>No brand name</h3><p>The critical path item. Domain, handles, mailer, landing page and every printed asset wait behind it, and there are six weeks left. <span class="who">Brian &amp; Patrick</span></p></div></li>
+      <li><div><h3>Shipping is modelled at $0.82</h3><p>That is a one-ounce first-class stamp. A rigid mailer holding a print, a sticker, a letter and a third piece is not one ounce. Realistically $1.50&ndash;$5. It is the largest error risk in the unit economics &mdash; weigh a mock bundle at a post office counter. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>Price not signed off</h3><p>Marty&rsquo;s call is $32/month, $320/year. At $15 the contribution per unit is $10.79 against a category CAC near $72 &mdash; a seven-month payback, which means paid acquisition never works and growth is capped at organic forever. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>No studio capacity number</h3><p>Minutes per bundle is both the growth ceiling and the missing input in gross margin. Patrick&rsquo;s labour is not in the cost model at all. <span class="who">Patrick</span></p></div></li>
+      <li><div><h3>No storefront, so no analytics</h3><p>Visits, checkout starts and completion rate don&rsquo;t exist until something is live to measure. Gifting has to be configured at the same time &mdash; it is the 11/1 campaign, not a December feature. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>No &ldquo;how did you hear about us?&rdquo; at checkout</h3><p>Platform attribution is directional at best at our size. One free-text question at checkout is the most reliable acquisition data we will ever get, and it has to exist before the first order. <span class="who">Brian</span></p></div></li>
+      <li><div><h3>No tracked links on the Denver ground game</h3><p>A coaster drop without a unique short link teaches us nothing. Every physical tactic needs its own URL or QR before a single unit is printed &mdash; and coaster art has to reach the printer by 10/1. <span class="who">Marty</span></p></div></li>
+      <li><div><h3>No dunning or cancel survey</h3><p>Involuntary churn is a quarter to a third of all churn and is pure engineering. Both are launch requirements, not month-two work. <span class="who">Brian</span></p></div></li>
     </ol>
   </section>
 
@@ -270,7 +273,10 @@
     "as_of": "2026-09-16",
     "updated_by": "marty",
     "stage": "pre-launch",
-    "note": "Every value is null because nothing has been instrumented yet. Null means 'not measured'. It never means zero. Nothing enters this file without a source and a date."
+    "note": "Every value is null because nothing has been instrumented yet. Null means 'not measured'. It never means zero. Nothing enters this file without a source and a date.",
+    "launch_date": "2026-11-01",
+    "first_delivery": "2026-12-01",
+    "market": "Denver, CO"
   },
   "north_star": {
     "id": "active_subscribers",
@@ -294,7 +300,7 @@
     "waitlist_signups": {
       "value": null,
       "period": "cumulative",
-      "target": 500,
+      "target": 250,
       "source": null
     },
     "visit_to_signup_rate": {
@@ -363,7 +369,7 @@
     "price_point": {
       "value": null,
       "unit": "usd",
-      "source": "Not yet decided. company/open-questions.md #2."
+      "source": "Not set. Marty proposes $32/mo, $320/yr \u2014 see marketing/pricing.md. Awaiting Brian's sign-off."
     },
     "gross_margin": {
       "value": null,
@@ -627,7 +633,16 @@
   document.getElementById("total-count").textContent = total;
   if (DATA.meta) {
     document.getElementById("asof").textContent = DATA.meta.as_of || "—";
-    document.getElementById("stage").textContent = (DATA.meta.stage || "—").replace(/-/g, " ");
+    if (DATA.meta.market) { document.getElementById("market").textContent = DATA.meta.market; }
+    if (DATA.meta.launch_date) {
+      var launch = new Date(DATA.meta.launch_date + "T00:00:00");
+      document.getElementById("launch").textContent =
+        (launch.getMonth() + 1) + "/" + launch.getDate() + "/" + String(launch.getFullYear()).slice(2);
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      var days = Math.round((launch - today) / 86400000);
+      document.getElementById("days-left").textContent = days > 0 ? days : "0";
+    }
     document.getElementById("foot-updated").textContent = "Updated " + (DATA.meta.as_of || "—") + " by " + (DATA.meta.updated_by || "marty");
   }
 })();

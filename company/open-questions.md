@@ -7,18 +7,16 @@ Answer inline, or in chat and Marty will file them.
 
 | # | Question | Why it blocks | Who |
 | - | -------- | ------------- | --- |
-| 1 | **Target launch date?** | Everything backdates from it. A Q4 launch means gifting is the entire launch plan; a Q1 launch means we build an audience through Q4 instead. | Brian |
-| 2 | **Price point and tiers?** | Decides whether paid acquisition is viable at all. Below ~$25/mo, paid math almost certainly fails and we're organic-only indefinitely. | Brian |
-| 3 | **How many bundles can Patrick physically make per month, at what quality?** | This is the growth ceiling. Marketing to 500 people when the studio caps at 150 burns the brand. | Patrick |
-| 4 | **Where are we based?** | Half the guerrilla plan is local — bars, coffee shops, markets, shops. Without a city there's no ground game. | Brian |
-| 5 | **Brand name?** | Blocks domain, handles, mailer, everything. | Brian / Patrick |
+| 3 | **How many bundles can Patrick physically make per month, and how many studio minutes per bundle?** | The growth ceiling, and the missing input in the pricing model. Marketing to 500 people when the studio caps at 150 burns the brand. | Patrick |
+| 5 | **Brand name?** | Blocks domain, handles, mailer, everything. Launch is 11/1 — this is now the critical path item. | Brian / Patrick |
+| 14 | **What does the bundle actually weigh, in its real mailer?** | Shipping is modelled at $0.82. That's a one-ounce stamp and the bundle is not one ounce. It's the single biggest error risk in the unit economics. Weigh a mock-up at the counter. | Brian |
 
 ## Important — shapes the plan
 
 | # | Question | Why it matters |
 | - | -------- | -------------- |
 | 6 | Is Patrick willing to be on camera regularly? | The studio-process content strategy depends on it. If no, the plan changes materially and gets more expensive. |
-| 7 | Marketing budget for months 1–6? | Decides organic-only vs. paid-assisted. |
+| 7 | Marketing budget for months 1–6? | Decides organic-only vs. paid-assisted. Now urgent — launch is 6 weeks out. |
 | 8 | Edition sizes — open or limited? Signed? | Changes both price and the collector segment's willingness to buy. |
 | 9 | Will we sell one-off prints alongside the subscription? | A shop is the best low-friction entry point and a strong retention offer. Also a distraction if it's not ready. |
 | 10 | Any existing audience? Patrick's follower counts, any list, any past customers? | Determines whether month one is "launch" or "cold start." |
@@ -33,7 +31,11 @@ Answer inline, or in chat and Marty will file them.
 
 ## Answered
 
-*(Nothing yet.)*
+| # | Question | Answer | Date |
+| - | -------- | ------ | ---- |
+| 1 | Launch date | **11/1/26**, first bundle delivered **12/1/26** | 2026-09-16 |
+| 2 | Price | Brian set the range at $15–30 and asked Marty to land it. **Marty's call: $32/month, $320/year.** See `marketing/pricing.md`. Awaiting Brian's sign-off. | 2026-09-16 |
+| 4 | Where are we based | **Denver, Colorado** | 2026-09-16 |
 
 ## Decisions on record
 

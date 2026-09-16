@@ -5,58 +5,50 @@ section gets rewritten monthly to reflect what we actually learned.*
 
 ## Where we are
 
-Pre-launch, pre-name, pre-audience, pre-price. Zero subscribers, zero list, zero
+Pre-launch with **46 days to go**. Launch 11/1/26, first bundle delivered
+12/1/26, based in Denver. No brand name yet. Zero subscribers, zero list, zero
 channels live. Every number in `data/metrics.json` is `null` and that is correct.
 
-The job right now is not acquisition. It is **building the thing acquisition
-will run on**: an audience that exists before the product does.
+Price: **$32/month, $320/year** is my call, pending Brian's sign-off
+(`marketing/pricing.md`). The cost model permits $15; the business needs $32.
 
 ## The thesis in one paragraph
 
 Most monthly print clubs sell a *print*. We sell a *practice*. Patrick is a
-working printmaker and graphic designer whose entire body of professional work
-is food-and-drink brands — Snackcrate, Counter Culture, Olio, Seed And Stone.
-That's not a coincidence we should hide; it's the credential. The strategy is to
-make Patrick's studio publicly visible for 90 days before we ask anyone for
-money, so that when we launch we are converting an audience that already has a
-relationship with the maker, not buying strangers at $70 CAC.
+working printmaker and graphic designer whose entire body of professional work is
+food-and-drink brands — Snackcrate, Counter Culture, Olio, Seed And Stone. That's
+not a coincidence to hide; it's the credential. Make the studio publicly visible,
+sell the process rather than the object, and the physical work becomes a moat
+nobody selling licensed digital prints can cross.
 
-The physical process is the content. The content is the channel. The channel is
-the moat, because nobody selling licensed digital prints can copy a press.
+Sell the studio, not the subscription.
 
-## The three phases
+## What the launch date does to the plan
 
-### Phase 0 — Foundations (now → launch minus 90 days)
-Name, brand, mailer design, storefront, one great photo set. No marketing spend.
-The deliverable is a landing page that can capture an email and a product that
-photographs well. Marketing's only job here is to make sure the *mailer itself*
-is designed to be posted — see `marketing/guerrilla.md`, "the unboxing is the ad."
+The original plan gave 90 days to build an audience before asking for money. We
+have 46, and no name. That phase is gone — see `marketing/calendar.md`. The
+consequences, stated plainly:
 
-### Phase 1 — Audience before product (launch minus 90 → launch)
-Build a waitlist. Target: **500 emails before we charge anyone.** Every one of
-them came from watching Patrick work, not from an ad.
+- **Waitlist target drops from 500 to 250.** Real Denver emails, not a padded
+  number.
+- **The first 100 subscribers come from rooms, not channels.** No channel
+  compounds in six weeks. Coasters into bars and 30 seeded industry people will
+  outperform anything algorithmic in this window.
+- **Pinterest and Instagram start now anyway**, because they pay off in January
+  and beyond even though they won't move 11/1.
 
-Tactics, in priority order:
-1. **Studio process content** on Instagram + TikTok — the pull, the misregistration,
-   the color separation, the failed proof. Short, unpolished, frequent.
-2. **Pinterest as the evergreen engine** — food-and-drink art is a top-of-funnel
-   Pinterest category and pins compound for years, unlike everything else.
-3. **A free monthly print giveaway to the waitlist** — the waitlist is the entry.
-4. **Seeding the industry segment by hand** — mail free prints to 30 named
-   bartenders, cooks, and coffee people. No ask. This is the highest-leverage
-   $300 we will spend all year.
+But the date is right. **Open 11/1, deliver 12/1 is the gift window** — a
+first bundle that lands as a Christmas present, ordered by 11/25. That's the
+best launch timing this category offers, and it's the whole 11/1 campaign.
+Gifting is not a December feature. It is the launch.
 
-### Phase 2 — Launch and the first 100 (launch → month 3)
-The first 100 subscribers come from the waitlist and from hand-to-hand contact,
-not from advertising. Paid stays off until we know CAC is even measurable.
+## Denver is the plan
 
-Success is not subscriber count. Success is **month-2 retention above 85%**. A
-hundred subscribers who stay beats four hundred who don't, and the second cohort
-teaches us nothing if the first one leaks.
-
-### Phase 3 — Scale, carefully (month 4+)
-Turn on paid only if unit economics clear. Add gifting before Q4. Add the shop.
-Push toward the studio's real capacity ceiling, and stop there deliberately.
+Half the acquisition strategy is a city, and now we have one. Denver has a dense,
+well-regarded cocktail and coffee scene, a real printmaking and arts community,
+and neighborhoods (RiNo, Baker, Highlands, LoHi) where our buyer is concentrated
+enough to reach on foot. The ground game in `marketing/guerrilla.md` is now the
+primary acquisition channel through launch, not a supplement to it.
 
 ## Channel bets
 
@@ -92,20 +84,25 @@ unpredictability is the reason to stay subscribed.
 
 - If Patrick won't or can't be on camera, the whole process-content thesis
   collapses and this becomes a much more expensive, much more ordinary business.
-- If the price lands below ~$25, paid never works and we are permanently capped
-  at whatever organic produces.
+- If Brian holds the price at $15, paid never works and we are permanently capped
+  at whatever organic produces. I'd rather launch late at $32 than on time at $15.
+- If the real shipping cost lands above $5/unit, the bundle gets lighter or the
+  price goes to $38. It doesn't go down.
 - If the bar-cart wall-space ceiling is real and hard, churn cliffs at month 6
   and no amount of acquisition fixes it.
 
 ## Projections (explicitly not results)
 
-Illustrative only, to be replaced with real numbers. Assumes $35/mo, 6% monthly
-churn, and organic-only acquisition:
+Illustrative only. Assumes $32/mo, 6% monthly churn, organic-only acquisition,
+and real gross margin after a corrected shipping cost:
 
-- Waitlist 500 → 20% launch conversion → 100 subscribers month 1
-- LTV at 6% churn ≈ 16.7 months × $35 × ~60% margin ≈ **$350**
-- Which would support a CAC ceiling around $115 at a 3:1 LTV:CAC — comfortably
-  above the $72 subscription-box average, *if* the price holds.
+- Waitlist 250 → 25% launch conversion (gift-window lift) → ~60 subscribers at 12/1
+- LTV at 6% churn ≈ 16.7 months × $32 × ~75% margin ≈ **$400**
+- Supporting a CAC ceiling near $130 at 3:1 — well above the $72 category
+  average, *if* the price holds at $32.
+
+Sixty subscribers at 12/1 is a good outcome from a six-week runway. Three hundred
+would mean we outran the studio.
 
 Every number above is a guess and is not in `data/metrics.json`.
 

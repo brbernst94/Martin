@@ -30,8 +30,22 @@ the third piece as the headline, not the bonus.
 Physical subscription box, monthly, direct to consumer. Recurring revenue,
 physical COGS, real shipping costs, real churn.
 
-`OPEN` — price point, tier structure, prepay options, shipping regions, launch
-date, brand name, storefront platform.
+**Launch: 11/1/26.** First bundle delivered **12/1/26**.
+**Based in Denver, Colorado.**
+**Price: $32/month proposed** ($320/year), pending Brian's sign-off — see
+`marketing/pricing.md`.
+
+`OPEN` — brand name, storefront platform, shipping regions, edition structure.
+
+### Unit economics (from Brian's breakeven analysis, 2026-09-16)
+
+Variable cost per bundle is **$3.47** before card processing — paper $0.80, ink
+$0.65, sticker $0.75, envelope $0.45, shipping $0.82. Fixed costs are **$43/month**
+(website $23, relief blocks $10, parchment $10).
+
+Two caveats that matter more than the numbers: **shipping at $0.82 is a
+one-ounce stamp and this bundle is not one ounce**, and **Patrick's labour is
+not in the model at all**. Both are open (`#14`, `#3`).
 
 ## What we have going for us
 
@@ -57,8 +71,9 @@ date, brand name, storefront platform.
   copy. See `marketing/competitors/`.
 - **Fulfillment scales with Patrick's hands.** Growth that outruns the studio is
   worse than no growth. Marketing needs to know the ceiling before it pushes.
-- **No list, no audience, no launch date yet.** We are starting from zero on
-  every channel. The first 100 subscribers will not come from advertising.
+- **Six weeks to launch with no list, no name, and no audience.** We are starting
+  from zero on every channel. The first 100 subscribers will not come from
+  advertising — they'll come from Denver, by hand.
 
 ## The honest strategic read
 

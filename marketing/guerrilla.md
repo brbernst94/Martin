@@ -7,8 +7,35 @@ product. We don't. **We make small, desirable, food-and-drink-themed printed
 objects.** That is the same sentence as "we make the best guerrilla marketing
 assets in our category." Every tactic below exploits that.
 
-Ranked by leverage per dollar. Nothing here executes without Brian's go-ahead;
-several of these need a city (see `company/open-questions.md` #4).
+Ranked by leverage per dollar. Nothing here executes without Brian's go-ahead.
+
+**We're in Denver, and with 46 days to launch this is no longer a supplement to
+the channel plan — it is the acquisition plan.** No algorithmic channel compounds
+in six weeks. Rooms do.
+
+## The Denver ground game
+
+Where our two primary segments physically concentrate:
+
+- **RiNo / Five Points** — the densest cocktail-bar and gallery corridor in the
+  city, and the most art-receptive room in Denver. Start here.
+- **South Broadway (Baker)** — bars, record shops, tattoo studios, vintage. High
+  sticker-and-poster tolerance, younger, extremely online.
+- **LoHi / Highlands** — restaurant-dense, higher disposable income, more likely
+  to actually subscribe than to just like the post.
+- **Tennyson St / Berkeley** — neighborhood-loyal, strong local-pride reflex,
+  ideal for the print-the-city series.
+- **Coffee:** Denver has a genuinely serious specialty coffee scene, and baristas
+  overlap heavily with the printmaking community. Cheapest room to win.
+
+**Marty's first task on this:** build a named target list — 15 bars for coasters,
+10 venues for wall placements, 30 industry people for seeding — with addresses
+and a contact where one is findable. Brian walks it; Marty builds the route.
+
+Two Denver-specific assets worth using: the First Friday Art Walk on Santa Fe
+(a monthly, free, art-primed crowd) and the city's printmaking community, which
+is small enough that Patrick being a real printmaker is verifiable and therefore
+credible.
 
 ---
 
@@ -28,6 +55,8 @@ is a gift, not a flyer, so it doesn't get thrown away.
 - **Cost:** ~$300–400 printing, ~6 Brian-hours of walking into bars, ~4
   Patrick-hours of design.
 - **Kill date:** 60 days after the first drop. Track with a unique short link.
+- **Timing:** coasters need print lead time. To land before 11/1 the art has to
+  be at the printer by **10/1**.
 
 ## 2. Seed the industry — 30 free prints, no ask
 
@@ -44,6 +73,8 @@ at work are a permanent billboard.
   audience, plus 3–5 ongoing relationships.
 - **Cost:** ~$300 all-in. The highest-leverage money in the entire plan.
 - **Kill date:** None. If it works, do it every quarter.
+- **Timing:** mail by **10/15** so it lands well before launch. A print that
+  arrives the week we start selling reads as an ask.
 
 ## 3. Stickers as distribution, not swag
 
