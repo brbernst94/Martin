@@ -150,27 +150,40 @@ class Repo:
 
     # -- writes -----------------------------------------------------------
 
-    def write_and_commit(self, rel: str, content: str, message: str) -> str:
+    def stage(self, rel: str, content: str) -> str:
+        """Write a file and stage it. Does NOT commit or push.
+
+        Committing per write meant a network round trip inside the tool loop,
+        which made Brian wait on git before he got an answer. Writes are batched
+        and pushed once at the end of the turn instead.
+        """
         if any(rel.startswith(p) for p in FORBIDDEN_PREFIXES):
             raise PermissionError(f"{rel} is off limits")
-        self.resolve(rel)  # validate before doing any network work
+        self.resolve(rel)  # validate before touching the filesystem
 
         with _lock:
-            self.ensure()
             path = self.resolve(rel)
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(content)
-
             self._git("add", "--", rel)
-            status = self._git("status", "--porcelain", "--", rel)
-            if not status:
-                return f"{rel} was already identical — nothing committed."
 
-            body = (
-                f"{message}\n\n"
-                "Written by Marty from Slack.\n\n"
-                "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
-            )
+            if not self._git("status", "--porcelain", "--", rel):
+                return f"{rel} is unchanged — nothing to write."
+            return f"{rel} written. It will be pushed when this reply is sent."
+
+    def publish(self, message: str) -> str | None:
+        """Commit and push everything staged. Returns a summary, or None if clean."""
+        with _lock:
+            staged = self._git("diff", "--cached", "--name-only")
+            if not staged:
+                return None
+            files = staged.splitlines()
+
+            body = f"{message}\n\n"
+            if len(files) > 1:
+                body += "Files:\n" + "\n".join(f"- {f}" for f in files) + "\n\n"
+            body += ("Written by Marty from Slack.\n\n"
+                     "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
             self._git("commit", "-m", body)
 
             for attempt in range(3):
@@ -185,4 +198,4 @@ class Repo:
                     self._git("rebase", f"origin/{self.branch}", check=False)
 
             sha = self._git("rev-parse", "--short", "HEAD")
-            return f"Committed {rel} as {sha} and pushed to {self.branch}."
+            return f"{sha}: {', '.join(files)}"

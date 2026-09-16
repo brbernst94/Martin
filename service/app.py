@@ -8,6 +8,7 @@ import logging
 import os
 import re
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 from slack_bolt import App
@@ -91,6 +92,8 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
         channel=channel, thread_ts=reply_ts, text="_thinking…_"
     )
 
+    started = time.monotonic()
+
     def note(tool_name: str, args: dict) -> None:
         label = {
             "read_file": f"reading `{args.get('path', '')}`",
@@ -98,8 +101,12 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
             "search_repo": f"searching for `{args.get('pattern', '')}`",
             "write_file": f"writing `{args.get('path', '')}`",
         }.get(tool_name, tool_name)
+        elapsed = int(time.monotonic() - started)
+        suffix = f" ({elapsed}s)" if elapsed >= 10 else ""
         try:
-            client.chat_update(channel=channel, ts=placeholder["ts"], text=f"_{label}…_")
+            client.chat_update(
+                channel=channel, ts=placeholder["ts"], text=f"_{label}…{suffix}_"
+            )
         except Exception:  # noqa: BLE001, best-effort status only
             pass
 
@@ -117,6 +124,15 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
     client.chat_update(channel=channel, ts=placeholder["ts"], text=parts[0])
     for part in parts[1:]:
         client.chat_postMessage(channel=channel, thread_ts=reply_ts, text=part)
+
+    # Push after answering, so git never sits between a question and its reply.
+    pushed = marty.publish()
+    if pushed:
+        client.chat_postMessage(
+            channel=channel, thread_ts=reply_ts,
+            text=("_pushed " + pushed + "_") if not pushed.startswith("FAILED")
+                 else ":warning: couldn't push — " + pushed,
+        )
 
 
 # --- Slack events ------------------------------------------------------------
@@ -192,6 +208,9 @@ def post_morning_brief() -> None:
     first = app.client.chat_postMessage(channel=channel, text=parts[0])
     for part in parts[1:]:
         app.client.chat_postMessage(channel=channel, thread_ts=first["ts"], text=part)
+    pushed = marty.publish()
+    if pushed:
+        app.client.chat_postMessage(channel=channel, thread_ts=first["ts"], text=f"_pushed {pushed}_")
 
 
 def start_scheduler() -> None:

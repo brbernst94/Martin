@@ -66,9 +66,10 @@ REPO_TOOLS = [
     {
         "name": "write_file",
         "description": (
-            "Write a file to the strategy repo and push the commit. This is how you make a "
-            "decision permanent. Always read the file first and write it back whole. The "
-            "commit message states the decision, not the file list."
+            "Write a file to the strategy repo. This is how you make something permanent. "
+            "Always read the file first and write it back whole. Writes are batched and "
+            "pushed in one commit after your reply is sent, so calling this several times "
+            "in a turn is cheap. The commit message states the decision, not the file list."
         ),
         "input_schema": {
             "type": "object",
@@ -130,9 +131,14 @@ class Marty:
             "- **The relevant strategy doc** — when a new fact changes the plan. Do not "
             "just note the fact and leave a stale strategy behind it.",
             "",
-            "Do this as it happens, in the same turn, not at the end. Then say you did "
-            "in one short clause — 'Logged.' or 'Noted in decisions.' — so Brian can "
-            "see it landed. Never narrate the write at length.",
+            "**Answer the question first.** If Brian asked you something, the answer is "
+            "the job and the logging is bookkeeping. Never leave him waiting while you "
+            "file paperwork — decide what you think, then write. A question that also "
+            "contains a new fact gets both, in that order, in one turn.",
+            "",
+            "Say you logged it in one short clause — 'Logged.' or 'Noted in decisions.' "
+            "— at the end. Never narrate the write at length, and never make the write "
+            "the whole reply.",
             "",
             "Do not log chatter, your own speculation, or anything you inferred rather "
             "than were told. A ledger full of guesses is worse than an empty one. If "
@@ -201,9 +207,8 @@ class Marty:
                 hits = self.repo.grep(args["pattern"])
                 return "\n".join(hits) if hits else "No matches.", False
             if name == "write_file":
-                return self.repo.write_and_commit(
-                    args["path"], args["content"], args["commit_message"]
-                ), False
+                self._commit_messages.append(args["commit_message"])
+                return self.repo.stage(args["path"], args["content"]), False
             return f"Unknown tool: {name}", True
         except Exception as exc:  # noqa: BLE001
             log.warning("tool %s failed: %s", name, exc)
@@ -213,6 +218,7 @@ class Marty:
 
     def respond(self, history: list[dict], on_tool=None) -> tuple[str, list[dict]]:
         """Run to completion. Returns (reply_text, updated_history)."""
+        self._commit_messages: list[str] = []
         self.repo.ensure()
         messages = list(history)
         tools = REPO_TOOLS + [WEB_SEARCH_TOOL]
@@ -268,3 +274,14 @@ class Marty:
         ) if messages and messages[-1]["role"] == "assistant" else ""
 
         return reply or "(I got stuck on that one — try asking again.)", messages
+
+    def publish(self) -> str | None:
+        """Push whatever this turn staged. Called after the reply goes out."""
+        messages = getattr(self, "_commit_messages", [])
+        if not messages:
+            return None
+        try:
+            return self.repo.publish(messages[0])
+        except Exception as exc:  # noqa: BLE001
+            log.exception("publish failed")
+            return f"FAILED: {type(exc).__name__}: {exc}"

@@ -105,6 +105,16 @@ conversion needed.
 Threads keep context for 3 days or 40 messages, whichever comes first, and now
 survive a restart (persisted next to the repo checkout).
 
+## Answer first, file second
+
+Marty replies before he writes anything. Repo writes are staged during the turn
+and committed in a single push *after* the reply is sent, so git never sits
+between a question and its answer — and a turn that touches four files is one
+commit, not four.
+
+You'll see a quiet `_pushed a1b2c3d: company/knowledge.md_` under his reply when
+something landed.
+
 ## How Marty remembers
 
 Two layers, deliberately:
