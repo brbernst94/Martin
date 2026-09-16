@@ -64,9 +64,18 @@ def allowed(user_id: str) -> bool:
     return not ALLOWED or user_id in ALLOWED
 
 
-def handle(say, client, channel: str, thread_ts: str, user: str, text: str) -> None:
+def handle(client, channel: str, reply_ts: str | None, convo_key: str,
+           user: str, text: str) -> None:
+    """reply_ts is the thread to answer in, or None to reply at top level.
+
+    In a DM there is no reason to bury the answer in a thread, and the whole DM
+    is one conversation — so DMs key on the channel and reply inline.
+    """
     if not allowed(user):
-        say(text="I only take direction from Brian and Patrick.", thread_ts=thread_ts)
+        client.chat_postMessage(
+            channel=channel, thread_ts=reply_ts,
+            text="I only take direction from Brian and Patrick.",
+        )
         return
 
     body = strip_mention(text)
@@ -74,12 +83,12 @@ def handle(say, client, channel: str, thread_ts: str, user: str, text: str) -> N
         return
 
     if body.lower() in {"reset", "new thread", "forget"}:
-        threads.clear(thread_ts)
-        say(text="Cleared. Starting fresh.", thread_ts=thread_ts)
+        threads.clear(convo_key)
+        client.chat_postMessage(channel=channel, thread_ts=reply_ts, text="Cleared. Starting fresh.")
         return
 
     placeholder = client.chat_postMessage(
-        channel=channel, thread_ts=thread_ts, text="_thinking…_"
+        channel=channel, thread_ts=reply_ts, text="_thinking…_"
     )
 
     def note(tool_name: str, args: dict) -> None:
@@ -94,12 +103,12 @@ def handle(say, client, channel: str, thread_ts: str, user: str, text: str) -> N
         except Exception:  # noqa: BLE001, best-effort status only
             pass
 
-    history = threads.get(thread_ts)
+    history = threads.get(convo_key)
     history.append({"role": "user", "content": body})
 
     try:
         reply, updated = marty.respond(history, on_tool=note)
-        threads.set(thread_ts, updated)
+        threads.set(convo_key, updated)
     except Exception as exc:  # noqa: BLE001
         log.exception("turn failed")
         reply = f"Something broke on my end: `{type(exc).__name__}: {exc}`"
@@ -107,24 +116,26 @@ def handle(say, client, channel: str, thread_ts: str, user: str, text: str) -> N
     parts = chunks(reply)
     client.chat_update(channel=channel, ts=placeholder["ts"], text=parts[0])
     for part in parts[1:]:
-        client.chat_postMessage(channel=channel, thread_ts=thread_ts, text=part)
+        client.chat_postMessage(channel=channel, thread_ts=reply_ts, text=part)
 
 
 # --- Slack events ------------------------------------------------------------
 
 @app.event("app_mention")
-def on_mention(event, say, client):
+def on_mention(event, client):
+    thread_ts = event.get("thread_ts") or event["ts"]
     handle(
-        say, client,
+        client,
         channel=event["channel"],
-        thread_ts=event.get("thread_ts") or event["ts"],
+        reply_ts=thread_ts,
+        convo_key=thread_ts,
         user=event.get("user", ""),
         text=event.get("text", ""),
     )
 
 
 @app.event("message")
-def on_message(event, say, client):
+def on_message(event, client):
     # Ignore edits, deletions, joins, and anything Marty said himself.
     if event.get("subtype") or event.get("bot_id"):
         return
@@ -140,10 +151,17 @@ def on_message(event, say, client):
     if mentioned and not is_dm:
         return  # app_mention will handle it; don't answer twice
 
+    if is_dm and not in_thread:
+        # The whole DM is one conversation; answer inline, not in a thread.
+        reply_ts, convo_key = None, f"dm:{event['channel']}"
+    else:
+        reply_ts = convo_key = event.get("thread_ts") or event["ts"]
+
     handle(
-        say, client,
+        client,
         channel=event["channel"],
-        thread_ts=event.get("thread_ts") or event["ts"],
+        reply_ts=reply_ts,
+        convo_key=convo_key,
         user=event.get("user", ""),
         text=event.get("text", ""),
     )

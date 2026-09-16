@@ -75,12 +75,24 @@ class Repo:
         with _lock:
             if not (self.dir / ".git").exists():
                 self.dir.parent.mkdir(parents=True, exist_ok=True)
-                log.info("cloning %s into %s", self.slug, self.dir)
-                subprocess.run(
+                log.info("cloning %s (branch %s) into %s", self.slug, self.branch, self.dir)
+                clone = subprocess.run(
                     ["git", "clone", "--depth", "50", "--branch", self.branch,
                      self._remote, str(self.dir)],
-                    check=True, capture_output=True, text=True, timeout=300,
+                    capture_output=True, text=True, timeout=300,
                 )
+                if clone.returncode != 0:
+                    stderr = self._scrub(clone.stderr.strip())
+                    hint = ""
+                    if "not found in upstream" in stderr or "Remote branch" in stderr:
+                        hint = (f" — GITHUB_BRANCH is set to '{self.branch}' and that branch "
+                                f"does not exist on {self.slug}. Set it to a branch that does.")
+                    elif "Authentication failed" in stderr or "could not read Username" in stderr:
+                        hint = (" — GITHUB_TOKEN is missing, expired, or lacks Contents access "
+                                f"to {self.slug}.")
+                    elif "not found" in stderr.lower():
+                        hint = f" — {self.slug} not found, or the token can't see it."
+                    raise RuntimeError(f"clone failed: {stderr}{hint}")
                 self._git("config", "user.name", "Marty (CMO)")
                 self._git("config", "user.email", "marty@bot.local")
             else:
