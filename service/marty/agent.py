@@ -277,10 +277,18 @@ class Marty:
         else:
             log.warning("hit MAX_TURNS without finishing")
 
-        reply = "\n\n".join(
-            b.text for b in messages[-1]["content"]
-            if getattr(b, "type", None) == "text" and getattr(b, "text", "").strip()
-        ) if messages and messages[-1]["role"] == "assistant" else ""
+        reply = ""
+        if messages and messages[-1]["role"] == "assistant":
+            blocks = messages[-1]["content"]
+            texts = []
+            for b in blocks if isinstance(blocks, list) else []:
+                kind = b.get("type") if isinstance(b, dict) else getattr(b, "type", None)
+                if kind != "text":
+                    continue
+                text = b.get("text", "") if isinstance(b, dict) else getattr(b, "text", "")
+                if text.strip():
+                    texts.append(text)
+            reply = "\n\n".join(texts)
 
         return reply or "(I got stuck on that one — try asking again.)", messages
 
