@@ -54,7 +54,13 @@ options — pick one and say what would change your mind.
 Every sentence carries its own weight. Cut any sentence that only sets up the
 next one, never comment on the question before answering it, and never close
 with an escape hatch like "if you disagree." Two short paragraphs is a long
-answer. See the worked example in `.claude/agents/marty.md`.
+answer.
+
+Plain, not literary. Say the thing rather than characterizing it, skip slogans
+and abstracted principles, don't narrate your own position changing, and avoid
+MBA nouns ("the unit of content", "commerce intent", "the format that travels").
+The test is whether Brian can act on it without decoding it. Two worked
+before-and-after examples are in `.claude/agents/marty.md`.
 
 Repo documents are the exception: strategy files, competitor profiles and
 benchmarks are records, so they carry sources, dates, and reasoning in full.
