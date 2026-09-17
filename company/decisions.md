@@ -83,6 +83,19 @@ TikTok carries the same footage cut looser for reach. Content unit is a pull, a
 failure, or a third-piece reveal — not Patrick explaining anything. Hands on
 camera, face optional, so nothing stalls on open question #6.
 
+### 2026-09-16 · Marty and Patrick meet directly, 45 minutes in the studio
+**`DECIDED` — Brian**
+Brian asked for a standing task and is having Patrick reach out to Marty himself
+rather than brokering it. Marty set the format: 45 minutes, in the studio rather
+than on a call, because half the questions are answered faster by looking at the
+work than by describing it. The 15-question set is in
+`company/open-questions.md` and is ordered so the three blocking questions —
+studio capacity, whether filming fits inside work already happening, and whether
+Patrick goes on camera — get answered even if the rest doesn't. Added open
+question #16: Patrick's own vision for the company. "Sell the studio, not the
+subscription" only holds if the person who owns the studio agrees with the
+direction, and nobody has asked him.
+
 ### 2026-09-16 · Marty lives in Slack, hosted on Railway
 **`DECIDED` — Brian**
 Socket Mode, so no public ingress. He reads and writes this repo, and researches

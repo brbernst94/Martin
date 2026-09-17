@@ -20,6 +20,7 @@ Answer inline, or in chat and Marty will file them.
 | 8 | Edition sizes — open or limited? Signed? | Changes both price and the collector segment's willingness to buy. |
 | 9 | Will we sell one-off prints alongside the subscription? | A shop is the best low-friction entry point and a strong retention offer. Also a distraction if it's not ready. |
 | 10 | Any existing audience? Patrick's follower counts, any list, any past customers? | Determines whether month one is "launch" or "cold start." Now includes: does Patrick already have a TikTok or Instagram presence we'd be building on rather than starting from zero? |
+| 16 | **What is Patrick's own vision for the company?** Where he wants it in three years, and what he won't do. | Added 2026-09-16 at Brian's request. The positioning is "sell the studio, not the subscription" — that only holds if the studio's owner agrees with where it's going. | 
 
 ## Nice to have
 
@@ -28,6 +29,41 @@ Answer inline, or in chat and Marty will file them.
 | 11 | Storefront platform preference (Shopify vs. Squarespace vs. a subscription-native tool)? Affects what Marty can instrument. |
 | 12 | Is there a ceiling on shipping cost we'll absorb? Affects free-shipping messaging. |
 | 13 | Does Patrick have press contacts or gallery relationships worth activating? |
+
+---
+
+## Patrick intake — 45 minutes, in the studio
+
+*Requested by Brian 2026-09-16. Brian is having Patrick reach out to Marty
+directly. Status: **scheduled pending Patrick's outreach**.*
+
+Questions 1–3 are the blocking ones. If the conversation only covers those, it
+was still worth having. The rest are ordered to be answerable in the room.
+
+**Capacity and filming — the blockers**
+1. How many bundles can you make in a month before it stops being fun — and how many minutes does one bundle actually take you, start to finish? *(open q #3)*
+2. Can filming happen during work you're already doing, or does it mean setting up a separate shoot? *(open q #6)*
+3. Do you want to be on camera, or hands only? Either is workable; I just need to know which. *(open q #6)*
+
+**What already exists**
+4. What do you already have — Instagram, TikTok, a mailing list, past print customers? Follower counts if you know them. *(open q #10)*
+5. Send me 8–10 images of work you'd be proud to have represent this. The visual guardrails in `company/brand.md` are marked `UNVERIFIED` and I don't want to keep guessing.
+
+**The work itself**
+6. What's your process — screenprint, relief, something else? What's the actual sequence from block to finished piece?
+7. Open editions or limited? Signed and numbered, or not? *(open q #8)*
+8. What paper are you printing on, and does it change month to month?
+9. Give me five third-piece ideas off the top of your head. I want to see your range when nobody's constraining you.
+10. How far ahead can you work? Can December's bundle be done by early November?
+
+**Appetite and limits**
+11. What's the part of this you're most excited to make, and what's the part you're dreading?
+12. Is there anything you won't do — subjects, styles, collaborations, anything that would make this feel like a job instead of your practice?
+13. Do you have press contacts, gallery relationships, or printmakers in Denver worth knowing? *(open q #13)*
+
+**Vision**
+14. When you picture a subscriber opening the envelope, what do you want to happen in that four seconds?
+15. Where does this go in three years if it works — bigger studio, shop, gallery shows, something else? *(open q #16)*
 
 ## Answered
 
