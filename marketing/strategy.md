@@ -23,6 +23,25 @@ nobody selling licensed digital prints can cross.
 
 Sell the studio, not the subscription.
 
+## The studio isn't the ceiling — demand is
+
+Patrick says he could make a few thousand bundles a month before it stops being
+fun, and wants to start at 50–100 in month one and roughly double from there
+(2026-09-16). Capacity was a live risk in every earlier version of this plan and
+it's off the board. **50–100 subscribers by 12/1 is the target, not the cap**,
+and acquisition no longer gets held back to protect fulfillment.
+
+What's still missing is how long a batch takes. Patrick can't price one bundle
+because making many at once is far faster per unit, so his labour goes into the
+margin model per run, not per piece. He's clocking a real one.
+
+## Process content is free
+
+Filming happens while Patrick is already working — no separate shoot, no extra
+studio hours. Hands-only is the standing format; he doesn't want to be on camera
+all the time, so his face is occasional and voluntary and nothing in the calendar
+waits on it.
+
 ## One brand, not two
 
 Patrick's art and the brand are marketed as one thing, with Patrick as the face.
@@ -67,7 +86,7 @@ Full detail in `marketing/channels.md`. The short version:
 | Pinterest | **Core** | Search-driven, compounds, and "bar cart art" is an evergreen query. Most underrated channel for this business. |
 | Email | **Core** | The only channel we own. The waitlist *is* the launch. |
 | Physical / guerrilla | **Core** | We make objects. Objects are distribution. See `guerrilla.md`. |
-| TikTok | **Active** | Upgraded from Test 2026-09-16. Patrick actually wants to make short form, which was the only real constraint. Same footage cut looser, ~0 marginal Patrick-hours. Buys reach, not conversion. |
+| TikTok | **Active** | Upgraded from Test 2026-09-16. Patrick wants to make short form and filming fits inside work he's already doing, so it costs ~0 marginal studio hours. Buys reach, not conversion. |
 | Reddit | **Test, carefully** | r/cocktails and r/printmaking are exactly our people and will eject us instantly if we market at them. Participate as Patrick, don't advertise. |
 | Paid social | **Off** | No creative, no data, no price point. Revisit at month 4. See `paid-media.md`. |
 | Google / Search | **Off for now** | No brand demand to capture yet. Revisit with the shop. |
@@ -90,10 +109,9 @@ unpredictability is the reason to stay subscribed.
 
 ## What would make me wrong
 
-- If filming turns out to be a separate shoot rather than something that happens
-  during work Patrick is already doing, the whole process-content thesis gets
-  expensive and this becomes a much more ordinary business. His appetite for
-  short form is the asset; his hours are still the constraint.
+- If a batch of 50 turns out to eat most of Patrick's month, the capacity answer
+  is softer than it sounds and the price should go up to ration it. The clocked
+  run settles this.
 - If Brian holds the price at $15, paid never works and we are permanently capped
   at whatever organic produces. I'd rather launch late at $32 than on time at $15.
 - If the real shipping cost lands above $5/unit, the bundle gets lighter or the
@@ -111,8 +129,9 @@ and real gross margin after a corrected shipping cost:
 - Supporting a CAC ceiling near $130 at 3:1 — well above the $72 category
   average, *if* the price holds at $32.
 
-Sixty subscribers at 12/1 is a good outcome from a six-week runway. Three hundred
-would mean we outran the studio.
+Sixty subscribers at 12/1 sits inside Patrick's own 50–100 month-one range, so
+the constraint on that number is entirely how many people we can reach in six
+weeks.
 
 Every number above is a guess and is not in `data/metrics.json`.
 

@@ -88,9 +88,12 @@ the mailer design is final.
 
 **Patrick's labour is not in the model at all.** That's fine for a breakeven
 sheet and fatal for a pricing decision. `data/metrics-schema.md` requires gross
-margin to count his hours at a real rate, and the numbers above don't yet. We
-need a studio-hours-per-bundle figure — it's also the growth ceiling
-(`company/open-questions.md` #3).
+margin to count his hours at a real rate, and the numbers above don't yet.
+Patrick told me 2026-09-16 he can't give a per-bundle time because making many
+at once is much faster per unit — so labour goes in **per batch**, and the
+number we need is one clocked run: start, finish, quantity. He's doing that.
+Capacity itself is no longer the worry: he says a few thousand a month before it
+stops being fun, starting at 50–100.
 
 ## Structure
 
@@ -110,7 +113,7 @@ need a studio-hours-per-bundle figure — it's also the growth ceiling
 - Shipping lands above $5/unit → the bundle needs to get lighter or the price
   needs to go to $38, not down. At $32 that's a 72% margin, survivable. At $15
   it's 43% and the business stops working.
-- Patrick's per-bundle time exceeds ~50 minutes → we're capacity-bound long
-  before we're demand-bound, and the price should go *up* to ration it.
+- A clocked batch shows 50 bundles eating most of Patrick's month → we're
+  capacity-bound after all and the price goes *up* to ration it.
 - The Denver waitlist won't convert above $25 → that's real data and it beats
   this analysis. We'll know by launch.

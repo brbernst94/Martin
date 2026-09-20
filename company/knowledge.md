@@ -27,6 +27,14 @@ in somebody's head or a Slack scrollback.*
 | 2026-09-16 | Brian | Launch (subscriptions open) is 11/1/26. First bundle delivered 12/1/26. |
 | 2026-09-16 | Brian | The business is based in **Denver, Colorado**. |
 
+## Studio capacity
+
+| Date | Who | Fact |
+| --- | --- | --- |
+| 2026-09-16 | Patrick | **He could make a few thousand bundles a month before it stops being fun.** Capacity is not the growth ceiling this year. |
+| 2026-09-16 | Patrick | **He wants to start at 50–100 bundles in month one and roughly double each month after**, to get his feet under him first. |
+| 2026-09-16 | Patrick | **No per-bundle time yet.** Making one is slower per unit than making many — he works in batches, so a single-bundle number doesn't exist. Marty asked him to clock start, finish, and count on his next run. |
+
 ## Unit economics
 
 | Date | Who | Fact |
@@ -51,14 +59,15 @@ in somebody's head or a Slack scrollback.*
 | Date | Who | Fact |
 | --- | --- | --- |
 | 2026-09-16 | Brian | **Patrick is partial to short-form video and specifically to TikTok.** This is the first signal on open question #6 — he's willing to make video, though whether he'll be on camera himself is still unconfirmed. |
+| 2026-09-16 | Patrick | **Filming can happen while he's working** — no separate shoot required. |
+| 2026-09-16 | Patrick | **He's fine with his hands on camera; he does not want his face on camera all the time.** |
 
 ## Still unknown
 
 Things Marty needs and does not have. Mirrors `company/open-questions.md`.
 
-- Patrick's studio minutes per bundle, and monthly capacity ceiling
+- Patrick's minutes per batch (capacity ceiling itself is answered — see above)
 - Real bundle weight and verified postage
-- Whether Patrick will appear on camera himself (hands-only is assumed workable)
 - Marketing budget for months 1–6
 - Edition sizes — open or limited, signed or not
 - Any existing audience: follower counts, list, past customers
