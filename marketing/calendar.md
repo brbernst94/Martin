@@ -43,7 +43,9 @@ Nothing else matters until these are done. All are blocking.
       economics. — *Brian*
 - [ ] **Cost the cocktail card and the letter.** Neither is in the breakeven
       sheet and both ship every month. — *Brian*
-- [ ] **Price signed off.** Marty's call is $32/$320 (`marketing/pricing.md`). — *Brian*
+- [ ] **Price signed off.** Marty's call is $32/$320 (`marketing/pricing.md`);
+      Patrick's stated range is $15–20 and this is not yet resolved between
+      them. — *Patrick & Brian*
 - [ ] **Clock one batch** — start, finish, how many came out. — *Patrick*
 - [ ] **Logo, mailer, packaging designed.** The mailer is a marketing decision:
       it has to be worth photographing unopened. — *Patrick*
@@ -56,7 +58,10 @@ Nothing else matters until these are done. All are blocking.
 ## By 10/25 · December's bundle exists and is photographed
 
 - [ ] **December relief print made and photographed properly.** This one photo
-      set feeds Pinterest for a year — shoot it once, shoot it well. — *Patrick*
+      set feeds Pinterest for a year — shoot it once, shoot it well. Shoot
+      against the studio's green wall, consistently lit, per Patrick's new
+      lighting setup — this becomes the recognizable visual signature across
+      video and photo. — *Patrick*
 - [ ] **Cocktail card 01 designed and printed.** It's the retention product and
       the thing nobody else in the category has; it has to be visible on the
       launch page. — *Patrick*
@@ -64,6 +69,11 @@ Nothing else matters until these are done. All are blocking.
 - [ ] **Letter 01 written**, including the standing request for subscriber
       photos and one place to send them. — *Patrick*
 - [ ] **The full bundle shot together**, laid out, as the hero image for 11/1.
+- [ ] **Weigh a fully assembled bundle on a real scale.** Target is one ounce
+      (28g) or under in the 5.5x7.5 envelope, nothing rigid, to hold one stamp —
+      going over adds a second-ounce charge, and a stiff insert triggers a
+      surcharge regardless of weight. Do a timed dry run: mail one finished
+      envelope to Patrick himself in October to see real transit time. — *Patrick*
 
 ## 10/1 → 11/1 · Denver, by hand (4 weeks)
 
@@ -91,6 +101,14 @@ Nothing else matters until these are done. All are blocking.
 
 The last high-intent day of the year. Everything in November builds to it.
 
+## 11/20 · December bundles in the mail
+
+Print, sign, stuff and seal by **11/19**; in the mail by **11/20**. That leaves
+five working days ahead of 12/1 despite Thanksgiving (11/26) landing inside the
+window, when post office volume is already climbing. Subscribers who join after
+11/20 don't get a December envelope — say so plainly on the site rather than
+let them find out by not receiving one.
+
 ## 12/1 · First bundle ships
 
 - Unboxing content push; the spare-sticker prompt (E-07)
@@ -111,3 +129,4 @@ The last high-intent day of the year. Everything in November builds to it.
 - **Week 1:** process content as the work happens
 - **Week 3:** "what's shipping and why" email
 - **Week 4:** bundle mails; unboxing content
+</content>

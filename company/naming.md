@@ -52,6 +52,17 @@ problem without a misspelling or a bolted-on "co".
 | Open Door | **Hard kill** | Opendoor is a multi-billion-dollar real estate company. Unwinnable search, real trademark exposure. Not a close call. |
 | Small Batch | **Hard kill** | The single most overused phrase in food and beverage. It signals nothing because everyone says it. |
 
+## Considered after launch of the name
+
+**Green Room Press** (or similar), proposed 2026-09-16 by Patrick, tied to his
+studio's green walls. Rejected as a name: "green" in a print business reads as
+eco/recycled-stock positioning, which isn't ours and would take years to
+correct; a "green room" is a room you wait outside of before being let in,
+which fights the invitation positioning; and an existing "Green Room Press"
+already exists elsewhere. The green wall itself was kept — approved as the
+consistent visual backdrop for photo/video and as a brand accent color, paired
+with something warmer. See `company/brand.md` and `company/decisions.md`.
+
 ## Domains, checked 2026-09-16
 
 | Domain | Status |
@@ -98,3 +109,4 @@ The Guest List is the fallback and it's a real name, not a consolation.
 `theguestlistpress.com` is available. I'd move fast either way — the name is
 the critical path item and everything else in `marketing/calendar.md` is
 stacked behind it.
+</content>

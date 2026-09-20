@@ -77,7 +77,19 @@ screenprint too, but chose relief for this), and his graphic design work is in
 the bundle as the cocktail card. Paper is constant month to month, stock not yet
 named.
 
-`UNVERIFIED` — everything about how the work actually *looks*. Patrick's
+**Confirmed 2026-09-16, later — the studio's green wall is the visual set.**
+Patrick works in a room with green walls and is buying lighting to shoot better
+photo and video against it. Approved as the standing backdrop for all process
+content — same wall, same color, every shoot — so a post is recognizable before
+anyone reads the name. Also approved as a brand accent color, paired with a
+warmer color so the palette doesn't drift toward eco/sustainability signaling
+(plain green on a print/paper brand reads as recycled-stock positioning, which
+isn't ours). The wall color has to stay consistent shoot to shoot — repainting
+or drifting the shade undoes the point of using it as a signature. This is a
+color and a set, not the brand name; "Green Room Press" was considered and
+rejected as a name — see `company/naming.md` and `company/decisions.md`.
+
+`UNVERIFIED` — everything else about how the work actually *looks*. Patrick's
 portfolio is image-based and couldn't be read programmatically. The following is
 still inference and must not drive creative until he sends images:
 
@@ -91,17 +103,14 @@ outstanding.
 
 ## Naming
 
-`OPEN` — no brand name chosen. Marty's constraints for candidates:
-- Must survive being said out loud in a bar.
-- Should gesture at *both* halves (making + consuming) rather than picking one.
-- `.com` and a clean Instagram handle available.
-- Not a pun that gets old by month four.
-
-Standing Invite is Marty's proposal, awaiting Brian — see `company/decisions.md`.
+Standing Invite — decided by Patrick, see `company/decisions.md`. Domain
+`standinginvitepress.com`.
 
 ## Brand assets we don't have yet
 
-Logo, wordmark, color system, type system, packaging design, mailer design,
-photography direction, website. All of these are Patrick's to make and all of
-them are on the critical path to launch. Marketing cannot start until the mailer
-looks like something someone would post a photo of.
+Logo, wordmark, color system (beyond the green-plus-warm accent direction
+above), type system, packaging design, mailer design, photography direction,
+website. All of these are Patrick's to make and all of them are on the critical
+path to launch. Marketing cannot start until the mailer looks like something
+someone would post a photo of.
+</content>
