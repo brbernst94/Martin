@@ -19,7 +19,7 @@ Answer inline, or in chat and Marty will file them.
 | 7 | Marketing budget for months 1–6? | Decides organic-only vs. paid-assisted. Now urgent — launch is 6 weeks out. |
 | 8 | Edition sizes — open or limited? Signed? | Changes both price and the collector segment's willingness to buy. |
 | 9 | Will we sell one-off prints alongside the subscription? | A shop is the best low-friction entry point and a strong retention offer. Also a distraction if it's not ready. |
-| 10 | Any existing audience? Patrick's follower counts, any list, any past customers? | Determines whether month one is "launch" or "cold start." Now includes: does Patrick already have a TikTok or Instagram presence we'd be building on rather than starting from zero? |
+| 10 | Any existing audience? Patrick's follower counts, any list, any past customers? | Determines whether month one is "launch" or "cold start." Now includes: does Patrick already have a TikTok or Instagram presence we'd be building on rather than starting from zero? Asked of Patrick directly 2026-09-16 as a pre-read. |
 | 16 | **What is Patrick's own vision for the company?** Where he wants it in three years, and what he won't do. | Added 2026-09-16 at Brian's request. The positioning is "sell the studio, not the subscription" — that only holds if the studio's owner agrees with where it's going. | 
 
 ## Nice to have
@@ -34,8 +34,11 @@ Answer inline, or in chat and Marty will file them.
 
 ## Patrick intake — 45 minutes, in the studio
 
-*Requested by Brian 2026-09-16. Brian is having Patrick reach out to Marty
-directly. Status: **scheduled pending Patrick's outreach**.*
+*Requested by Brian 2026-09-16. Status: **Patrick made contact 2026-09-16**.
+Marty sent him the three blocking questions (capacity, whether filming fits
+inside work already happening, on-camera or hands-only) plus two pre-reads:
+8–10 images of work he'd want representing this, and what he already has online.
+Date for the 45 minutes not yet set.*
 
 Questions 1–3 are the blocking ones. If the conversation only covers those, it
 was still worth having. The rest are ordered to be answerable in the room.
