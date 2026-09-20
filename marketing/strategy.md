@@ -1,7 +1,8 @@
-# Marketing strategy — v0.1
+# Marketing strategy — v0.2
 
-*Owner: Marty. Last rewritten: 2026-09-16. This is a living document; the top
-section gets rewritten monthly to reflect what we actually learned.*
+*Owner: Marty. Last rewritten: 2026-09-16, after Patrick fixed the bundle at
+four items. This is a living document; the top section gets rewritten monthly to
+reflect what we actually learned.*
 
 ## Where we are
 
@@ -11,6 +12,10 @@ channels live. Every number in `data/metrics.json` is `null` and that is correct
 
 Price: **$32/month, $320/year** is my call, pending Brian's sign-off
 (`marketing/pricing.md`). The cost model permits $15; the business needs $32.
+
+Existing audience, from Patrick 2026-09-16: 250 on his art Instagram, 1,200 on a
+personal account that isn't about art, a few Etsy sales to friends and family,
+no list. This is a cold start, and the plan is written as one.
 
 ## The thesis in one paragraph
 
@@ -22,6 +27,32 @@ sell the process rather than the object, and the physical work becomes a moat
 nobody selling licensed digital prints can cross.
 
 Sell the studio, not the subscription.
+
+## The bundle is fixed at four things
+
+Every month: a relief print of a food subject, a cocktail card with the month's
+drink and recipe, a sticker cut from that month's cocktail graphic, and a letter
+from Patrick. Patrick killed the rotating surprise object on 2026-09-16 —
+coasters, matchbooks, tea towels — because everything ships in an envelope and
+weight and cost are real.
+
+What that does to the plan, plainly:
+
+- **The card is the retention product.** It's a set that builds into a book, and
+  it's the only piece that never competes for wall space. It ships every month
+  without gaps, and we market it as a collection from day one — numbered, shown
+  filling up. `marketing/retention.md` now rests on it almost alone.
+- **The sticker is the acquisition product.** It's the only thing in the bundle
+  that leaves the house. A bartender putting it on their well is distribution we
+  didn't pay for. Rules in `company/brand.md`: one element of the cocktail
+  graphic, reads at an inch, our name on it small.
+- **The letter is the community product.** Patrick's idea, and he's the one who
+  wanted the photo request in it. Subscriber photos of real walls and bar carts
+  beat anything we'd produce. Both tracked competitors also send letters, so the
+  letter is table stakes and the photo loop is the part that's ours.
+- **We lost the "what's in the box" hook.** Contents are identical every month,
+  so the month's *subject* carries all the surprise. That raises the stakes on
+  how we tease each month and on the letter explaining it.
 
 ## The studio is not the ceiling
 
@@ -35,7 +66,13 @@ for 12/1 sit comfortably inside his own month-one range.
 The open piece is time per batch, not volume — he can't price a single bundle
 because making many at once is far faster per unit. He's clocking his next run
 (start, finish, count). That number feeds gross margin and what he earns per
-hour; it no longer gates growth.
+hour; it no longer gates growth. It also matters more now: four items a month,
+not three.
+
+He can work about a month ahead given planning. **December's print and the first
+cocktail card have to be finished, or far enough along to photograph, by 10/25.**
+Subscriptions open 11/1 and selling a promise instead of an object converts
+materially worse.
 
 ## Content costs us nothing extra
 
@@ -44,11 +81,15 @@ the standing default and his face is by exception, asked for only on something
 like a launch post. The expensive branch of the process-content thesis is closed:
 we get the footage out of work that was happening anyway.
 
+One limit worth writing down: Patrick said he's excited to build a community and
+not excited about marketing and finance. Nothing in this plan can depend on him
+running a channel. He makes the work, appears in it, and writes the letter.
+
 ## One brand, not two
 
 Patrick's art and the brand are marketed as one thing, with Patrick as the face.
 No separate artist account. The positioning requires it — "sell the studio" only
-works if the studio is visibly one person's — and at zero followers a second
+works if the studio is visibly one person's — and at 250 followers a second
 account is dividing nothing in half. Full reasoning in `company/decisions.md`.
 
 ## What the launch date does to the plan
@@ -84,10 +125,10 @@ Full detail in `marketing/channels.md`. The short version:
 
 | Channel | Verdict | Why |
 | ------- | ------- | --- |
-| Instagram | **Core** | Where both primary segments live, and where process video performs. Home for short form — commerce intent is here. |
+| Instagram | **Core** | Where both primary segments live, and where process video performs. Home for short form — this is where people buy. |
 | Pinterest | **Core** | Search-driven, compounds, and "bar cart art" is an evergreen query. Most underrated channel for this business. |
 | Email | **Core** | The only channel we own. The waitlist *is* the launch. |
-| Physical / guerrilla | **Core** | We make objects. Objects are distribution. See `guerrilla.md`. |
+| Physical / guerrilla | **Core** | We make objects. Objects are distribution. The monthly sticker is the cheapest one we have. See `guerrilla.md`. |
 | TikTok | **Active** | Upgraded from Test 2026-09-16. Patrick actually wants to make short form, which was the only real constraint. Same footage cut looser, ~0 marginal Patrick-hours. Buys reach, not conversion. |
 | Reddit | **Test, carefully** | r/cocktails and r/printmaking are exactly our people and will eject us instantly if we market at them. Participate as Patrick, don't advertise. |
 | Paid social | **Off** | Three gates left, all ours: price, a converting page, three organic posts over 10k views. The capacity gate cleared 2026-09-16. See `paid-media.md`. |
@@ -105,15 +146,19 @@ benchmarks put curated lifestyle boxes at 7–10% monthly churn; best-in-class i
 under 3%. At 8% monthly churn, the average subscriber lasts 12 months; at 4%,
 25. That difference is worth more than any channel decision on this page.
 
-The plan is in `marketing/retention.md`. The one-line version: **the third piece
-is the retention product.** It's the only unpredictable element, and
-unpredictability is the reason to stay subscribed.
+The plan is in `marketing/retention.md`. The one-line version: **the cocktail
+card is the retention product** — an unfinished collection is the reason not to
+cancel, and it's the only piece that doesn't compete for wall space.
 
 ## What would make me wrong
 
+- If subscribers file the cocktail cards in a drawer instead of collecting them,
+  the whole retention thesis is gone and there's no rotating object left to fall
+  back on. Ask at the month-3 touchpoint. This is now the single biggest risk in
+  the plan.
 - If a clocked batch shows 50 bundles eating most of Patrick's month, the
   capacity read above is wrong and the price goes up to ration demand. His
-  appetite is real; his hours are still unmeasured.
+  appetite is real; his hours are still unmeasured — and it's four items now.
 - If Brian holds the price at $15, paid never works and we are permanently capped
   at whatever organic produces. I'd rather launch late at $32 than on time at $15.
 - If the real shipping cost lands above $5/unit, the bundle gets lighter or the

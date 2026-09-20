@@ -19,9 +19,11 @@ need.
 - **Why they buy:** The wall above the bar cart is a real, unsolved, recurring
   problem, and "new art every month" solves it permanently.
 - **Why they churn:** They run out of wall. **This is the core retention risk
-  and the cocktail card is the answer** — a collected object rather than a hung
-  one, so it never competes for wall. The variable surprise piece backs it up:
-  coasters, matchbooks, menus and tea towels get used rather than displayed.
+  and the cocktail card is the only answer we have** — a collected object rather
+  than a hung one, so it never competes for wall. It used to have backup from a
+  variable surprise piece skewed toward things that get used up; Patrick cut
+  that on weight and cost, so the card now carries the whole load. See
+  `marketing/retention.md`.
 - **Willingness to pay:** High. This person spends $60 on a bottle without
   blinking. The card also aims directly at what they already care about — the
   drink itself, not just the art about it.
@@ -40,7 +42,9 @@ people who are visibly *of* the world rather than selling into it.
   this segment in one screenshot, so the drinks have to be right.
 - **Why they matter disproportionately:** They work in rooms full of our other
   customer. A bartender with our print in their bar is a billboard we didn't pay
-  for. This is the single highest-leverage segment we have.
+  for. This is the single highest-leverage segment we have. The monthly sticker
+  is the cheap version of the same thing — it ends up on a well, a cooler, or a
+  ticket rail where every coworker sees it.
 - **Risk:** Notoriously low disposable income. Price tiering may be needed.
 
 ## Secondary: The Gifter
@@ -68,7 +72,9 @@ size, paper, and signature.
   that editions are open but every piece is signed and numbered, and the paper
   is constant month to month. We still need the stock named. Open editions will
   cost us the scarcity-driven end of this segment; that's the right trade for a
-  subscription that can't promise to stop printing.
+  subscription that can't promise to stop printing. Relief rather than
+  screenprint is a plus here, not a minus — it's the harder, more physical
+  process and this segment knows it.
 
 ## Explicitly not targeting at launch
 
@@ -81,6 +87,7 @@ size, paper, and signature.
 1. Which of the two primaries actually converts cheaper. Test both in the first
    90 days; do not assume.
 2. Whether the bar-cart wall-space ceiling is real, and how fast people hit it.
+   Higher stakes now that nothing in the bundle gets used up.
 3. Whether restaurant-industry people will pay full price or need a tier.
 4. Whether the cocktail cards actually get collected, or just filed. Ask in the
-   month-3 touchpoint.
+   month-3 touchpoint. This is the most important of the four.

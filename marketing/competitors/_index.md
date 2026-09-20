@@ -13,8 +13,8 @@ anytime, ~$10–12/month including shipping.
 That price band is a trap for us. At $12 with worldwide shipping included, the
 economics only work if the artist is printing digitally at scale and treating it
 as audience-building rather than a business. Patrick makes physical prints by
-hand plus a sticker plus a third piece. We cannot be the cheap option and
-shouldn't try.
+hand, plus a designed cocktail card, plus a sticker, plus a letter. We cannot be
+the cheap option and shouldn't try.
 
 ## Where the actual gap is
 
@@ -25,24 +25,29 @@ Three gaps, in order of how much they're worth to us:
    served by print-on-demand marketplaces, not by anyone with a point of view.
    This is our wedge.
 2. **Nobody is selling the process.** Almost every competitor sells a finished
-   image. A working press, plates, separations, and misregistration is a story
-   none of them can tell. It is also, conveniently, the best short-form video
-   content in the category.
-3. **Everybody ships one thing.** One print, one envelope, predictable.
-   Three-piece bundles with a variable third element are rare at this price, and
-   the variability is exactly what defends against the "I have enough prints"
-   cancel.
+   image. A working press, plates, test prints, and prints that come out wrong
+   is a story none of them can tell. It is also, conveniently, the best
+   short-form video content in the category.
+3. **Nobody ships anything you collect.** Everyone ships one print and a letter —
+   the letter is table stakes, not a differentiator. The cocktail card is a set
+   that builds into a book, and an unfinished set is what actually defends
+   against the "I have enough prints" cancel. We gave up the variable surprise
+   object on 2026-09-16 (weight and cost), so the card is carrying this on its
+   own.
 
 ## Where we're exposed
 
 - **Price.** We will be 2–4x the category norm. Every piece of positioning has
   to earn that gap explicitly.
 - **Free worldwide shipping is the category default.** Competitors at $10–12
-  include it. We have three physical objects and real postage, so we either
-  build it into price or look worse on the comparison.
+  include it. We have four physical items and real postage, so we either build
+  it into price or look worse on the comparison.
+- **Predictability.** Our contents are now the same four things every month.
+  Competitors are equally predictable, so this isn't a disadvantage against
+  them — but it removes the "what's in the box" hook we'd been planning to use.
 - **They all have audiences already.** These clubs are monetizing followings
-  built over years. We are starting at zero. That's the real gap, not the
-  product.
+  built over years. We are starting at 250 art followers and no list. That's the
+  real gap, not the product.
 
 ## Tracked competitors
 
