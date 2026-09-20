@@ -12,21 +12,48 @@ from .repo import Repo
 log = logging.getLogger("marty.agent")
 
 MODEL = os.environ.get("MARTY_MODEL", "claude-opus-5")
+# Capture is bookkeeping, not judgment — deciding what to file is much easier
+# than deciding what to think. Opus for both roughly doubled the bill.
+CAPTURE_MODEL = os.environ.get("MARTY_CAPTURE_MODEL", "claude-sonnet-5")
 EFFORT = os.environ.get("MARTY_EFFORT", "high")
 MAX_TOKENS = 16000
 MAX_TURNS = 20
 MAX_PAUSE_RESUMES = 5
 
+# $ per million tokens, for the cost line in the logs. Cache reads are a tenth
+# of input; cache writes are 1.25x.
+PRICES = {
+    "claude-opus-5": (5.0, 25.0),
+    "claude-sonnet-5": (2.0, 10.0),
+    "claude-haiku-4-5": (1.0, 5.0),
+}
+
+
+def _cost(model: str, usage) -> float:
+    inp, out = PRICES.get(model, PRICES["claude-opus-5"])
+    fresh = getattr(usage, "input_tokens", 0) or 0
+    write = getattr(usage, "cache_creation_input_tokens", 0) or 0
+    read = getattr(usage, "cache_read_input_tokens", 0) or 0
+    output = getattr(usage, "output_tokens", 0) or 0
+    return (fresh * inp + write * inp * 1.25 + read * inp * 0.1 + output * out) / 1_000_000
+
 # Loaded into every system prompt so Marty always argues from the real plan.
+# Preloaded into every prompt. Everything else he reads on demand — preloading
+# eight documents cost ~14k tokens on every single API call, and a tool loop
+# makes several per exchange.
 CORE_DOCS = [
-    ".claude/agents/marty.md",
-    "company/business-brief.md",
-    "company/knowledge.md",
-    "company/decisions.md",
-    "company/brand.md",
-    "company/icp.md",
-    "company/open-questions.md",
-    "marketing/strategy.md",
+    ".claude/agents/marty.md",      # who he is and how he talks
+    "company/business-brief.md",    # what the business is
+    "company/knowledge.md",         # what Brian and Patrick have told him
+]
+
+# Named so he knows to go read them rather than guessing.
+ON_DEMAND_DOCS = [
+    "company/decisions.md", "company/brand.md", "company/icp.md",
+    "company/open-questions.md", "company/naming.md", "company/glossary.md",
+    "marketing/strategy.md", "marketing/channels.md", "marketing/pricing.md",
+    "marketing/calendar.md", "marketing/guerrilla.md", "marketing/retention.md",
+    "marketing/paid-media.md", "marketing/experiments.md",
 ]
 
 READ_TOOLS = [
@@ -170,14 +197,16 @@ class Marty:
         ]
 
     def system_prompt(self, allow_writes: bool, speaker: str = "") -> list[dict]:
-        """Two prompts: one for answering, one for recording.
+        """Two blocks, stable first.
 
-        The answering pass has no write tools on purpose. Without being told
-        that, Marty notices the missing tool and reports that he cannot write —
-        which is both confusing and untrue, since recording happens immediately
-        afterwards.
+        The stable block — identity, the repo map, the always-loaded docs — is
+        the expensive one, so it goes first and carries the cache breakpoint.
+        Everything that varies by pass or by who is talking goes in a second,
+        uncached block after it. The other way round (which is how this started)
+        gives every combination of person and pass its own cache entry, and each
+        one pays full price for the same 12k tokens.
         """
-        parts = [
+        stable = [
             "You are Marty, CMO of a monthly art-bundle business. Everything about who "
             "you are and how you speak is in the agent definition below. Follow it exactly.",
             "",
@@ -185,76 +214,39 @@ class Marty:
             "Lead with the answer. No headers or bullet lists unless the answer genuinely "
             "has parts. Never open with a restatement of the question.",
             "",
-            "Density is the standard Brian holds you to, and he has rewritten your work "
-            "to make the point. Every sentence must carry weight no other sentence "
-            "carries. Specifically:",
-            "- Cut any sentence whose only job is to set up the next one. Land the good "
-            "line without the runway.",
-            "- Never comment on the question before answering it. No 'good question', no "
-            "'that's the right thing to be asking', no 'your brief is the reason rather "
-            "than a complication'.",
-            "- Never close with an escape hatch — no 'if you disagree', no 'but it's your "
-            "call', no 'happy to look at alternatives'. He knows he can overrule you; "
-            "offering it back reads as no conviction in what you just said.",
-            "- Don't restate a point you already made in different words.",
-            "- Two short paragraphs is a long answer. Three is almost always too many.",
-            "",
-            "Plain, not literary. You are an executive briefing another executive, not "
-            "writing an essay:",
-            "- Say the thing, don't characterize it. 'Film his hands, not his face' is "
-            "the sentence. 'His hands are the character' is you admiring your phrasing.",
-            "- No slogans. If it would look at home on a poster, cut it.",
-            "- No abstracted principles. Don't state a general law and then apply it — "
-            "state the decision.",
-            "- Don't narrate your position changing. Nobody needs the before. Say what "
-            "it is now; if the reason matters it's one clause.",
-            "- No MBA nouns: 'the unit of content', 'commerce intent', 'the format that "
-            "travels', 'the binding constraint'. Talk about posts, buyers, dates.",
-            "",
-            "**Brian is the CEO, not a marketer and not a printmaker.** Both of those "
-            "vocabularies are yours, not his. He should never have to look up a word to "
-            "understand his own marketing plan.",
-            "- Never use craft terms with him. A 'pull' is him printing. A 'proof' is a "
-            "test print. 'Registration' is whether the colors line up. Say the plain "
-            "thing: 'video of him printing', 'prints that come out wrong'.",
-            "- Marketing terms that are load-bearing — CAC, churn, LTV, conversion rate "
-            "— get defined on first use, then you can use them freely. 'CAC, what it "
-            "costs us to get one subscriber, is about $40.'",
-            "- Everything else in plain English. Not 'impressions' — how many people saw "
-            "it. Not 'top of funnel' — people who've never heard of us.",
-            "- If a sentence needs him to already know a word to be useful, rewrite the "
-            "sentence.",
-            "",
-            "Brian's test is whether he can act on it without decoding it. Two worked "
-            "before-and-after examples are in .claude/agents/marty.md under 'What "
-            "density looks like'. They are the target, not a suggestion.",
-            "",
-            "There is a before-and-after worked example in .claude/agents/marty.md under "
-            "'What density looks like'. Read it as the target, not as a suggestion.",
-            "",
             "Slack formatting: *bold* uses single asterisks, _italic_ single underscores, "
             "`code` backticks. Markdown headers (#) do not render — don't use them.",
             "",
+            "=== THE REPO ===",
         ]
-
-        parts += (self._capture_rules() if allow_writes else self._answering_rules())
-        if not allow_writes:
-            parts += ["", *self.audience_rules(speaker)]
-        parts += ["", "=== THE REPO ==="]
-
         try:
-            parts.append("\n".join(self.repo.tree()))
+            stable.append("\n".join(self.repo.tree()))
         except Exception as exc:  # noqa: BLE001
-            parts.append(f"(file listing unavailable: {exc})")
+            stable.append(f"(file listing unavailable: {exc})")
+
+        stable += [
+            "",
+            "These are loaded below in full. Everything else, read with read_file when "
+            "it is relevant — don't answer from memory about a document you haven't "
+            "opened this turn. The ones you reach for most:",
+            *(f"  {d}" for d in ON_DEMAND_DOCS),
+        ]
 
         for path in CORE_DOCS:
             try:
-                parts += ["", f"=== {path} ===", self.repo.read(path, max_chars=20_000)]
+                stable += ["", f"=== {path} ===", self.repo.read(path, max_chars=20_000)]
             except Exception as exc:  # noqa: BLE001
-                parts.append(f"\n=== {path} === (unreadable: {exc})")
+                stable.append(f"\n=== {path} === (unreadable: {exc})")
 
-        # One cached block: this prefix is identical across turns, so it caches.
-        return [{"type": "text", "text": "\n".join(parts), "cache_control": {"type": "ephemeral"}}]
+        variable = list(self._capture_rules() if allow_writes else self._answering_rules())
+        if not allow_writes:
+            variable += ["", *self.audience_rules(speaker)]
+
+        return [
+            {"type": "text", "text": "\n".join(stable),
+             "cache_control": {"type": "ephemeral"}},
+            {"type": "text", "text": "\n".join(variable)},
+        ]
 
     @staticmethod
     def _answering_rules() -> list[str]:
@@ -356,7 +348,8 @@ class Marty:
     # -- the loop ---------------------------------------------------------
 
     def respond(self, history: list[dict], on_tool=None, allow_writes: bool = False,
-                effort: str | None = None, speaker: str = "") -> tuple[str, list[dict]]:
+                effort: str | None = None, speaker: str = "",
+                model: str | None = None) -> tuple[str, list[dict]]:
         """Run to completion. Returns (reply_text, updated_history).
 
         Writes are off by default. Every tool call is a full model round trip, so
@@ -370,9 +363,12 @@ class Marty:
         system = self.system_prompt(allow_writes, speaker)
 
         resumes = 0
+        spend = 0.0
+        calls = 0
+        cache_hits = 0
         for _ in range(MAX_TURNS):
             response = self.client.messages.create(
-                model=MODEL,
+                model=model or MODEL,
                 max_tokens=MAX_TOKENS,
                 system=system,
                 thinking={"type": "adaptive"},
@@ -380,6 +376,11 @@ class Marty:
                 tools=tools,
                 messages=messages,
             )
+
+            calls += 1
+            spend += _cost(model or MODEL, response.usage)
+            if (getattr(response.usage, "cache_read_input_tokens", 0) or 0) > 0:
+                cache_hits += 1
 
             if response.stop_reason == "refusal":
                 detail = getattr(response, "stop_details", None)
@@ -413,6 +414,10 @@ class Marty:
         else:
             log.warning("hit MAX_TURNS without finishing")
 
+        log.info("%s: %d call(s), %d cached, $%.3f",
+                 "capture" if allow_writes else "answer", calls, cache_hits, spend)
+        self.last_cost = spend
+
         reply = ""
         if messages and messages[-1]["role"] == "assistant":
             blocks = messages[-1]["content"]
@@ -444,6 +449,7 @@ class Marty:
                 list(history) + [{"role": "user", "content": prompt}],
                 allow_writes=True,
                 effort="low",
+                model=CAPTURE_MODEL,
             )
         except Exception as exc:  # noqa: BLE001
             log.exception("capture pass failed")

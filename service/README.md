@@ -180,13 +180,38 @@ experts on this business.
 
 ## Costs
 
-Opus 5 at `high` effort. The repo context is cached, so a follow-up in the same
-thread costs a fraction of the first message. Expect roughly $0.10–0.40 per
-exchange depending on how much research he does. A full morning brief with web
-research is closer to $1–2.
+Three things keep this affordable, and all three were learned the expensive way.
 
-To cut it: `MARTY_EFFORT=medium` for everyday chat, or `MARTY_MODEL=claude-sonnet-5`.
-Both trade judgment for cost — I'd leave it on Opus for strategy work.
+**The stable half of the prompt comes first and carries the cache breakpoint.**
+Identity, the repo map and the always-loaded docs are identical for every
+person and every pass, so they cache once and are read back at a tenth of the
+price. Anything that varies — who is talking, which pass — goes in a second
+block *after* it. Putting the variable content first, which is how this started,
+gives every combination its own cache entry and each one pays full price for the
+same 6k tokens.
+
+**Only three documents are preloaded.** `marty.md`, `business-brief.md` and
+`knowledge.md`. Everything else he opens with `read_file` when it's relevant.
+Preloading eight documents cost ~14k tokens on *every* API call, and a tool loop
+makes several per exchange.
+
+**Capture runs on Sonnet.** Deciding what to file is much easier than deciding
+what to think. Opus on both roughly doubled the bill for no gain.
+
+Every turn logs what it cost:
+
+```
+answer: 3 call(s), 2 cached, $0.042
+capture: 2 call(s), 2 cached, $0.008
+```
+
+If `cached` is 0 across a whole conversation, caching is broken — check whether
+something varying slipped into the stable block.
+
+Knobs: `MARTY_EFFORT=medium` for everyday chat (`high` is worth it for the
+morning brief), `MARTY_CAPTURE_MODEL` (default `claude-sonnet-5`), and
+`MARTY_MODEL` if you ever want to drop the answering model too — I'd keep that
+on Opus, it's where the judgment lives.
 
 ## Running locally
 
