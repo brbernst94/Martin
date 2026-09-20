@@ -15,6 +15,9 @@ MODEL = os.environ.get("MARTY_MODEL", "claude-opus-5")
 # Capture is bookkeeping, not judgment — deciding what to file is much easier
 # than deciding what to think. Opus for both roughly doubled the bill.
 CAPTURE_MODEL = os.environ.get("MARTY_CAPTURE_MODEL", "claude-sonnet-5")
+# One cheap call decides whether the capture pass runs at all. Most exchanges
+# contain nothing durable, and skipping them skips a whole tool loop.
+GATE_MODEL = os.environ.get("MARTY_GATE_MODEL", "claude-haiku-4-5")
 EFFORT = os.environ.get("MARTY_EFFORT", "high")
 MAX_TOKENS = 16000
 MAX_TURNS = 20
@@ -244,7 +247,7 @@ class Marty:
 
         return [
             {"type": "text", "text": "\n".join(stable),
-             "cache_control": {"type": "ephemeral"}},
+             "cache_control": {"type": "ephemeral", "ttl": "1h"}},
             {"type": "text", "text": "\n".join(variable)},
         ]
 
@@ -370,6 +373,10 @@ class Marty:
             response = self.client.messages.create(
                 model=model or MODEL,
                 max_tokens=MAX_TOKENS,
+                # Auto-caches the last cacheable block, which is the growing
+                # message history — otherwise every tool call in the loop
+                # re-sends the whole thread at full price.
+                cache_control={"type": "ephemeral"},
                 system=system,
                 thinking={"type": "adaptive"},
                 output_config={"effort": effort or EFFORT},
@@ -433,12 +440,65 @@ class Marty:
 
         return reply or "(I got stuck on that one — try asking again.)", messages
 
+    def worth_recording(self, history: list[dict]) -> bool:
+        """Cheap yes/no on whether the capture pass is worth running.
+
+        Most exchanges are questions, chatter or acknowledgements and produce no
+        writes. Running a full tool loop to discover that is the single most
+        wasteful thing this service does.
+        """
+        tail = []
+        for message in history[-4:]:
+            content = message.get("content")
+            if isinstance(content, str):
+                text = content
+            else:
+                parts = []
+                for b in content if isinstance(content, list) else []:
+                    kind = b.get("type") if isinstance(b, dict) else getattr(b, "type", None)
+                    if kind == "text":
+                        parts.append(b.get("text", "") if isinstance(b, dict)
+                                     else getattr(b, "text", ""))
+                text = " ".join(parts)
+            if text.strip():
+                tail.append(f"{message['role'].upper()}: {text[:2000]}")
+
+        if not tail:
+            return False
+
+        try:
+            result = self.client.messages.create(
+                model=GATE_MODEL,
+                max_tokens=8,
+                system=(
+                    "You decide whether a conversation excerpt needs to be recorded in "
+                    "a company's strategy repo.\n\n"
+                    "Answer YES only if it contains a new fact about the business, "
+                    "product, costs, customers or market stated by a person; a decision "
+                    "that was made; or a change that contradicts something previously "
+                    "believed.\n\n"
+                    "Answer NO for questions, analysis, recommendations, chatter, "
+                    "acknowledgements, and anything the assistant merely reasoned to.\n\n"
+                    "Reply with exactly YES or NO."
+                ),
+                messages=[{"role": "user", "content": "\n\n".join(tail)}],
+            )
+            answer = next((b.text for b in result.content if b.type == "text"), "").strip()
+            log.info("capture gate: %s ($%.4f)", answer or "?", _cost(GATE_MODEL, result.usage))
+            return answer.upper().startswith("YES")
+        except Exception as exc:  # noqa: BLE001 — on doubt, record it
+            log.warning("capture gate failed, recording anyway: %s", exc)
+            return True
+
     def capture(self, history: list[dict]) -> str | None:
         """Second pass, after the reply is sent. Records anything durable.
 
         Runs at low effort — deciding what to file is mechanical next to deciding
         what to think. Brian is not waiting on this.
         """
+        if not self.worth_recording(history):
+            return None
+
         self._commit_messages = []
         prompt = (
             "Record anything durable from that exchange, following your instructions. "

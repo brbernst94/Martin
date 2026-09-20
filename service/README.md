@@ -208,10 +208,32 @@ capture: 2 call(s), 2 cached, $0.008
 If `cached` is 0 across a whole conversation, caching is broken — check whether
 something varying slipped into the stable block.
 
-Knobs: `MARTY_EFFORT=medium` for everyday chat (`high` is worth it for the
-morning brief), `MARTY_CAPTURE_MODEL` (default `claude-sonnet-5`), and
-`MARTY_MODEL` if you ever want to drop the answering model too — I'd keep that
-on Opus, it's where the judgment lives.
+**A Haiku gate decides whether capture runs at all.** Most exchanges are
+questions or chatter and produce no writes; running a full Sonnet tool loop to
+discover that was the most wasteful thing here. One ~$0.0004 call answers YES or
+NO first. On failure it answers YES — losing a fact is worse than a wasted call.
+
+**The message history is cached too**, not just the system prompt, and the
+system block holds a 1-hour TTL. Slack messages arrive minutes apart, and the
+default 5-minute cache expired in every gap.
+
+Roughly $0.08 an exchange, $0.11 when something gets recorded.
+
+### What's left
+
+Input is largely solved; **output is now the dominant cost**, and thinking
+tokens bill as output. So `MARTY_EFFORT` is the real remaining lever:
+
+- `medium` — the default for chat. Right for most questions.
+- `low` — noticeably cheaper, and fine for lookups and quick calls. Costs
+  judgment on anything strategic.
+- `high` — worth it for the morning brief, where research and synthesis are the
+  whole point.
+
+Other knobs: `MARTY_CAPTURE_MODEL` (default `claude-sonnet-5`), `MARTY_GATE_MODEL`
+(default `claude-haiku-4-5`), and `MARTY_MODEL` if you ever want to drop the
+answering model — I'd keep that on Opus. It's where the judgment lives, and it's
+no longer where the money goes.
 
 ## Running locally
 

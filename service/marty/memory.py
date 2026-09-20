@@ -17,7 +17,7 @@ from pathlib import Path
 
 log = logging.getLogger("marty.memory")
 
-MAX_MESSAGES = 40
+MAX_MESSAGES = 20  # every message is resent on every call in the tool loop
 TTL_SECONDS = 60 * 60 * 24 * 3  # threads go cold after three days
 SCHEMA = 2  # bump to discard state written by an older, incompatible format
 
