@@ -18,11 +18,13 @@ need.
   Imbibe's audiences, local cocktail bars.
 - **Why they buy:** The wall above the bar cart is a real, unsolved, recurring
   problem, and "new art every month" solves it permanently.
-- **Why they churn:** They run out of wall. **This is the core retention risk and
-  the third piece is the answer** — coasters, matchbooks, menus, and recipe
-  cards are consumed and displayed differently than prints.
+- **Why they churn:** They run out of wall. **This is the core retention risk
+  and the cocktail card is the answer** — a collected object rather than a hung
+  one, so it never competes for wall. The variable surprise piece backs it up:
+  coasters, matchbooks, menus and tea towels get used rather than displayed.
 - **Willingness to pay:** High. This person spends $60 on a bottle without
-  blinking.
+  blinking. The card also aims directly at what they already care about — the
+  drink itself, not just the art about it.
 
 ## Primary: The Restaurant-Industry Person
 
@@ -34,7 +36,8 @@ people who are visibly *of* the world rather than selling into it.
   TikTok kitchen and bar content, industry Discords, and — critically —
   physically, at their workplace.
 - **Why they buy:** Recognition. Art that gets the details right is a signal that
-  someone on the inside made it.
+  someone on the inside made it. A recipe card with a wrong spec is how we lose
+  this segment in one screenshot, so the drinks have to be right.
 - **Why they matter disproportionately:** They work in rooms full of our other
   customer. A bartender with our print in their bar is a billboard we didn't pay
   for. This is the single highest-leverage segment we have.
@@ -50,7 +53,8 @@ in a tight seasonal window, converts at high AOV, and churns by definition.
 - **Why they matter:** Prepaid gift subscriptions are cash up front with zero
   involuntary churn, and a meaningful share convert to self-pay at expiry.
 - **Action:** Gifting must exist before Q4 or we miss the only reliable seasonal
-  spike this category has.
+  spike this category has. The card collection is the gift-renewal argument —
+  three months in, the set is started.
 
 ## Secondary: The Print Collector
 
@@ -60,7 +64,11 @@ size, paper, and signature.
 - **Why they matter:** Small in number, loud in credibility, and they will tell
   us immediately if the product isn't good. Recruit them first.
 - **What they need:** Edition numbers, signatures, real paper stock named on the
-  product page. If we get sloppy here we lose them and they say so publicly.
+  product page. **Two of the three are settled** — Patrick confirmed 2026-09-16
+  that editions are open but every piece is signed and numbered, and the paper
+  is constant month to month. We still need the stock named. Open editions will
+  cost us the scarcity-driven end of this segment; that's the right trade for a
+  subscription that can't promise to stop printing.
 
 ## Explicitly not targeting at launch
 
@@ -74,3 +82,5 @@ size, paper, and signature.
    90 days; do not assume.
 2. Whether the bar-cart wall-space ceiling is real, and how fast people hit it.
 3. Whether restaurant-industry people will pay full price or need a tier.
+4. Whether the cocktail cards actually get collected, or just filed. Ask in the
+   month-3 touchpoint.
