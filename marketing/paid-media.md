@@ -24,10 +24,13 @@ Paid turns on only when **all four** are true:
 - [ ] Price is set and is **$25/month or higher**
 - [ ] A landing page converts **cold traffic at ≥3%** to email capture
 - [ ] At least **three organic posts have cleared 10k views** — these become the ads
-- [ ] Studio capacity has **headroom for 50+ more subscribers/month**
+- [x] Studio capacity has **headroom for 50+ more subscribers/month** — **met
+      2026-09-16.** Patrick: a few thousand bundles a month before it stops
+      being fun, starting at 50–100 and doubling.
 
-Gate 4 matters as much as the others. Paid that outruns fulfillment is how a
-subscription brand kills itself.
+Gate 4 mattered as much as the others — paid that outruns fulfillment is how a
+subscription brand kills itself. It's now the only one we've cleared, and it
+doesn't move the others.
 
 ## The first test, when gates clear
 

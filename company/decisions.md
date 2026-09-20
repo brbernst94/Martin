@@ -83,6 +83,45 @@ TikTok carries the same footage cut looser for reach. Content unit is a pull, a
 failure, or a third-piece reveal — not Patrick explaining anything. Hands on
 camera, face optional, so nothing stalls on open question #6.
 
+### 2026-09-16 · Hands on camera is the standing default; Patrick's face is by exception
+**`DECIDED` — Patrick**
+Patrick is fine being filmed while he works and fine with his hands on camera,
+but does not want his face on camera all the time. So process video is
+hands-only by default and his face is asked for only where it genuinely matters
+— a launch post, an introduction — and it's an ask each time, never an
+assumption. Closes open question #6.
+
+### 2026-09-16 · Filming happens inside work already underway, never as a separate shoot
+**`DECIDED` — Patrick**
+He confirmed we can film while he's making. This was the expensive branch in the
+strategy — a standalone shoot would have cost studio hours we don't have and
+made the process-content thesis unaffordable. Marginal cost of content is now
+close to zero.
+
+### 2026-09-16 · Studio capacity is not the growth ceiling; demand is
+**`DECIDED` — Marty**, from Patrick's numbers
+Patrick says he could make a few thousand a month before it stops being fun, and
+wants to start at 50–100 and roughly double monthly. Every plan in the repo was
+written assuming the studio would cap growth. It won't this year. Consequences:
+the 12/1 projection of ~60 subscribers is comfortably inside his month-one range
+rather than near a limit, and paid-media gate 4 (headroom for 50+ more
+subscribers/month) is cleared. Still open: minutes per batch, which is the
+missing input to gross margin and to what Patrick earns per hour — he'll clock
+his next run.
+
+### 2026-09-16 · Marty and Patrick meet directly, 45 minutes in the studio
+**`DECIDED` — Brian**
+Brian asked for a standing task and is having Patrick reach out to Marty himself
+rather than brokering it. Marty set the format: 45 minutes, in the studio rather
+than on a call, because half the questions are answered faster by looking at the
+work than by describing it. The 15-question set is in
+`company/open-questions.md` and is ordered so the three blocking questions —
+studio capacity, whether filming fits inside work already happening, and whether
+Patrick goes on camera — get answered even if the rest doesn't. Added open
+question #16: Patrick's own vision for the company. "Sell the studio, not the
+subscription" only holds if the person who owns the studio agrees with the
+direction, and nobody has asked him.
+
 ### 2026-09-16 · Marty lives in Slack, hosted on Railway
 **`DECIDED` — Brian**
 Socket Mode, so no public ingress. He reads and writes this repo, and researches
