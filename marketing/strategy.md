@@ -23,24 +23,26 @@ nobody selling licensed digital prints can cross.
 
 Sell the studio, not the subscription.
 
-## The studio isn't the ceiling — demand is
+## The studio is not the ceiling
 
-Patrick says he could make a few thousand bundles a month before it stops being
-fun, and wants to start at 50–100 in month one and roughly double from there
-(2026-09-16). Capacity was a live risk in every earlier version of this plan and
-it's off the board. **50–100 subscribers by 12/1 is the target, not the cap**,
-and acquisition no longer gets held back to protect fulfillment.
+Patrick, 2026-09-16: he could make a few thousand bundles a month before it
+stops being fun, and wants to start at 50–100 and roughly double each month.
+Every plan here was written expecting fulfillment to cap growth. It doesn't.
+Demand is the constraint, which means marketing is the constraint, which means
+there is no longer a reason to pace acquisition. The ~60 subscribers I project
+for 12/1 sit comfortably inside his own month-one range.
 
-What's still missing is how long a batch takes. Patrick can't price one bundle
-because making many at once is far faster per unit, so his labour goes into the
-margin model per run, not per piece. He's clocking a real one.
+The open piece is time per batch, not volume — he can't price a single bundle
+because making many at once is far faster per unit. He's clocking his next run
+(start, finish, count). That number feeds gross margin and what he earns per
+hour; it no longer gates growth.
 
-## Process content is free
+## Content costs us nothing extra
 
-Filming happens while Patrick is already working — no separate shoot, no extra
-studio hours. Hands-only is the standing format; he doesn't want to be on camera
-all the time, so his face is occasional and voluntary and nothing in the calendar
-waits on it.
+Filming happens while Patrick is working — no separate shoot. Hands on camera is
+the standing default and his face is by exception, asked for only on something
+like a launch post. The expensive branch of the process-content thesis is closed:
+we get the footage out of work that was happening anyway.
 
 ## One brand, not two
 
@@ -86,9 +88,9 @@ Full detail in `marketing/channels.md`. The short version:
 | Pinterest | **Core** | Search-driven, compounds, and "bar cart art" is an evergreen query. Most underrated channel for this business. |
 | Email | **Core** | The only channel we own. The waitlist *is* the launch. |
 | Physical / guerrilla | **Core** | We make objects. Objects are distribution. See `guerrilla.md`. |
-| TikTok | **Active** | Upgraded from Test 2026-09-16. Patrick wants to make short form and filming fits inside work he's already doing, so it costs ~0 marginal studio hours. Buys reach, not conversion. |
+| TikTok | **Active** | Upgraded from Test 2026-09-16. Patrick actually wants to make short form, which was the only real constraint. Same footage cut looser, ~0 marginal Patrick-hours. Buys reach, not conversion. |
 | Reddit | **Test, carefully** | r/cocktails and r/printmaking are exactly our people and will eject us instantly if we market at them. Participate as Patrick, don't advertise. |
-| Paid social | **Off** | No creative, no data, no price point. Revisit at month 4. See `paid-media.md`. |
+| Paid social | **Off** | Three gates left, all ours: price, a converting page, three organic posts over 10k views. The capacity gate cleared 2026-09-16. See `paid-media.md`. |
 | Google / Search | **Off for now** | No brand demand to capture yet. Revisit with the shop. |
 | YouTube long-form | **Off** | High production cost against Patrick's scarcest resource. |
 
@@ -109,9 +111,9 @@ unpredictability is the reason to stay subscribed.
 
 ## What would make me wrong
 
-- If a batch of 50 turns out to eat most of Patrick's month, the capacity answer
-  is softer than it sounds and the price should go up to ration it. The clocked
-  run settles this.
+- If a clocked batch shows 50 bundles eating most of Patrick's month, the
+  capacity read above is wrong and the price goes up to ration demand. His
+  appetite is real; his hours are still unmeasured.
 - If Brian holds the price at $15, paid never works and we are permanently capped
   at whatever organic produces. I'd rather launch late at $32 than on time at $15.
 - If the real shipping cost lands above $5/unit, the bundle gets lighter or the
@@ -129,9 +131,8 @@ and real gross margin after a corrected shipping cost:
 - Supporting a CAC ceiling near $130 at 3:1 — well above the $72 category
   average, *if* the price holds at $32.
 
-Sixty subscribers at 12/1 sits inside Patrick's own 50–100 month-one range, so
-the constraint on that number is entirely how many people we can reach in six
-weeks.
+Sixty subscribers at 12/1 is a good outcome from a six-week runway, and it's
+inside what Patrick says he wants to make in month one.
 
 Every number above is a guess and is not in `data/metrics.json`.
 
