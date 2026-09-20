@@ -86,10 +86,26 @@ def handle(client, channel: str, reply_ts: str | None, convo_key: str,
     In a DM there is no reason to bury the answer in a thread, and the whole DM
     is one conversation — so DMs key on the channel and reply inline.
     """
+    body_preview = strip_mention(text).strip().lower().rstrip("?!.")
+
+    # Answered before the access check on purpose: this is how someone who isn't
+    # configured yet finds the ID that configures them.
+    if body_preview in {"whoami", "who am i", "my id", "member id"}:
+        role = who(user)
+        label = {"brian": "You're set up as Brian — I brief you as CEO.",
+                 "patrick": "You're set up as Patrick — I brief you as the artist."}.get(
+                     role, "You're not configured yet, so I'll keep it plain until you are.")
+        client.chat_postMessage(
+            channel=channel, thread_ts=reply_ts,
+            text=f"Your Slack member ID is `{user}`\n{label}",
+        )
+        return
+
     if not allowed(user):
         client.chat_postMessage(
             channel=channel, thread_ts=reply_ts,
-            text="I only take direction from Brian and Patrick.",
+            text=("I only take direction from Brian and Patrick. "
+                  "Send me `whoami` if you need your member ID."),
         )
         return
 

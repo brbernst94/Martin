@@ -71,8 +71,11 @@ Set every one of these in Railway → Variables (`.env.example` is the template)
 
 **Set `MARTY_BRIAN_ID` and `MARTY_PATRICK_ID`.** They control two things: who's
 allowed to talk to Marty at all, and how he briefs them. Without them anyone in
-the workspace can spend your Anthropic credits and commit to the repo. Find a
-user ID in Slack: profile → ⋮ → Copy member ID.
+the workspace can spend your Anthropic credits and commit to the repo.
+
+To find an ID, DM Marty **`whoami`** and he replies with it. That works before
+you're on the allowlist — which is the point, since it's how you get on it. The
+manual route is profile → **⋮** → **Copy member ID**.
 
 Marty talks to Brian as a CEO — money, dates, decisions, no craft vocabulary —
 and to Patrick as the artist: the work, his own printmaking vocabulary, and no
@@ -109,6 +112,8 @@ conversion needed.
 - **DM** — anything. He replies in the DM.
 - **`@Marty` in a channel** — he answers in a thread and stays in that thread.
 - **`reset`** in a thread — clears his memory of it.
+- **`whoami`** — replies with your Slack member ID and which register he's using
+  for you. Works for anyone, configured or not.
 
 Threads keep context for 3 days or 40 messages, whichever comes first, and now
 survive a restart (persisted next to the repo checkout).
