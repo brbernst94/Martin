@@ -62,6 +62,12 @@ in somebody's head or a Slack scrollback.*
 | 2026-09-16 | Patrick | **Filming can happen while he's working** — no separate shoot required. |
 | 2026-09-16 | Patrick | **He's fine with his hands on camera; he does not want his face on camera all the time.** |
 
+## Working with Patrick
+
+| Date | Who | Fact |
+| --- | --- | --- |
+| 2026-09-16 | Patrick | **He asked to be messaged with fewer business terms.** Confirms the briefing rule directly from him: Patrick gets what to make, by when, and why that subject — no metrics, no marketing vocabulary. |
+
 ## Still unknown
 
 Things Marty needs and does not have. Mirrors `company/open-questions.md`.
