@@ -109,6 +109,62 @@ subscribers/month) is cleared. Still open: minutes per batch, which is the
 missing input to gross margin and to what Patrick earns per hour — he'll clock
 his next run.
 
+### 2026-09-16 · The bundle is four fixed items; the variable surprise piece is retired
+**`DECIDED` — Patrick and Marty** — supersedes the three-items-plus-a-surprise
+structure in the founding brief
+Patrick described what he actually wants to make: a relief print, a cocktail
+card, a letter, and a sticker, every month, all on a single food-and-drink theme.
+The unpredictable fourth piece is gone. He ruled the objects out himself —
+coasters, matchbooks and tea towels don't fit an envelope at a shipping cost he's
+willing to carry, and they cost too much per unit. Marty agreed rather than
+pushed back because a format that takes a few extra hours every month for twelve
+months is the kind of commitment that kills the whole thing in month six.
+
+What this costs us: the surprise piece was the acquisition product, the one
+unpredictable thing worth screenshotting. What replaces it is the theme itself —
+the reveal each month is *which drink and which food*, not which object. The
+retention argument moves entirely onto the cocktail card collection and the
+letter. `marketing/retention.md` and `company/brand.md` rewritten accordingly.
+
+### 2026-09-16 · The cocktail card ships every month without gaps
+**`DECIDED` — Marty**, Patrick's idea
+A collection only works if it's reliable — people don't cancel halfway through a
+set, but only if there is no gap in the set to forgive. So the card is a fixed
+monthly item, never the occasional surprise. This is now the single strongest
+retention mechanic in the business.
+
+### 2026-09-16 · The sticker is a fragment of the month's graphic, not a copy of it
+**`DECIDED` — Marty and Patrick**
+Patrick proposed reusing the cocktail card artwork as the sticker. Same picture
+twice in one envelope makes four items feel like three. Pulling one element out —
+the glass, the garnish — keeps the month visibly coherent and costs him almost
+nothing extra since the drawing already exists. Sticker subject rule: one object,
+legible at an inch, no context required, with our mark somewhere small so a
+stranger who sees it on a laptop can find us.
+
+### 2026-09-16 · Open editions, signed and numbered; constant paper
+**`DECIDED` — Patrick**
+Closes open question #8. Open editions cost us the scarcity end of the print
+collector segment; signing and numbering every piece keeps most of the rest.
+Paper stays constant month to month unless cost forces a change, which is what
+lets us name the stock on the product page as a permanent claim. Stock still
+needs naming.
+
+### 2026-09-16 · December's print and cocktail card 01 photographed by 10/25
+**`DECIDED` — Marty**
+Subscriptions open 11/1 and Patrick says he can work about a month ahead if the
+planning is done. Without finished work to photograph we are selling a promise
+instead of an object on day one, which converts far worse. 10/25 is the date; it
+is now the hardest deadline in the calendar after launch itself.
+
+### 2026-09-16 · The monthly letter carries a photo request, every month
+**`DECIDED` — Marty**, Patrick's idea
+Patrick wants to include a letter explaining why he chose the month's subject,
+plus a personal update, and to ask subscribers to send photos of where their
+pieces ended up. That request goes in every letter, not just the first, with one
+place to send to. It is better acquisition content than anything we could
+produce ourselves — real subscribers' walls and bar carts — and it costs nothing.
+
 ### 2026-09-16 · Marty and Patrick meet directly, 45 minutes in the studio
 **`DECIDED` — Brian**
 Brian asked for a standing task and is having Patrick reach out to Marty himself

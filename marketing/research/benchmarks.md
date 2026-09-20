@@ -25,8 +25,10 @@ re-checked or deleted.*
 
 **Implication for us:** we sit somewhere between "curated lifestyle box" (7–10%)
 and "premium" (3–5%). Hand-made original art at a premium price should behave
-like the premium band — but only if the third piece solves the wall-space
-ceiling. Target: **under 5% monthly by month 6.**
+like the premium band — but only if the cocktail card solves the wall-space
+ceiling. That's a heavier load on the card than it was before 2026-09-16, when
+a rotating third object was also carrying it. Target: **under 5% monthly by
+month 6.**
 
 **The discount finding is the most actionable line in this file.** Subscribers
 acquired with "first box free" or "50% off" churn at 2–3x. At our margins that
@@ -55,7 +57,9 @@ hours. For evergreen visual product, that's the entire argument for Pinterest.
 
 **Implication:** the $10–15 band is saturated and assumes digital printing at
 volume. We cannot compete there and should not try. Our comparison set is a
-bottle of amaro or two cocktails out, not a cheaper print.
+bottle of amaro or two cocktails out, not a cheaper print. Note that both
+tracked competitors include a letter from the artist — ours is table stakes, and
+the photo request inside it is the part that isn't.
 
 ## Gaps in our knowledge
 
@@ -64,7 +68,8 @@ Marty should close these:
   are all-category)
 - Gift-subscription conversion-at-expiry rates for physical boxes
 - Pinterest conversion rates for art/home-decor specifically
-- Postage cost reality for a three-object bundle at our likely weight
+- Postage cost reality for a **four-item** bundle at our likely weight — print,
+  card stock, sticker, letter
 
 ## Sources
 

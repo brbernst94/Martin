@@ -9,17 +9,18 @@ Answer inline, or in chat and Marty will file them.
 | - | -------- | ------------- | --- |
 | 3 | **Narrowed 2026-09-16.** Capacity is answered — a few thousand a month before it stops being fun, starting at 50–100 and doubling. Still open: **how long a batch actually takes.** | Minutes per batch is the missing input in gross margin and in what Patrick earns per hour. It is no longer a growth ceiling. Patrick will clock start, finish and count on his next run. | Patrick |
 | 5 | **Brand name?** | Blocks domain, handles, mailer, everything. Launch is 11/1 — this is now the critical path item. | Brian / Patrick |
-| 14 | **What does the bundle actually weigh, in its real mailer?** | Shipping is modelled at $2.00 and still unverified. It's the single biggest error risk in the unit economics. Weigh a mock-up at the counter. | Brian |
+| 14 | **What does the bundle actually weigh, in its real mailer?** | Shipping is modelled at $2.00 and still unverified — and it's now four printed pieces, not three. Single biggest error risk in the unit economics. Weigh a mock-up at the counter. | Brian |
+| 19 | **What do the cocktail card and the letter cost to print?** Added 2026-09-16. | Two mandatory monthly items absent from the cost sheet entirely. Both add material cost and weight. | Brian |
+| 20 | **8–10 images of Patrick's work.** Added 2026-09-16. | The visual guardrails in `company/brand.md` are still `UNVERIFIED` and everything creative is being guessed. Asked directly; outstanding. | Patrick |
 
 ## Important — shapes the plan
 
 | # | Question | Why it matters |
 | - | -------- | -------------- |
 | 7 | Marketing budget for months 1–6? | Decides organic-only vs. paid-assisted. Now urgent — launch is 6 weeks out. |
-| 8 | Edition sizes — open or limited? Signed? | Changes both price and the collector segment's willingness to buy. |
 | 9 | Will we sell one-off prints alongside the subscription? | A shop is the best low-friction entry point and a strong retention offer. Also a distraction if it's not ready. |
-| 10 | Any existing audience? Patrick's follower counts, any list, any past customers? | Determines whether month one is "launch" or "cold start." Now includes: does Patrick already have a TikTok or Instagram presence we'd be building on rather than starting from zero? Asked of Patrick directly 2026-09-16 as a pre-read. |
-| 16 | **What is Patrick's own vision for the company?** Where he wants it in three years, and what he won't do. | Added 2026-09-16 at Brian's request. The positioning is "sell the studio, not the subscription" — that only holds if the studio's owner agrees with where it's going. |
+| 16 | **What is Patrick's own vision for the company?** Where he wants it in three years, and what he won't do. | Added 2026-09-16 at Brian's request. The positioning is "sell the studio, not the subscription" — that only holds if the studio's owner agrees with where it's going. Partially answered: he's excited to build community, not excited about marketing and finance. Three-year picture still unasked. |
+| 21 | **What paper, by name?** Added 2026-09-16. | Patrick confirmed the stock is constant month to month, which is what lets us name it on the product page as a permanent claim. Nobody has said what it is. |
 
 ## Nice to have
 
@@ -34,25 +35,17 @@ Answer inline, or in chat and Marty will file them.
 ## Patrick intake — 45 minutes, in the studio
 
 *Requested by Brian 2026-09-16. Status: **Patrick made contact 2026-09-16 and
-answered the three blocking questions in Slack the same day** (see Answered
-below). Date for the 45 minutes not yet set; the remaining questions are the
-agenda. Pre-reads still outstanding: 8–10 images of work he'd want representing
-this, and what he already has online.*
-
-**Still to answer — what already exists**
-4. What do you already have — Instagram, TikTok, a mailing list, past print customers? Follower counts if you know them. *(open q #10)*
-5. Send me 8–10 images of work you'd be proud to have represent this. The visual guardrails in `company/brand.md` are marked `UNVERIFIED` and I don't want to keep guessing.
+answered most of the intake in Slack the same day** (see Answered below). Date
+for the 45 minutes not yet set; what's left is the agenda. Pre-read still
+outstanding: 8–10 images of work he'd want representing this.*
 
 **The work itself**
-6. What's your process — screenprint, relief, something else? What's the actual sequence from block to finished piece?
-7. Open editions or limited? Signed and numbered, or not? *(open q #8)*
-8. What paper are you printing on, and does it change month to month?
-9. Give me five third-piece ideas off the top of your head. I want to see your range when nobody's constraining you.
-10. How far ahead can you work? Can December's bundle be done by early November?
+9. Give me five ideas for a month off the top of your head — drink and food together. I want to see your range when nobody's constraining you.
 10a. Time one batch: clock when you start, when you finish, and how many came out. *(open q #3)*
+8a. What paper, by name? *(open q #21)*
 
 **Appetite and limits**
-11. What's the part of this you're most excited to make, and what's the part you're dreading?
+11. What's the part of this you're most excited to make, and what's the part you're dreading? *(partially answered — community yes, marketing/finance no. Still want the making answer.)*
 12. Is there anything you won't do — subjects, styles, collaborations, anything that would make this feel like a job instead of your practice?
 13. Do you have press contacts, gallery relationships, or printmakers in Denver worth knowing? *(open q #13)*
 
@@ -68,7 +61,12 @@ this, and what he already has online.*
 | 2 | Price | Brian set the range at $15–30 and asked Marty to land it. **Marty's call: $32/month, $320/year.** See `marketing/pricing.md`. Awaiting Brian's sign-off. | 2026-09-16 |
 | 4 | Where are we based | **Denver, Colorado** | 2026-09-16 |
 | 6 | Filming and on-camera | **Filming happens during work already underway — no separate shoot. Hands on camera by default; Patrick does not want his face on camera all the time, so face is by exception and by ask.** | 2026-09-16 |
+| 8 | Edition sizes — open or limited? Signed? | **Open editions, every piece signed and numbered.** | 2026-09-16 |
+| 10 | Any existing audience? | **Art Instagram 250 followers; personal Instagram 1,200 (not art). Etsy sales mostly to friends and family, little revenue. No list.** Cold start. | 2026-09-16 |
 | 15 | Separate artist brand or one combined brand? | **One brand, Patrick as the face.** See `company/decisions.md`. | 2026-09-16 |
+| 17 | What's the process — screenprint, relief, something else? | **Relief prints for this, though he does screenprint too. His graphic design goes into the bundle as the cocktail card.** | 2026-09-16 |
+| 18 | What's actually in the bundle? | **Four fixed items: relief print, cocktail card, letter, sticker. All flat, envelope only. No variable surprise piece — coasters and matchbooks ruled out on weight and cost.** | 2026-09-16 |
+| 22 | How far ahead can Patrick work? | **About a month ahead, if the planning is done and he starts in time.** December's print and card must be photographed by **10/25**. | 2026-09-16 |
 
 ## Decisions on record
 
