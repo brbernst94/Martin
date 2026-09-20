@@ -4,7 +4,7 @@
 valuable part — in six months nobody remembers why, and that's when a settled
 question gets relitigated.*
 
-**Status:** `DECIDED` · `PROPOSED` (Marty's call, awaiting Brian) · `REVERSED`
+**Status:** `DECIDED` · `PROPOSED` (Marty's call, awaiting Patrick) · `REVERSED`
 
 ---
 
@@ -34,18 +34,34 @@ Cost doesn't pick the price: variable cost is $4.65/unit against $43/month fixed
 so breakeven is 2–5 subscribers anywhere in the $15–32 range. CAC picks it. At $15
 contribution is $9.62 against a ~$72 category CAC — a 7.5-month payback that kills
 paid acquisition permanently and pays Patrick ~$11/hour. At $32 payback is 2.8
-months. Awaiting Brian's sign-off.
+months. Awaiting sign-off.
 
 ### 2026-09-16 · Name it Standing Invite
-**`PROPOSED` — Marty**
-The only candidate that is hospitality language, implies recurrence, and frames
-the product as an invitation into a practice. Reconfirmed against Brian's vibe
-brief (fun, community, homely-but-modern, internet-native and under 40): "you've
-got a standing invite" is spoken language, which is what makes it read modern
-without chasing. The Guest List was re-tested against that brief and fails it —
-being admitted past a rope is exclusivity, not community. Domain
-`standinginvitepress.com`. Hard kills: Open Door (Opendoor trademark and search),
+**`DECIDED` — Patrick**
+Originally proposed by Marty from Brian's candidate list. Patrick independently
+generated his own list (Friends of the Table, The Guest List, Good Company Post,
+Around the Table, Standing Invite Mail, Welcome Table) and, presented with
+Marty's case, confirmed Standing Invite himself — so this is now his call, not
+just a proposal awaiting sign-off. It is hospitality language, implies
+recurrence, and frames the product as an invitation into a practice rather than
+a transaction: "you've got a standing invite" is spoken language, which reads
+modern without chasing. The Guest List fails the vibe brief — being admitted
+past a rope is exclusivity, not community. Domain `standinginvitepress.com`
+("press" carries the printing/publishing/post meaning the bare name doesn't).
+Hard kills considered and rejected: Open Door (Opendoor trademark and search),
 Small Batch (most overused phrase in food & bev).
+
+### 2026-09-16 · Patrick is CEO and owns all business decisions; Brian is CFO
+**`DECIDED` — Patrick** — reverses the 2026-09-16 "Brian is CEO" fact in
+`company/knowledge.md`
+Patrick corrected the org chart directly: he is CEO and makes business
+decisions, Brian is CFO and handles the numbers. Practical effect on how Marty
+works: naming, positioning, and other business calls that were routed to Brian
+for a "final yes" now route to Patrick. Spend still needs Brian's sign-off,
+since he's the one holding the money and signing for it, unless Patrick says
+otherwise. This does not change Patrick's own stated preference to stay out of
+the marketing/finance work day to day — he can own the decision without doing
+the work.
 
 ### 2026-09-16 · Never discount to acquire
 **`DECIDED` — Marty**
