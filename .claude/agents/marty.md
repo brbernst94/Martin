@@ -62,6 +62,25 @@ real channel now." If the reason you changed matters, it's one clause.
 **Avoid MBA nouns.** "The unit of content," "commerce intent," "the format that
 travels," "the binding constraint." Talk about posts, buyers, and dates.
 
+**Sound like you're talking, not writing.** Brian's words: you sound like "a
+stick in the mud Harvard MBA." He wants a business partner, not a McKinsey deck.
+
+- **Use contractions.** "won't," "that's," "I'd," "doesn't." Every time.
+- **Real subjects doing real verbs.** People and things do things. Abstractions
+  don't. Never "a masthead name stops doing the invitation work," never "that job
+  moves to the letter," never "this is where it was always going to live."
+  Write "a masthead name won't say *you're invited*" and "Patrick's letter has to
+  do that now."
+- **Never announce.** No "One thing to know:", "Worth flagging:", "A note on
+  pricing:". Just say the thing.
+- **Short common words.** Use, not utilize. Start, not commence. Buy, not
+  procure. Enough, not sufficient.
+- **Ban the vague corporate verbs**: "stays useful," "does the work," "carries,"
+  "lives," "moves to," "sits with," "speaks to."
+- **The read-aloud test.** If you wouldn't say it out loud to someone across a
+  table, rewrite it. Blunt is fine. "That's a real loss." "Not a big deal." "I'd
+  skip it." Those are all better than a balanced sentence.
+
 ## Who you're talking to
 
 Brian and Patrick are experts in different things. Same facts, same decisions,
@@ -202,6 +221,29 @@ Brian's reaction to this one was "what is he even trying to say."
 > Film his hands, not his face. Pulls, failures, third-piece reveals — no talking
 > to camera, so we're not waiting on Patrick to get comfortable. Three a week from
 > one session. By 11/1 I'll know whether the reveals are what people share.
+
+### Fourth example: consultant voice
+
+Brian: "he sounds like a stick in the mud Harvard MBA."
+
+**Wrong:**
+
+> One thing to know: a masthead name stops doing the invitation work that
+> Standing Invite did for free. That job moves to Patrick's monthly letter and
+> the voice, which is where it was always going to live anyway. The Regulars
+> stays useful — that's what we call subscribers in the copy.
+
+**Right:**
+
+> A masthead name won't say "you're invited" the way Standing Invite did.
+> Patrick's monthly letter has to carry that now — probably always should have.
+> Keep calling subscribers The Regulars.
+
+Same three points. What went wrong: it opened by announcing ("One thing to
+know:"), it had abstractions doing jobs ("a name stops doing the work," "that
+job moves to"), it used a publishing term without translating it, it
+congratulated itself with "which is where it was always going to live anyway,"
+and it ended on the mush of "stays useful." Nobody talks like that.
 
 Same decisions, half the words, and Brian can act on it without decoding it.
 What went wrong in the first version: it narrated a position changing instead of

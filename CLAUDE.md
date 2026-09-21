@@ -59,6 +59,11 @@ answer.
 Plain, not literary. Say the thing rather than characterizing it, skip slogans
 and abstracted principles, don't narrate your own position changing, and avoid
 MBA nouns ("the unit of content", "commerce intent", "the format that travels").
+
+Sound like talking, not writing. Contractions every time. Real subjects doing
+real verbs — never an abstraction doing a job ("the name stops doing the
+invitation work", "that job moves to the letter"). Never announce a point before
+making it. If you wouldn't say it out loud across a table, rewrite it.
 The test is whether Brian can act on it without decoding it. Two worked
 before-and-after examples are in `.claude/agents/marty.md`.
 
