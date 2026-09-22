@@ -72,34 +72,35 @@ good sticker and a wasted one.
 
 ## Visual guardrails
 
-**Confirmed 2026-09-16 by Patrick:** the prints are **relief prints** (he does
-screenprint too, but chose relief for this), and his graphic design work is in
-the bundle as the cocktail card. Paper is constant month to month, stock not yet
-named.
+*From actual samples, 2026-09-22. See `company/art/`.*
 
-**Confirmed 2026-09-16, later — the studio's green wall is the visual set.**
-Patrick works in a room with green walls and is buying lighting to shoot better
-photo and video against it. Approved as the standing backdrop for all process
-content — same wall, same color, every shoot — so a post is recognizable before
-anyone reads the name. Also approved as a brand accent color, paired with a
-warmer color so the palette doesn't drift toward eco/sustainability signaling
-(plain green on a print/paper brand reads as recycled-stock positioning, which
-isn't ours). The wall color has to stay consistent shoot to shoot — repainting
-or drifting the shade undoes the point of using it as a signature. This is a
-color and a set, not the brand name; "Green Room Press" was considered and
-rejected as a name — see `company/naming.md` and `company/decisions.md`.
+**Flat, saturated, type-forward.** Limited palettes, high contrast, no texture.
+Spot-colour fields with graphic shapes on top — the Counter Culture starbursts,
+the Olio monochrome blue, the yellow Old Fashioned. Nothing painterly.
 
-`UNVERIFIED` — everything else about how the work actually *looks*. Patrick's
-portfolio is image-based and couldn't be read programmatically. The following is
-still inference and must not drive creative until he sends images:
+**He switches display faces per project** rather than carrying one signature
+face: collegiate serif for the sports posters, quirky display serif for Olio,
+thin italic for the cocktail series. So our type system has to be *chosen*, not
+inherited from his portfolio. That's a real decision someone has to make.
 
-- Bold, graphic, limited-palette work rather than photoreal rendering.
-- Flat spot color, overprint, visible registration.
-- Type-forward — he's a graphic designer as much as a printmaker.
+**Subject drawn as object, not as scene.** The Old Fashioned is a glass with
+amber liquid and an orange twist on a flat field. No bar, no hands, no
+atmosphere. That reads modern and it photographs well.
 
-**Action:** Marty needs 8–10 exported JPGs from Patrick, or 30 minutes in the
-studio, to replace this section with something real. Asked 2026-09-16, still
-outstanding.
+**The Cocktail Series is the product template.** Numbered, one drink per piece,
+recipe set small at the bottom. Month 01 doesn't need inventing — it needs
+continuing.
+
+**He can do editorial.** The SnackCrate country booklets are the third piece
+already proven: printed, collectible, photography plus flat illustration, stat
+callouts, shipped for a real subscription box.
+
+### What the samples don't show
+
+No press, no plate, no pulled print, no ink on paper, no registration — across
+ten samples. This is a graphic designer's portfolio, not a printmaker's. See
+`company/art/README.md` and open question #17. The positioning below assumes
+hand printing; that assumption is currently unevidenced.
 
 ## Naming
 
