@@ -95,12 +95,13 @@ continuing.
 already proven: printed, collectible, photography plus flat illustration, stat
 callouts, shipped for a real subscription box.
 
-### What the samples don't show
+### What the samples don't show yet
 
-No press, no plate, no pulled print, no ink on paper, no registration — across
-ten samples. This is a graphic designer's portfolio, not a printmaker's. See
-`company/art/README.md` and open question #17. The positioning below assumes
-hand printing; that assumption is currently unevidenced.
+No press, no plate, no pulled print, no ink on paper — across the first ten
+samples. Brian confirmed on 2026-09-22 that the hand-printed work exists, so the
+positioning holds. But it means the single most valuable asset we have is the
+one nobody has photographed. That gap is now a content problem, not a strategy
+problem — see open question #17.
 
 ## Naming
 

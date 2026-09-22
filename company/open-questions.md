@@ -13,8 +13,6 @@ Answer inline, or in chat and Marty will file them.
 | 19 | **What do the cocktail card and the letter cost to print?** Added 2026-09-16. | Two mandatory monthly items absent from the cost sheet entirely. Both add material cost and weight. | Brian |
 | 20 | **8–10 images of Patrick's work.** Added 2026-09-16. | The visual guardrails in `company/brand.md` are still `UNVERIFIED` and everything creative is being guessed. Asked directly; outstanding. | Patrick |
 
-| 17 | **Does Patrick have hand-printed work to show — a press, plates, pulled prints, ink on paper?** | Ten portfolio samples show flat vector, editorial layout and product compositing. Not one shows printmaking. The whole strategy is "a working printmaker's practice, delivered," where the press is both the content and the moat. If there's no press, the pitch changes and "hand-made print" is the wrong phrase. The cost model has paper, ink and relief blocks in it, so presumably something is being printed — Marty just hasn't seen it. | Patrick |
-
 ## Important — shapes the plan
 
 | # | Question | Why it matters |

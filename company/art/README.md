@@ -46,23 +46,16 @@ no texture. He also switches display faces per project rather than carrying one
 signature face, which means the brand's type system has to be decided
 deliberately rather than inherited from his portfolio.
 
-## The problem this creates
+## What's still missing
 
-**Almost none of this is printmaking.**
+None of these ten show printmaking — no press, plate, pulled print or ink on
+paper. Brian confirmed on 2026-09-22 that the hand-printed work exists, so the
+"working printmaker" positioning holds.
 
-Ten samples, and not one shows a press, a plate, a pulled print, ink on real
-paper, or registration. It is flat vector, editorial layout and high-end product
-compositing. Excellent work, directly on our subject, commercially proven — and
-it is a graphic designer's portfolio, not a printmaker's.
+Which makes this a content gap rather than a strategy risk, and a bigger one.
+The press, the plates, a pulled print and a botched registration are the process
+videos, the Pinterest set, and the only real proof of why this costs $32 when a
+print club costs $12. It is the most valuable material the company has and
+nobody has photographed it.
 
-`marketing/strategy.md` is built on "a working printmaker's practice, delivered,"
-where the press is the moat and the process is the content. That thesis needs
-evidence we do not have. The cost model has paper, ink and relief blocks in it,
-so there is presumably hand printing happening — but nobody has shown Marty any.
-
-Two things to settle, in `company/open-questions.md`:
-1. Samples of Patrick's actual hand-printed work, if it exists.
-2. If it does not, the strategy changes. Not fatally — a food-and-drink designer
-   with Cadbury and Nestlé on his CV making a monthly numbered series is still a
-   strong product. But it is a different pitch, and "hand-made print" would be
-   the wrong words for it.
+Wanted before the first Instagram post, not after. Open question #17.
