@@ -1,6 +1,8 @@
 # Guerrilla playbook
 
-*Owner: Marty. 2026-09-16.*
+*Owner: Marty. 2026-09-16. Updated after Patrick dropped the bundle sticker for
+a second order-sheet print — coasters are now the only object that leaves the
+house for free, not a supplement to the sticker.*
 
 Most DTC brands have to manufacture marketing collateral separately from their
 product. We don't. **We make small, desirable, food-and-drink-themed printed
@@ -50,6 +52,11 @@ still, holding a drink, with nothing to look at. The coaster lives under their
 glass for 40 minutes. And because it's genuinely good, the bar wants it — this
 is a gift, not a flyer, so it doesn't get thrown away.
 
+**Now carries the "leaves the house" job alone.** It used to split that work
+with the bundle sticker; Patrick replaced the sticker with a second print on a
+vintage order sheet, which is more collectible but stays in a drawer. Coasters
+are the only object in this entire plan a stranger sees in public.
+
 - **Bet:** 2,000 coasters into 15 bars produces 200+ site visits and 50+ waitlist
   signups at a cost under $400. Sub-$8 acquisition cost on our best segment.
 - **Cost:** ~$300–400 printing, ~6 Brian-hours of walking into bars, ~4
@@ -76,18 +83,14 @@ at work are a permanent billboard.
 - **Timing:** mail by **10/15** so it lands well before launch. A print that
   arrives the week we start selling reads as an ask.
 
-## 3. Stickers as distribution, not swag
+## 3. The order-sheet print, as a collectible, not a giveaway
 
-**The move:** Every bundle ships with two of that month's sticker. One for the
-subscriber, one to give away. Say so on the card.
-
-**Why it works:** Stickers are the only marketing asset that a customer will
-place in public for us, for free, permanently. We already make them. Doubling the
-count costs almost nothing.
-
-- **Bet:** 15% of subscribers place the second sticker somewhere public.
-- **Cost:** Marginal print cost only.
-- **Kill date:** None — measure via sticker-specific short URL or QR.
+**Retired as a distribution tactic.** This used to be "two stickers per
+bundle, one to give away" (E-07) — Patrick dropped the sticker for a second
+small relief print pulled onto a vintage order sheet, off-register on purpose.
+It's a better object but it doesn't leave the house: it's something you keep,
+not something you hand to a bartender. Don't plan on it for reach. Its job is
+retention and collectibility, not acquisition — see `marketing/retention.md`.
 
 ## 4. The mailer is the ad
 
@@ -172,3 +175,4 @@ existing subscribers.
   communities that detect this instantly and punish it permanently.
 - **Buying an existing food/drink meme account.** Audience is real, but the
   followers aren't buyers and the association cheapens the work.
+</content>

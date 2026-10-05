@@ -2,7 +2,8 @@
 
 *Owner: Marty. 2026-09-16. Rewritten the same day after Patrick set the bundle
 contents — the old version leaned on a variable surprise piece that no longer
-exists.*
+exists. Updated again after Patrick dropped the sticker for a second
+order-sheet print.*
 
 Acquisition gets the attention; churn decides whether this is a business. At 8%
 monthly churn the average subscriber lasts 12.5 months. At 4%, 25 months. Same
@@ -15,11 +16,14 @@ Category benchmarks (checked 2026-09-16): consumer subscription ecommerce runs
 
 ## What we're retaining with
 
-Four fixed items every month: a relief print, a cocktail card, a letter, a
-sticker. All flat, all paper, all in an envelope. Patrick ruled out coasters,
-matchbooks and tea towels on weight and cost, so the retention plan can't lean on
-objects that get used up and replaced. It has to lean on the **collection** and
-the **relationship**.
+Four fixed items every month: a relief print, a cocktail card, a letter, and a
+second small relief print pulled onto a vintage restaurant order sheet,
+off-register on purpose. That last item used to be a sticker; Patrick swapped
+it, which actually helps retention and hurts acquisition — see
+`marketing/guerrilla.md` for the acquisition side. All flat, all paper, all in
+an envelope. Patrick ruled out coasters, matchbooks and tea towels on weight and
+cost, so the retention plan can't lean on objects that get used up and replaced.
+It has to lean on the **collection** and the **relationship**.
 
 ## The four reasons people will cancel us
 
@@ -27,14 +31,19 @@ the **relationship**.
 The structural risk, and it got worse when the surprise piece died. Someone
 subscribes to fill a space, fills it in four months, and has no reason to
 continue. The old answer was that the third piece would skew toward usable
-objects — coasters, tea towels, menus. That answer is gone.
+objects — coasters, tea towels, menus. That answer is gone. The new
+order-sheet print doesn't help here either — it's still something to look at,
+not something to use.
 
-**The answer is now the cocktail card, and it has to carry more weight than it
-was designed to.** It's the only piece that isn't wall-destined: it's a collected
-object, filed and used at the bar cart, and an unfinished set is a reason not to
-cancel. So it ships every month without gaps, and we sell the *collection*
-explicitly, not the card — "month seven of your cocktail book" is the message,
-not "this month's drink."
+**The answer is still the cocktail card, and it now has company.** It's the
+only piece that isn't wall-destined: it's a collected object, filed and used at
+the bar cart, and an unfinished set is a reason not to cancel. So it ships
+every month without gaps, and we sell the *collection* explicitly, not the
+card — "month seven of your cocktail book" is the message, not "this month's
+drink." **The order-sheet print is now a second collection, on top of it** —
+two signed prints a month on a recognizable, aging stock is a stronger
+"building something" story than one print plus a sticker ever was, and it's
+worth saying so in the letter.
 
 Two things that follow, both of which I want built:
 - **Something to keep the cards in.** A box, a slipcase, a binder, sent at month
@@ -53,11 +62,12 @@ weight, not a marketing fix.
 Someone who loves cocktails gets a month about bread. Variety is the product, but
 it guarantees misses.
 
-**Patrick's letter already is the answer**, which is the best thing about it. He
-writes why he chose the subject and what's new in the studio, in the envelope,
-every month. People forgive a subject they don't love if they understand the
-thinking. Back it with the monthly "what's shipping and why" email so the
-explanation arrives before the bundle does, not with it.
+**Patrick's letter already is the answer**, which is the best thing about it. It
+now goes further than it did — newspaper-format, with the subject's story, his
+personal connection to it, and a song and movie pick each month, which gives
+people something to look forward to even in a month whose subject doesn't land.
+Back it with the monthly "what's shipping and why" email so the explanation
+arrives before the bundle does, not with it.
 
 Longer-term: let subscribers vote on one upcoming subject per quarter. Voting is
 the cheapest retention mechanic that exists — it manufactures anticipation and
@@ -99,7 +109,8 @@ In priority order, all to be built before we have anything to retain:
 4. **A designed mailer.** Anticipation is a retention mechanic; a package that
    looks like a gift keeps people subscribed.
 5. **The card case or slipcase**, shipped at month 3 or 6. The collection needs a
-   home to have visible gaps.
+   home to have visible gaps. Consider whether it should hold the order-sheet
+   prints too, now that there are two collections running at once.
 6. **Cancel survey, one question, free text.** We will learn more from the first
    20 cancels than from any research we could buy.
 7. **Month-3 and month-6 touchpoints.** Handwritten note or a surprise extra at
@@ -131,3 +142,4 @@ getting churn from 8% to 4%.
 
 - Churn by category — https://eightx.co/blog/average-subscription-churn-rate-by-category (checked 2026-09-16)
 - Voluntary vs. involuntary churn split — https://www.subscriptionboxcalculator.us/benchmarks (checked 2026-09-16)
+</content>

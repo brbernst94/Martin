@@ -20,20 +20,29 @@ Per-unit variable cost, from Brian's sheet:
 | --- | --- |
 | Paper | $0.80 |
 | Ink | $0.65 |
-| Sticker | $0.75 |
+| Sticker *(now wrong — see below)* | $0.75 |
 | Envelope | $0.45 |
 | Shipping | $2.00 *(Brian's corrected figure, 2026-09-16)* |
 | Cocktail card | **not costed** |
 | Letter | **not costed** |
 | Card processing (2.9% + $0.30) | varies with price |
 
+**The sticker line needs replacing, not just re-costing.** Patrick dropped the
+sticker for a second small relief print pulled onto a vintage restaurant order
+sheet he already owns ~1,000 of. The sheet itself is sunk cost until that stock
+runs out, so the real per-unit cost here is ink and the extra pull time, not
+$0.75 of sticker material — likely lower per-unit in dollars, but it adds a
+second signed print to Patrick's labour every month, which isn't in this sheet
+at all. Needs a real number before this table is trustworthy again.
+
 Fixed monthly: website $23, relief blocks $10, parchment $10 = **$43/month.**
 
 Non-processing variable cost is **$4.65/unit** *as sheeted* — and the sheet is
-now missing two printed items. The bundle Patrick described is four pieces: the
-relief print, the cocktail card, the letter, and the sticker. The card is
-printed card stock and the letter is a printed sheet; both cost money and both
-add weight. Neither is in the number above.
+now missing two printed items and has a wrong line for the fourth. The bundle
+Patrick described is four pieces: the relief print, the cocktail card, the
+letter, and the order-sheet print. The card and letter are printed items; all
+of this costs money and adds weight. None of it is accurately in the number
+above yet.
 
 Even so, fixed costs are trivial and breakeven is two to five subscribers *at any
 price in the $15–32 range*. The cost structure does not pick the price.
@@ -60,8 +69,8 @@ $481/month against $43 of fixed cost. If making and packing 50 bundles is 40
 hours, that's **$11/hour** for a professional printmaker and graphic designer. At
 $32 the same month clears ~$1,263 — about $31/hour. Still under his market rate,
 but a business rather than an expensive hobby. Note that he is now making four
-things a month, not three, and one of them (the letter) is written fresh every
-time.
+things a month, not three — **two of them signed, pulled prints** — and one of
+them (the letter) is written fresh every time.
 
 **4. The price is the positioning.** The strategy is "a working printmaker's
 studio practice, delivered." A $15 price argues against that in a way no
@@ -70,7 +79,8 @@ that comparison should feel obviously favourable, not suspiciously cheap.
 
 ## Contribution at each price
 
-At $2.00 shipping, and before the card and letter are costed:
+At $2.00 shipping, and before the card, the letter, and the order-sheet print
+are costed:
 
 | Price | Processing | Total variable | Contribution | Margin | CAC payback @ $72 |
 | --- | --- | --- | --- | --- | --- |
@@ -83,7 +93,8 @@ At $2.00 shipping, and before the card and letter are costed:
 Note what the corrected shipping did: at $32 the margin moved 85% → 82%, barely
 a flinch. At $15 it moved 72% → 64%. **The cheap price is the fragile one.**
 Every future cost surprise — heavier paper, the card and letter once they're
-costed, a postage increase — lands harder the lower we price.
+costed, the real cost of a second pulled print, a postage increase — lands
+harder the lower we price.
 
 Why not $38: it crosses the line where a subscription box starts getting judged
 against genuine luxury goods, and we have no brand equity yet to survive that
@@ -91,10 +102,11 @@ comparison. Revisit at month 12 with a track record.
 
 ## Still missing
 
-**The cocktail card and the letter are not costed at all.** Two printed items,
-both mandatory every month, both adding weight to an envelope whose postage is
-already an estimate. Brian needs to price a print run of each. This is the
-largest known gap in the sheet.
+**The cocktail card and the letter are not costed at all**, and the fourth
+item's cost line is now wrong rather than just missing — see above. Three
+printed items without a real number, all mandatory every month, all adding
+weight to an envelope whose postage is already an estimate. Brian needs to
+price a print run of each. This is the largest known gap in the sheet.
 
 **Shipping is now $2.00** on Brian's call — a reasonable large-flat rate and far
 more believable than the $0.82 in the original sheet. It stays an estimate until
@@ -112,8 +124,9 @@ margin to count his hours at a real rate, and the numbers above don't yet.
 Patrick told me 2026-09-16 he can't give a per-bundle time because making many
 at once is much faster per unit — so labour goes in **per batch**, and the
 number we need is one clocked run: start, finish, quantity. He's doing that.
-Capacity itself is no longer the worry: he says a few thousand a month before it
-stops being fun, starting at 50–100.
+That number now has to cover two signed prints a month, not one. Capacity itself
+is no longer the worry: he says a few thousand a month before it stops being
+fun, starting at 50–100.
 
 ## Structure
 
@@ -133,9 +146,12 @@ stops being fun, starting at 50–100.
 - Shipping lands above $5/unit → the bundle needs to get lighter or the price
   needs to go to $38, not down. At $32 that's a 72% margin, survivable. At $15
   it's 43% and the business stops working.
-- The card and letter come in materially above ~$1/unit combined → same answer,
-  and it strengthens the case against $15 rather than weakening $32.
+- The card, letter, and order-sheet print come in materially above ~$1/unit
+  combined → same answer, and it strengthens the case against $15 rather than
+  weakening $32.
 - A clocked batch shows 50 bundles eating most of Patrick's month → we're
-  capacity-bound after all and the price goes *up* to ration it.
+  capacity-bound after all and the price goes *up* to ration it. More likely now
+  that he's pulling two prints, not one.
 - The Denver waitlist won't convert above $25 → that's real data and it beats
   this analysis. We'll know by launch.
+</content>

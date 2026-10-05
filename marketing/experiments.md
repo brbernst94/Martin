@@ -63,11 +63,14 @@ date → it doesn't run.*
 - **Kill date:** 6 months, if no venue ever reshares.
 - **Status:** `PROPOSED`
 
-### E-07 · Two stickers per bundle, one to give away
-- **Bet:** 15% of subscribers place the spare sticker publicly.
-- **Cost:** Marginal print cost.
-- **Kill date:** N/A. Measure with a sticker-specific short URL.
-- **Status:** `PROPOSED`
+### E-07 · ~~Two stickers per bundle, one to give away~~ — KILLED
+- Patrick dropped the bundle sticker entirely for a second small relief print
+  pulled onto a vintage restaurant order sheet, off-register on purpose. That
+  object is a keeper, not a giveaway — it doesn't leave the house, so this
+  tactic no longer has a vehicle. Coasters (E-02) now carry the "object a
+  stranger sees" job alone.
+- **Status:** `KILLED` — 2026-09-?? (bundle contents changed, not a result of
+  the experiment running)
 
 ### E-08 · Misprint sale to the email list
 - **Bet:** Each drop converts 5% of the list to a purchase and warms the rest.
@@ -110,8 +113,10 @@ date → it doesn't run.*
 
 ## Killed
 
-*(Nothing yet.)*
+- **E-07 · Two stickers per bundle, one to give away.** Bundle no longer has a
+  sticker. See above.
 
 ## Won
 
 *(Nothing yet.)*
+</content>

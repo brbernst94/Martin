@@ -42,9 +42,13 @@ people who are visibly *of* the world rather than selling into it.
   this segment in one screenshot, so the drinks have to be right.
 - **Why they matter disproportionately:** They work in rooms full of our other
   customer. A bartender with our print in their bar is a billboard we didn't pay
-  for. This is the single highest-leverage segment we have. The monthly sticker
-  is the cheap version of the same thing — it ends up on a well, a cooler, or a
-  ticket rail where every coworker sees it.
+  for. This is the single highest-leverage segment we have. **The bundle used to
+  carry a cheap version of the same trick — a sticker that ended up on a well, a
+  cooler, or a ticket rail.** That's gone; Patrick replaced the sticker with a
+  second print on a vintage order sheet, which is more collectible but doesn't
+  leave the house. Coasters (`marketing/guerrilla.md`) are now the only object
+  doing this job, and they're ours to place, not something that travels with
+  every bundle automatically.
 - **Risk:** Notoriously low disposable income. Price tiering may be needed.
 
 ## Secondary: The Gifter
@@ -66,7 +70,9 @@ Already buys screenprints. Knows what a reduction print is. Cares about edition
 size, paper, and signature.
 
 - **Why they matter:** Small in number, loud in credibility, and they will tell
-  us immediately if the product isn't good. Recruit them first.
+  us immediately if the product isn't good. Recruit them first. The second
+  pulled print on an old order sheet is a real draw for this segment — it's a
+  more serious object than a sticker ever was, and worth saying so explicitly.
 - **What they need:** Edition numbers, signatures, real paper stock named on the
   product page. **Two of the three are settled** — Patrick confirmed 2026-09-16
   that editions are open but every piece is signed and numbered, and the paper
@@ -91,3 +97,4 @@ size, paper, and signature.
 3. Whether restaurant-industry people will pay full price or need a tier.
 4. Whether the cocktail cards actually get collected, or just filed. Ask in the
    month-3 touchpoint. This is the most important of the four.
+</content>

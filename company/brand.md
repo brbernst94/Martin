@@ -8,7 +8,8 @@ marked `UNVERIFIED` is inference and must be confirmed.*
 
 > For people who take what they eat and drink seriously enough to hang it on the
 > wall, we mail a working printmaker's studio practice — a print, a cocktail
-> card, a letter, and a sticker, all on one idea — every month.
+> card, a letter, and a second print pulled onto a vintage order sheet, all on
+> one idea — every month.
 >
 > Not a print club. A standing invitation into Patrick Selner's studio.
 
@@ -47,7 +48,8 @@ cut on 2026-09-16. See `company/decisions.md`.)*
 Confident, dry, specific. The voice of a good bartender or a good line cook —
 knows their craft, doesn't oversell it, funnier than expected. The letter is the
 purest expression of it and it's Patrick's own writing, not copy we produce for
-him.
+him. It's also where the brand name lives now, plus a monthly song and movie
+pick — see "The order-sheet print" below.
 
 **Do:**
 - Name things precisely. "Two-color relief print on [stock]" beats "beautiful
@@ -61,14 +63,27 @@ him.
 - Exclamation points in body copy.
 - Describe the art as "stunning." Let people decide that.
 
-## The sticker rule
+## The order-sheet print (replaces the sticker)
 
-The sticker is one element lifted out of the month's cocktail or food graphic —
-never a copy of the card, because the same picture twice in one envelope makes
-four items feel like three. It has to read at an inch on a laptop lid and work
-with no context, because whoever sees it on a stranger's water bottle has never
-heard of us. Our mark goes somewhere small on it. A sticker nobody can trace is a
-good sticker and a wasted one.
+The fourth item is no longer a sticker. It's a second small relief print,
+pulled onto a vintage restaurant "order" sheet Patrick already owns about 1,000
+of, left off-register on purpose — that's the look, not a flaw. Each one is
+signed, same as the main print.
+
+This changes two things the sticker used to do:
+
+- **It's not the acquisition object anymore.** A sticker left the house — on a
+  laptop, a cooler, a well at a bar. An order-sheet print stays in a drawer or
+  goes on a wall. Coasters (`marketing/guerrilla.md`) now carry the "object a
+  stranger sees" job alone.
+- **The name needs a new home.** The sticker used to carry our mark. Now the
+  name lives on the newspaper-format letter, and Patrick is considering a
+  stamp-style logo mark to stamp on the back of the order sheet, the envelope
+  flap, and the prints — cheap, and it ages well on old stock.
+
+Supply isn't infinite: ~1,000 sheets is 10 months at 100 subscribers, 3 months
+at 300. Worth sourcing a second batch of old stock before the first runs out,
+not after.
 
 ## Visual guardrails
 

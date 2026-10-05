@@ -1,8 +1,9 @@
 # Marketing strategy — v0.2
 
 *Owner: Marty. Last rewritten: 2026-09-16, after Patrick fixed the bundle at
-four items. This is a living document; the top section gets rewritten monthly to
-reflect what we actually learned.*
+four items. Updated again after Patrick dropped the sticker for a second
+order-sheet print. This is a living document; the top section gets rewritten
+monthly to reflect what we actually learned.*
 
 ## Where we are
 
@@ -31,10 +32,12 @@ Sell the studio, not the subscription.
 ## The bundle is fixed at four things
 
 Every month: a relief print of a food subject, a cocktail card with the month's
-drink and recipe, a sticker cut from that month's cocktail graphic, and a letter
-from Patrick. Patrick killed the rotating surprise object on 2026-09-16 —
-coasters, matchbooks, tea towels — because everything ships in an envelope and
-weight and cost are real.
+drink and recipe, a letter from Patrick, and a second small relief print pulled
+onto a vintage restaurant order sheet, left off-register on purpose. That
+fourth item used to be a sticker — Patrick replaced it, see
+`company/decisions.md`. Patrick killed the rotating surprise object on
+2026-09-16 — coasters, matchbooks, tea towels — because everything ships in an
+envelope and weight and cost are real.
 
 What that does to the plan, plainly:
 
@@ -42,14 +45,18 @@ What that does to the plan, plainly:
   it's the only piece that never competes for wall space. It ships every month
   without gaps, and we market it as a collection from day one — numbered, shown
   filling up. `marketing/retention.md` now rests on it almost alone.
-- **The sticker is the acquisition product.** It's the only thing in the bundle
-  that leaves the house. A bartender putting it on their well is distribution we
-  didn't pay for. Rules in `company/brand.md`: one element of the cocktail
-  graphic, reads at an inch, our name on it small.
-- **The letter is the community product.** Patrick's idea, and he's the one who
-  wanted the photo request in it. Subscriber photos of real walls and bar carts
-  beat anything we'd produce. Both tracked competitors also send letters, so the
-  letter is table stakes and the photo loop is the part that's ours.
+- **The acquisition object is now coasters, not a bundle piece.** The sticker
+  used to be the thing in the bundle that left the house — on a laptop, a
+  cooler, a bartender's well. The order-sheet print is more collectible but
+  stays in a drawer. Coasters into Denver bars (`marketing/guerrilla.md`) carry
+  that job alone now.
+- **The letter is the community product — and now the brand-name carrier too.**
+  Patrick's idea, newspaper-format, with a story on the subject, a personal
+  connection, a song and movie pick, and the standing photo request. Both
+  tracked competitors also send letters, so the letter is table stakes and the
+  photo loop is the part that's ours. The brand name, which used to live on the
+  sticker, now lives here — Patrick's considering a stamp mark for the back of
+  the order sheet, the envelope, and the prints.
 - **We lost the "what's in the box" hook.** Contents are identical every month,
   so the month's *subject* carries all the surprise. That raises the stakes on
   how we tease each month and on the letter explaining it.
@@ -67,12 +74,12 @@ The open piece is time per batch, not volume — he can't price a single bundle
 because making many at once is far faster per unit. He's clocking his next run
 (start, finish, count). That number feeds gross margin and what he earns per
 hour; it no longer gates growth. It also matters more now: four items a month,
-not three.
+and **two of them are signed, pulled prints**, not one.
 
 He can work about a month ahead given planning. **December's print and the first
 cocktail card have to be finished, or far enough along to photograph, by 10/25.**
-Subscriptions open 11/1 and selling a promise instead of an object converts
-materially worse.
+December's subject is a cinnamon roll. Subscriptions open 11/1 and selling a
+promise instead of an object converts materially worse.
 
 ## Content costs us nothing extra
 
@@ -128,7 +135,7 @@ Full detail in `marketing/channels.md`. The short version:
 | Instagram | **Core** | Where both primary segments live, and where process video performs. Home for short form — this is where people buy. |
 | Pinterest | **Core** | Search-driven, compounds, and "bar cart art" is an evergreen query. Most underrated channel for this business. |
 | Email | **Core** | The only channel we own. The waitlist *is* the launch. |
-| Physical / guerrilla | **Core** | We make objects. Objects are distribution. The monthly sticker is the cheapest one we have. See `guerrilla.md`. |
+| Physical / guerrilla | **Core** | We make objects. Objects are distribution. Coasters are the cheapest one we have, and now the only bundle-adjacent object that leaves the house for free. See `guerrilla.md`. |
 | TikTok | **Active** | Upgraded from Test 2026-09-16. Patrick actually wants to make short form, which was the only real constraint. Same footage cut looser, ~0 marginal Patrick-hours. Buys reach, not conversion. |
 | Reddit | **Test, carefully** | r/cocktails and r/printmaking are exactly our people and will eject us instantly if we market at them. Participate as Patrick, don't advertise. |
 | Paid social | **Off** | Three gates left, all ours: price, a converting page, three organic posts over 10k views. The capacity gate cleared 2026-09-16. See `paid-media.md`. |
@@ -158,7 +165,8 @@ cancel, and it's the only piece that doesn't compete for wall space.
   the plan.
 - If a clocked batch shows 50 bundles eating most of Patrick's month, the
   capacity read above is wrong and the price goes up to ration demand. His
-  appetite is real; his hours are still unmeasured — and it's four items now.
+  appetite is real; his hours are still unmeasured — and it's two signed prints
+  a month now, not one.
 - If Brian holds the price at $15, paid never works and we are permanently capped
   at whatever organic produces. I'd rather launch late at $32 than on time at $15.
 - If the real shipping cost lands above $5/unit, the bundle gets lighter or the
@@ -187,3 +195,4 @@ Every number above is a guess and is not in `data/metrics.json`.
 - Churn by category — https://eightx.co/blog/average-subscription-churn-rate-by-category (checked 2026-09-16)
 - Organic reach by platform — https://84pins.com/best-social-media-for-organic-reach/ (checked 2026-09-16)
 - Patrick Selner portfolio — https://selnerpatrick.myportfolio.com/ (checked 2026-09-16)
+</content>

@@ -17,10 +17,15 @@ Each month a subscriber receives:
 2. **A cocktail card** — the month's featured drink, its recipe, and a graphic.
    Designed to be collected into a cocktail book over time. Patrick's idea. This
    is his graphic design work rather than his printmaking.
-3. **A letter** — why he chose this month's subject, what's new in the studio,
-   and a request that subscribers send photos of where their pieces ended up.
-4. **A sticker** — using one element of that month's cocktail or food graphic,
-   not a copy of the card.
+3. **A letter** — newspaper-format. Why he chose this month's subject, any
+   personal connection to it, a song and a movie pick for the month, what's new
+   in the studio, and a request that subscribers send photos of where their
+   pieces ended up. It's now the main carrier of brand voice (see below).
+4. **A second small relief print, pulled onto a vintage restaurant "order"
+   sheet**, left deliberately off-register. Replaces the sticker (decided by
+   Patrick; see `company/decisions.md`). Patrick has ~1,000 order sheets on
+   hand — enough for 10 months at 100 subscribers, 3 months at 300. Both prints
+   are signed by hand each month.
 
 All artwork is made by **Patrick Selner**, printmaker and graphic designer.
 Nothing in the bundle is licensed, drop-shipped, or AI-generated.
@@ -46,6 +51,11 @@ What we lost with the surprise piece is unpredictability. What's unpredictable
 now is the *theme* — which drink, which food — not the object. That's a thinner
 hook and marketing has to work harder for it. See `marketing/retention.md`.
 
+The sticker, which used to be the object that left the house for free, is gone
+too — replaced by the order-sheet print, which is more collectible but stays in
+a drawer rather than ending up on a stranger's laptop. The coasters in
+`marketing/guerrilla.md` now carry that job alone.
+
 ## The model
 
 Physical subscription box, monthly, direct to consumer. Recurring revenue,
@@ -54,7 +64,7 @@ physical COGS, real shipping costs, real churn.
 **Launch: 11/1/26.** First bundle delivered **12/1/26**.
 **December's print and cocktail card 01 must exist and be photographed by 10/25**
 or there's nothing to launch with. Patrick says he can work about a month ahead
-if the planning is done in time.
+if the planning is done in time. **December's subject is a cinnamon roll.**
 **Based in Denver, Colorado.**
 **Price: $32/month proposed** ($320/year), pending Brian's sign-off — see
 `marketing/pricing.md`.
@@ -64,15 +74,20 @@ if the planning is done in time.
 ### Unit economics (from Brian's breakeven analysis, 2026-09-16)
 
 Variable cost per bundle is **$4.65** before card processing — paper $0.80, ink
-$0.65, sticker $0.75, envelope $0.45, shipping $2.00. Fixed costs are **$43/month**
-(website $23, relief blocks $10, parchment $10).
+$0.65, sticker $0.75, envelope $0.45, shipping $2.00. **The sticker line is now
+wrong** — the sticker is cut from the bundle and replaced by a second print on
+an order sheet Patrick already owns 1,000 of; that line needs re-costing (ink
+and labour, not paper stock, since the sheet itself is sunk cost until the 1,000
+run out). Fixed costs are **$43/month** (website $23, relief blocks $10,
+parchment $10).
 
 Three caveats that matter more than the numbers: **shipping at $2.00 is still
 unverified against a real bundle at a counter** (`#14`), **neither the cocktail
 card nor the letter is costed** — two printed items missing from the sheet, both
 adding material and weight — and **Patrick's labour is not in the model**. He
 can't give a per-bundle time because batches are far faster per unit, so labour
-goes in per batch once he clocks a run (`#3`).
+goes in per batch once he clocks a run (`#3`). That labour number now has to
+cover two signed, pulled prints a month, not one.
 
 ## What we have going for us
 
@@ -102,10 +117,10 @@ goes in per batch once he clocks a run (`#3`).
 - **The category is crowded at the bottom.** A large number of $10–20/month
   print clubs already exist. Differentiation has to be real, not positioning
   copy. See `marketing/competitors/`.
-- **Four hand-made items every month, forever.** The card and the letter can't
-  skip — one breaks a collection, the other breaks the relationship. Whether
-  that's sustainable is open (`#18`), and it's the reason Marty did not fight
-  for the surprise piece.
+- **Four hand-made items every month, forever** — two of them signed prints now.
+  The card and the letter can't skip — one breaks a collection, the other
+  breaks the relationship. Whether that's sustainable is open (`#18`), and it's
+  the reason Marty did not fight for the surprise piece.
 - **The bundle is all flat paper now.** Every piece is something to look at.
   Nothing in it gets *used*, which is the thing that would have kept a
   wall-space-limited subscriber from cancelling. Live risk, handled in
@@ -127,3 +142,4 @@ objects with physical process. That process — the presses, the prints that com
 out wrong, the test prints — is the marketing asset and the moat.
 
 Sell the studio, not the subscription.
+</content>
